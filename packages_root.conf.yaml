@@ -8,4 +8,4 @@
 - shell:
   - [echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf]
   - [pacman -S --noconfirm --needed vim firefox yaourt fish git htop chromium python-pip pulseaudio pavucontrol libcaca atool udevil highlight pygmentize lynx unrar aspell-ru aspell-en lynx libsasl cyrus-sasl the_silver_searcher adobe-source-code-pro-fonts thefuck ipython tig]
-  - [pacman -Rns --noconfirm palemoon-bin || true]
+  - [pacman -Rns --noconfirm palemoon-bin nano || true]
