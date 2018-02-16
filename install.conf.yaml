@@ -7,7 +7,10 @@
 - clean: ['~', '~/.config']
 - link:
     ~/.i3:
+    ~/.Xresources: x/Xresources
 - shell:
   - ["git submodule update --init --recursive", "Installing submodules"]
   - [mkdir -p ~/Downloads, Creating downloads directory]
   - [mkdir -p ~/Projects, Creating projects directory]
+  - ["curl -L http://get.oh-my.fish | fish"]
+  - [omf install simple-ass-prompt]
