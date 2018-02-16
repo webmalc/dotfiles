@@ -1,3 +1,13 @@
-- clean: []
-- link: {}
-- shell: []
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+
+- clean: ['~', '~/.config']
+- link:
+    ~/.i3:
+- shell:
+  - ["git submodule update --init --recursive", "Installing submodules"]
+  - [mkdir -p ~/Downloads, Creating downloads directory]
+  - [mkdir -p ~/Projects, Creating projects directory]
