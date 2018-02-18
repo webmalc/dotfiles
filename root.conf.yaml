@@ -7,8 +7,17 @@
 - link: {}
 - shell:
   - [echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf]
-  - [pacman -S --noconfirm --needed vim firefox yaourt fish git htop chromium python-pip pulseaudio pavucontrol libcaca atool udevil highlight pygmentize lynx unrar aspell-ru aspell-en lynx libsasl cyrus-sasl the_silver_searcher adobe-source-code-pro-fonts thefuck ipython tig]
+  - [pacman -S --noconfirm --needed vim firefox yaourt fish git htop chromium python-pip pulseaudio pavucontrol libcaca atool udevil highlight pygmentize lynx unrar aspell-ru aspell-en lynx libsasl cyrus-sasl the_silver_searcher adobe-source-code-pro-fonts thefuck ipython tig keepassx2]
   - [chsh -s /usr/bin/fish webmalc]
-  - [chsh -s /usr/bin/fish]  
+  - [chsh -s /usr/bin/fish]
+  - [sudo pip install virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint pdb]
   - [pacman -Rns --noconfirm palemoon-bin nano]
+
+#postgresql
+#nodejs
+#vim
+#spacemacs
+#compile
+#mutt
+#fix omf
 

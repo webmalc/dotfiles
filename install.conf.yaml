@@ -11,10 +11,10 @@
     ~/.config/ranger/rc.conf: ranger/rc.conf
     ~/.config/fish/functions: fish/functions
     ~/.config/fish/config.fish: fish/config.fish
+    ~/.gitconfig: git/gitconfig
 - shell:
   - ["git submodule update --init --recursive", "Installing submodules"]
   - [mkdir -p ~/Downloads, Creating downloads directory]
   - [mkdir -p ~/Projects, Creating projects directory]
-  - ["curl -L http://get.oh-my.fish | fish"]
   - [omf install simple-ass-prompt]
   - [rm ~/.config/ranger/scope.sh; ranger --copy-config=scope]

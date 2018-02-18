@@ -7,3 +7,4 @@
 - link: {}
 - shell:
   - [yaourt -S --noconfirm telegram-desktop-bin dropbox universal-ctags-git powerline-fonts-git nerd-fonts-source-code-pro global neomutt cower-git py3status urlview]
+  - ["curl -L http://get.oh-my.fish | fish"]
