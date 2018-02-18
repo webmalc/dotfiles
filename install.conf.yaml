@@ -12,6 +12,8 @@
     ~/.config/fish/functions: fish/functions
     ~/.config/fish/config.fish: fish/config.fish
     ~/.gitconfig: git/gitconfig
+    ~/.bash_profile: bash/bash_profile
+    ~/.profile: profile/profile
 - shell:
   - ["git submodule update --init --recursive", "Installing submodules"]
   - [mkdir -p ~/Downloads, Creating downloads directory]
