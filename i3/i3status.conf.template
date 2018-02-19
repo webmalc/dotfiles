@@ -73,12 +73,12 @@ imap {
     cache_timeout = 60
     imap_server = 'imap.yandex.com'
     mailbox = 'INBOX'
-    password = ''
+    password = '{{email_password}}'
     port = '993'
     format = '✉ {unseen}'
     hide_if_zero = false
     user = 'm@webmalc.pw'
-    on_click 1 = 'exec terminal -e mutt; exec i3-msg "workspace 5: 5: im"'
+    on_click 1 = 'exec terminal -e neomutt; exec i3-msg "workspace 5: 5: im"'
 }
 
 arch_updates {

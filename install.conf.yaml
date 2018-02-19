@@ -6,7 +6,8 @@
 
 - clean: ['~', '~/.config']
 - link:
-    ~/.i3:
+    ~/.i3/config: i3/config
+    ~/.i3/i3status.conf: i3/i3status.conf.compiled
     ~/.Xresources: x/Xresources
     ~/.urlview: urlview/urlview
     ~/.config/ranger/rc.conf: ranger/rc.conf
