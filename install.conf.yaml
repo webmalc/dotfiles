@@ -14,6 +14,10 @@
     ~/.gitconfig: git/gitconfig
     ~/.bash_profile: bash/bash_profile
     ~/.profile: profile/profile
+    ~/.vimrc: vim/vimrc
+    ~/.vimrc.before: vim/vimrc.before
+    ~/.vimrc.bundles: vim/vimrc.bundles
+    ~/.vimrc.local: vim/vimrc.local
 - shell:
   - ["git submodule update --init --recursive", "Installing submodules"]
   - [mkdir -p ~/Downloads, Creating downloads directory]
