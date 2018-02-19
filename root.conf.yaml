@@ -26,7 +26,4 @@
     - [systemctl enable redis]
     - [systemctl start memcached]
     - [systemctl enable memcached]
-#compile
-#mutt
-#readme
 
