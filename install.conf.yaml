@@ -8,6 +8,7 @@
 - link:
     ~/.i3:
     ~/.Xresources: x/Xresources
+    ~/.urlview: urlview/urlview
     ~/.config/ranger/rc.conf: ranger/rc.conf
     ~/.config/fish/functions: fish/functions
     ~/.config/fish/config.fish: fish/config.fish
