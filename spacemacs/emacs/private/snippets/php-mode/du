@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: du - dump 
+# key: du
+# --
+dump($${1:var});
+exit();

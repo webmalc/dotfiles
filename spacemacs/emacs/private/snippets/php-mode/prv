@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: prv - private class property 
+# key: prv
+# --
+
+/**
+* @var ${1:type}
+*/
+private $${2:var};

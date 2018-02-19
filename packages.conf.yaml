@@ -6,6 +6,7 @@
 - clean: ['~', '~/.config']
 - link: {}
 - shell:
-  - [yaourt -S --noconfirm telegram-desktop-bin dropbox universal-ctags-git powerline-fonts-git nerd-fonts-source-code-pro global neomutt cower-git py3status urlview]
-  #- ["curl http://j.mp/spf13-vim3 -L -o - | sh"]
-  - ["curl -L http://get.oh-my.fish | fish"]
+  - [yaourt -S --noconfirm ttf-unifont telegram-desktop-bin dropbox universal-ctags-git powerline-fonts-git nerd-fonts-source-code-pro global neomutt cower-git py3status urlview]
+# - ["curl http://j.mp/spf13-vim3 -L -o - | sh"]
+# - ["curl -L http://get.oh-my.fish | fish"]
+  - ["git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d"]

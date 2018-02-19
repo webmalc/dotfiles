@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: df - def
+# key: df
+# --
+def ${1:func}(self${2:, args}):
+    """ ${3:docs} """
+    ${4:pass}

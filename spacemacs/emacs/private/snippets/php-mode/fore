@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: fore - foreach
+# key: fore
+# --
+foreach ($${1:array} as ${2:$key => }$${3:value}) {
+    ${4://body}
+}

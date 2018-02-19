@@ -18,6 +18,11 @@
     ~/.vimrc.before: vim/vimrc.before
     ~/.vimrc.bundles: vim/vimrc.bundles
     ~/.vimrc.local: vim/vimrc.local
+    ~/.spacemacs: spacemacs/spacemacs
+    ~/.emacs.d/private/snippets/js-mode: spacemacs/emacs/private/snippets/js-mode
+    ~/.emacs.d/private/snippets/php-mode: spacemacs/emacs/private/snippets/php-mode
+    ~/.emacs.d/private/snippets/python-mode: spacemacs/emacs/private/snippets/python-mode
+    ~/.emacs.d/private/snippets/typescript-mode: spacemacs/emacs/private/snippets/typescript-mode
 - shell:
   - ["git submodule update --init --recursive", "Installing submodules"]
   - [mkdir -p ~/Downloads, Creating downloads directory]

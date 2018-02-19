@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: fc - function constructor
+# key: fc
+# --
+
+/**
+* constructor
+*
+* @param ${2:type} $${3:param}
+*/
+public function __construct($2 $$3)
+{
+    $this->$3 = $$3;
+}
+

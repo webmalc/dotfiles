@@ -1,0 +1,32 @@
+# -*- mode: snippet -*-
+# name: vgs - property & getter & setter 
+# key: vgs
+# --
+
+/**
+* @var ${1:type}
+*/
+private $${2:param};
+
+/**
+* $2 set
+*
+* @param $1 $$2
+* @return self
+*/
+public function set${2:$(s-upper-camel-case yas-text)}($1 $$2): self
+{
+    $this->$2 = $$2;
+
+    return $this;
+}
+
+/**
+* $2 get
+*
+* @return $1
+*/
+public function get${2:$(s-upper-camel-case yas-text)}(): $1
+{
+    return $this->$2;
+}

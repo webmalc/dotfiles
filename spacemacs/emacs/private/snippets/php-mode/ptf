@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: ptf - protected function 
+# key: ptf
+# --
+
+/**
+* ${1:desc}
+*
+* @param ${2:type} $${3:param}
+* @return ${4:return}
+*/
+protected function ${5:name}($2 $$3): $4
+{
+    ${6://body}
+}
+

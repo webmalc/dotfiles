@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: js - jquery selector
+
+# key: js
+# --
+$('${1}');

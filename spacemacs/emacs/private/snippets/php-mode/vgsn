@@ -1,0 +1,32 @@
+# -*- mode: snippet -*-
+# name: vgsn - nullable property & getter & setter 
+# key: vgsn
+# --
+
+/**
+* @var ${1:type}|null
+*/
+private $${2:param};
+
+/**
+* $2 set
+*
+* @param $1 $$2
+* @return self
+*/
+public function set${2:$(s-upper-camel-case yas-text)}($1 $$2 = null): self
+{
+    $this->$2 = $$2;
+
+    return $this;
+}
+
+/**
+* $2 get
+*
+* @return $1|null
+*/
+public function get${2:$(s-upper-camel-case yas-text)}(): ?$1
+{
+    return $this->$2;
+}

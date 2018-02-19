@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: ptv - protected class property 
+# key: ptv
+# --
+
+/**
+* @var ${1:type}
+*/
+protected $${2:var};
