@@ -8,26 +8,25 @@
 - link:
     /usr/bin/start_conky_maia: conky/start_conky_maia
 - shell:
-  - [echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf]
-  - [pacman -S --noconfirm --needed nodejs-less memcahed redis postgresql emacs vim firefox yaourt fish git htop chromium python-pip pulseaudio pavucontrol libcaca atool udevil highlight pygmentize lynx unrar aspell-ru aspell-en lynx libsasl cyrus-sasl the_silver_searcher adobe-source-code-pro-fonts thefuck ipython tig keepassx2 nodejs npm]
-  - [chsh -s /usr/bin/fish webmalc]
-  - [chsh -s /usr/bin/fish]
-  - [sudo pip install virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb]
-  - [sudo npm install -g tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google]
-  - [pacman -Rns --noconfirm palemoon-bin nano]
-  - [sudo -u postgres initdb -D '/var/lib/postgres/data']
-  - [systemctl start postgresql]
-  - [systemctl enable postgresql]
-  - [systemctl start redis]
-  - [systemctl enable redis]
-  - [systemctl start memcahed]
-  - [systemctl enable memcahed]
-
-#postgresql
+    - [echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf]
+    - [pacman -S --noconfirm --needed nodejs-less memcached redis postgresql emacs vim firefox yaourt fish git htop chromium python-pip pulseaudio pavucontrol libcaca atool udevil highlight pygmentize lynx unrar aspell-ru aspell-en lynx libsasl cyrus-sasl the_silver_searcher adobe-source-code-pro-fonts thefuck ipython tig keepassx2 nodejs npm]
+    - [chsh -s /usr/bin/fish webmalc]
+    - [chsh -s /usr/bin/fish]
+    - [sudo pip install virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb]
+    - [sudo npm install -g tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google]
+    -
+      command: "pacman -Rns --noconfirm palemoon-bin nano 2>&1; true"
+      stdout: true
+    -
+      command: "sudo -u postgres initdb -D '/var/lib/postgres/data' 2>&1; true"
+      stdout: true
+    - [systemctl start postgresql]
+    - [systemctl enable postgresql]
+    - [systemctl start redis]
+    - [systemctl enable redis]
+    - [systemctl start memcached]
+    - [systemctl enable memcached]
 #compile
 #mutt
-#fix omf
-#remove help wallpaper
 #readme
-#clean fix
 

@@ -1,0 +1,77 @@
+set my_name = "Sergey Dubovskii"
+set use_from = yes
+set editor='vim -c "set spell spelllang=en_us,ru_ru"'
+# see the headers when editing
+# set edit_headers
+# sort by newest conversation first.
+set sort = reverse-threads
+set sort_aux = last-date-received
+
+# confirmation skipping
+set fast_reply=yes        # when replying, don't prompt for address
+set include=yes           # include original text on reply?
+set forward_quote=yes     # include original text on forward?
+set delete=yes            # don't ask for delete confirmation
+
+set from = "m@webmalc.pw"
+set imap_user = "m@webmalc.pw"
+set imap_pass = {{email_password}}
+set folder = "imaps://imap.yandex.com:993"
+set smtp_url = "smtps://$imap_user@smtp.yandex.com:465"
+set smtp_pass = "$imap_pass"
+set ssl_force_tls = yes
+set imap_keepalive  = 900
+
+
+# do not copy sent mail
+set copy
+
+mailboxes       = +INBOX
+set spoolfile = +INBOX #or +[Gmail]/Important
+set postponed = '+Черновики'
+set record    = '+Отправленные'
+#set postponed = +[Gmail]/Drafts
+set imap_check_subscribed
+unset imap_passive
+set mail_check = 120
+
+
+# cache
+set header_cache    = ~/.cache/mutt/headers
+set message_cachedir    = ~/.cache/mutt/bodies
+set certificate_file    = ~/.cache/mutt/certificates
+auto_view text/html
+set mailcap_path 	= ~/.mutt/mailcap
+# -*-muttrc-*-
+
+# Palette for use with the Linux console.  Black background.
+
+color hdrdefault blue black
+color quoted blue black
+color signature blue black
+color attachment red black
+color prompt brightmagenta black
+color message brightred black
+color error brightred black
+color indicator black red
+color status brightgreen blue
+color tree white black
+color normal white black
+color markers red black
+color search white black
+color tilde brightmagenta black
+color index blue black ~F
+color index red black "~N|~O"
+
+# color body brightwhite black '\*+[^*]+\*+'
+# color body brightwhite black '_+[^_]+_+'
+# bind pager j next-line
+bind pager k previous-line
+bind attach,index,pager \CD next-page
+bind attach,index,pager \CU previous-page
+bind pager g top
+bind pager G bottom
+bind attach,index g first-entry
+bind attach,index G last-entry
+
+bind index "^" imap-fetch-mail

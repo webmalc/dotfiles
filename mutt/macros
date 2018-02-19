@@ -1,0 +1,2 @@
+ macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview' macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+ macro attach 'V' "<pipe-entry>cat >~/.cache/mutt/mail.html && $BROWSER ~/.cache/mutt/mail.html && rm ~/.cache/mutt/mail.html<enter>
