@@ -1,0 +1,7 @@
+exec --no-startup-id xrandr --output VGA1 --auto --left-of HDMI1
+workspace "$ws1" output VGA1
+workspace "$ws2" output VGA1
+workspace "$ws3" output VGA1
+workspace "$ws4" output HDMI1
+workspace "$ws5" output HDMI1
+

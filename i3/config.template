@@ -455,23 +455,6 @@ assign [ class="vlc" ] $ws6
 for_window [class="Chromium"] floating enable border normal
 for_window [class="Google-chrome"] floating enable border normal
 
-# dual monitors
-exec --no-startup-id xrandr --output VGA1 --auto --left-of HDMI1
-workspace "$ws1" output VGA1
-workspace "$ws2" output VGA1
-workspace "$ws3" output VGA1
-workspace "$ws4" output HDMI1
-workspace "$ws5" output HDMI1
-#workspace “$ws2“ output HDMI1
-#workspace “$ws7“ output DVI-D-0
-#workspace “$ws2“ output VGA-0
-#workspace “$ws3“ output VGA-0
-#workspace “$ws4“ output VGA-0
-#workspace “$ws5“ output VGA-0
-#workspace “$ws6“ output DVI-D-0
-#bindsym $mod+o exec xrandr --output VGA-0 --off
-#bindsym $mod+p exec xrandr --output VGA-0 --auto --left-of DVI-D-0
-
 # bindings
 bindsym $mod+c exec zenity --calendar
 bindsym $mod+F5 exec --no-startup-id primusrun env LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' /usr/bin/steam

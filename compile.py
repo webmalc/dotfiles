@@ -8,7 +8,7 @@ def get_config():
     return config
 
 
-def _compile_config(config, path):
+def _compile_config(config, path, append_path=None):
     # compile
     print('compile' + path)
     with open(path + '.template', 'r') as template:
@@ -17,6 +17,9 @@ def _compile_config(config, path):
             compiled_content = content.replace('{{email_password}}',
                                                config['email']['password'])
             compiled.write(compiled_content)
+            if append_path:
+                with open(append_path, 'r') as append:
+                    compiled.write('\n\n' + append.read())
 
 
 def mutt(config):
@@ -29,6 +32,13 @@ def i3status(config):
     _compile_config(config, 'i3/i3status.conf')
 
 
+def i3(config):
+    # compile i3
+    append_path = 'i3/config.' + config['env']['host']
+    _compile_config(config, 'i3/config', append_path)
+
+
 config = get_config()
 mutt(config)
 i3status(config)
+i3(config)

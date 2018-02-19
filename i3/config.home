@@ -1,0 +1,8 @@
+exec --no-startup-id xrandr --output  VGA-0 --auto --left-of DVI-D-0
+workspace "$ws1" output VGA-0
+workspace "$ws2" output VGA-0
+workspace "$ws3" output VGA-0
+workspace "$ws5" output VGA-0
+bindsym $mod+o exec xrandr --output VGA-0 --off
+bindsym $mod+p exec xrandr --output VGA-0 --auto --left-of DVI-D-0
+
