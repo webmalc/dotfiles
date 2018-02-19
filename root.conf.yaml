@@ -13,6 +13,9 @@
   - [sudo pip install virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb]
   - [sudo npm install -g tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google]
   - [pacman -Rns --noconfirm palemoon-bin nano]
+  - [sudo -u postgres initdb -D '/var/lib/postgres/data']
+  - [systemctl start postgresql]
+  - [systemctl enable postgresql]
 
 #postgresql
 #compile
