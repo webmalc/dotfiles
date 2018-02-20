@@ -59,8 +59,8 @@ values."
         ranger-ignored-extensions '("mkv" "iso" "mp4")
         ranger-override-dired t
         ranger-max-preview-size 10)
-     ;; helm
-     ivy
+     helm
+     ;; ivy
      auto-completion
      better-defaults
      emacs-lisp
