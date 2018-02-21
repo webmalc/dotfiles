@@ -4,4 +4,5 @@ workspace "$ws2" output VGA1
 workspace "$ws3" output VGA1
 workspace "$ws4" output HDMI1
 workspace "$ws5" output HDMI1
-
+exec --no-startup-id i3-msg 'workspace $ws2; exec i3-sensible-terminal; exec i3-sensible-terminal; exec i3-sensible-terminal;'
+exec --no-startup-id i3-msg 'workspace $ws3; exec terminal -e "ranger"; exec terminal -e "ranger";'

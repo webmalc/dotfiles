@@ -6,3 +6,5 @@ workspace "$ws5" output VGA-0
 bindsym $mod+o exec xrandr --output VGA-0 --off
 bindsym $mod+p exec xrandr --output VGA-0 --auto --left-of DVI-D-0
 
+exec --no-startup-id i3-msg 'workspace $ws2; exec i3-sensible-terminal;'
+exec --no-startup-id i3-msg 'workspace $ws3; exec terminal -e "ranger";'

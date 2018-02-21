@@ -426,12 +426,9 @@ mode "$mode_gaps_outer" {
 # startup
 exec --no-startup-id setxkbmap "us,ru" ",winkeys" "grp:alt_shift_toggle,grp_led:scroll" -option ctrl:nocaps
 exec --no-startup-id xset r rate 200 55
-exec --no-startup-id i3-msg 'workspace $ws2; exec i3-sensible-terminal; exec i3-sensible-terminal;'
-exec --no-startup-id i3-msg 'workspace $ws3; exec terminal -e "ranger"; exec terminal -e "ranger";'
 exec --no-startup-id telegram-desktop
 exec --no-startup-id dropbox
 exec --no-startup-id $web-browser 
-#exec --no-startup-id primusrun env LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' /usr/bin/steam
 
 # programs
 assign [ class="Google-chrome" instance="google-chrome" ] $ws4
