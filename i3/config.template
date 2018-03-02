@@ -454,8 +454,6 @@ for_window [class="Google-chrome"] floating enable border normal
 
 # bindings
 bindsym $mod+c exec zenity --calendar
-bindsym $mod+F5 exec --no-startup-id primusrun env LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' /usr/bin/steam
-#:primusrun for notebook
 
 bindsym XF86AudioMute exec amixer sset 'Master' toggle
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset 'Master' 5%-
