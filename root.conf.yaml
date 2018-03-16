@@ -9,7 +9,7 @@
     /usr/bin/start_conky_maia: conky/start_conky_maia
 - shell:
     - [echo "blacklist pcspkr" > /etc/modprobe.d/nobeep.conf]
-    - [pacman -S --noconfirm --needed docker socat vagrant nodejs-less memcached redis postgresql emacs vim firefox yaourt fish git htop chromium python-pip pulseaudio pavucontrol libcaca atool udevil highlight pygmentize lynx unrar aspell-ru aspell-en lynx libsasl cyrus-sasl the_silver_searcher adobe-source-code-pro-fonts thefuck ipython tig keepassx2 nodejs npm]
+    - [pacman -S --noconfirm --needed docker ansible socat vagrant nodejs-less memcached redis postgresql emacs vim firefox yaourt fish git htop chromium python-pip pulseaudio pavucontrol libcaca atool udevil highlight pygmentize lynx unrar aspell-ru aspell-en lynx libsasl cyrus-sasl the_silver_searcher adobe-source-code-pro-fonts thefuck ipython tig keepassx2 nodejs npm]
     - [chsh -s /usr/bin/fish webmalc]
     - [chsh -s /usr/bin/fish]
     - [sudo pip install virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb]
