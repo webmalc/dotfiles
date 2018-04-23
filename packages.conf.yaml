@@ -7,7 +7,7 @@
 - link: {}
 - shell:
     -
-      command: "yaourt -S --noconfirm urlview ttf-unifont telegram-desktop-bin dropbox universal-ctags-git powerline-fonts-git nerd-fonts-source-code-pro global neomutt cower-git py3status urlview"
+      command: "yaourt -S --noconfirm spotify urlview ttf-unifont telegram-desktop-bin dropbox universal-ctags-git powerline-fonts-git nerd-fonts-source-code-pro global neomutt cower-git py3status urlview"
       stdout: true
       stderr: true
     -

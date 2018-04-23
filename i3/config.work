@@ -6,4 +6,5 @@ workspace "$ws4" output VGA1
 workspace "$ws5" output VGA1
 exec --no-startup-id i3-msg 'workspace $ws2; exec i3-sensible-terminal; exec i3-sensible-terminal; exec i3-sensible-terminal;'
 exec --no-startup-id i3-msg 'workspace $ws3; exec terminal -e "ranger"; exec terminal -e "ranger";'
+exec --no-startup-id spotify
 bindsym $mod+F5 exec --no-startup-id env LD_PRELOAD='/usr/$LIB/libstdc++.so.6 /usr/$LIB/libgcc_s.so.1 /usr/$LIB/libxcb.so.1 /usr/$LIB/libgpg-error.so' /usr/bin/steam
