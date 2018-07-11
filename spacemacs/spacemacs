@@ -40,8 +40,8 @@ values."
      javascript
      html
      sql
-     (typescript :variables
-        typescript-fmt-on-save t)
+    ;; (typescript :variables
+    ;;    typescript-fmt-on-save t)
      yaml
      colors
      django
