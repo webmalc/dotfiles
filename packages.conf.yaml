@@ -8,7 +8,7 @@
 - shell:
     -
       command: "yaourt -S --noconfirm spotify urlview ttf-unifont telegram-desktop-bin dropbox universal-ctags-git powerline-fonts-git nerd-fonts-source-code-pro global neomutt cower-git py3status urlview"
-      stdout: true
+ #     stdout: true
       stderr: true
     -
       command: "curl http://j.mp/spf13-vim3 -L -o - | sh 2>&1; true"

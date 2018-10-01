@@ -40,8 +40,8 @@ values."
      javascript
      html
      sql
-    ;; (typescript :variables
-    ;;    typescript-fmt-on-save t)
+     (typescript :variables
+       typescript-fmt-on-save t)
      yaml
      colors
      django
@@ -372,8 +372,8 @@ you should place your code here."
   (setq fci-rule-use-dashes t)
   (setq fci-dash-pattern 0.1)
   (add-hook 'after-change-major-mode-hook 'fci-mode)
-  ;; (add-hook 'prog-mode (lambda () (interactive) (column-marker-1 80)))
-  ;; (add-hook 'typescript (lambda () (interactive) (column-enforce-mode)))
+  (add-hook 'prog-mode (lambda () (interactive) (column-marker-1 80)))
+  (add-hook 'typescript (lambda () (interactive) (column-enforce-mode)))
 
   ;; Python -------------------------------------------------------------------- 
   ;; (add-to-list 'auto-mode-alist '("\\.py\\'" . yapf-mode))
@@ -397,8 +397,8 @@ you should place your code here."
   (setq company-tooltip-align-annotations t)
 
   ;; formats the buffer before saving
-  (add-hook 'before-save-hook 'tide-format-before-save)
-  (add-hook 'typescript-mode-hook #'setup-tide-mode)
+  ;; (add-hook 'before-save-hook 'tide-format-before-save)
+  ;; (add-hook 'typescript-mode-hook #'setup-tide-mode)
 
   ;; PHP configuration ---------------------------------------------------------
   (require 'php-auto-yasnippets)

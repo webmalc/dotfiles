@@ -56,10 +56,17 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 set $web-browser firefox
 set $ide emacs
+set $url_translate https://translate.yandex.ru
+set $url_translate_alternative https://translate.google.com
+set $url_series https://trakt.tv
+
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec $web-browser
+bindsym $mod+t exec $web-browser --new-tab $url_translate
+bindsym $mod+g exec $web-browser --new-tab $url_translate_alternative
+bindsym $mod+i exec $web-browser --new-tab $url_series
 bindsym $mod+F1 exec "cd ~/Projects; $ide"
 bindsym $mod+F3 exec terminal -e "ranger"
 bindsym $mod+F4 exec terminal -e neomutt; workspace $ws5
@@ -430,6 +437,7 @@ exec --no-startup-id telegram-desktop
 exec --no-startup-id dropbox
 exec --no-startup-id $web-browser 
 exec --no-startup-id nmcli con up id openvpn
+
 
 # programs
 assign [ class="Google-chrome" instance="google-chrome" ] $ws4
