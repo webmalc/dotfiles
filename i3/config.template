@@ -59,11 +59,13 @@ set $ide emacs
 set $url_translate https://translate.yandex.ru
 set $url_translate_alternative https://translate.google.com
 set $url_series https://trakt.tv
+set $url_nativecards https://nativecards.pw
 
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F2 exec $web-browser
+bindsym $mod+c exec $web-browser --new-tab $url_nativecards
 bindsym $mod+t exec $web-browser --new-tab $url_translate
 bindsym $mod+g exec $web-browser --new-tab $url_translate_alternative
 bindsym $mod+i exec $web-browser --new-tab $url_series
@@ -463,9 +465,6 @@ assign [ class="vlc" ] $ws6
 
 for_window [class="Chromium"] floating enable border normal
 for_window [class="Google-chrome"] floating enable border normal
-
-# bindings
-bindsym $mod+c exec zenity --calendar
 
 bindsym XF86AudioMute exec amixer sset 'Master' toggle
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset 'Master' 5%-
