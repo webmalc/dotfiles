@@ -1,0 +1,77 @@
+[global_config]
+  focus = mouse
+  suppress_multiple_term_dialog = True
+  window_state = maximise
+[keybindings]
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
+  go_up = <Alt>k
+  layout_launcher = None
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 92bc3ff5-23c7-4830-a3e5-a1c09c059b19
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 0:27
+      size = 1920, 1053
+      title = fish  /home/webmalc
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 958
+      ratio = 0.500261096606
+      type = HPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 526
+      ratio = 0.501908396947
+      type = VPaned
+    [[[child5]]]
+      order = 1
+      parent = child1
+      position = 526
+      ratio = 0.501908396947
+      type = VPaned
+    [[[terminal3]]]
+      order = 0
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = 191dfc4d-3f28-429a-a21e-53731c10809e
+    [[[terminal4]]]
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
+      uuid = 92bc3ff5-23c7-4830-a3e5-a1c09c059b19
+    [[[terminal6]]]
+      order = 0
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 84cc69d6-c3fb-4daa-a698-fbf88884c64f
+    [[[terminal7]]]
+      order = 1
+      parent = child5
+      profile = default
+      type = Terminal
+      uuid = 6495d3f0-a694-48f0-b2fd-f896b2ba0b7a
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#282828"
+    copy_on_selection = True
+    cursor_color = "#aaaaaa"
+    foreground_color = "#ebdbb2"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_theme_colors = True

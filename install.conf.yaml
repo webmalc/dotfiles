@@ -6,17 +6,12 @@
 
 - clean: ['~', '~/.config']
 - link:
-    ~/.i3/config: i3/config.compiled
-    ~/.i3/i3status.conf: i3/i3status.conf.compiled
-    ~/.Xresources: x/Xresources
-    ~/.urlview: urlview/urlview
-    ~/.config/ranger/rc.conf: ranger/rc.conf
     ~/.config/fish/functions: fish/functions
     ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/terminator/config: terminator/config
+    ~/.local/share/gnome-shell/extensions: gnome-extensions
     ~/.gitconfig: git/gitconfig
     ~/.bash_profile: bash/bash_profile
-    ~/.profile: profile/profile
-    # ~/.vimrc: vim/vimrc
     ~/.vimrc.before: vim/vimrc.before
     ~/.vimrc.bundles: vim/vimrc.bundles
     ~/.vimrc.local: vim/vimrc.local
@@ -25,13 +20,8 @@
     ~/.emacs.d/private/snippets/php-mode: spacemacs/emacs/private/snippets/php-mode
     ~/.emacs.d/private/snippets/python-mode: spacemacs/emacs/private/snippets/python-mode
     ~/.emacs.d/private/snippets/typescript-mode: spacemacs/emacs/private/snippets/typescript-mode
-    ~/.mutt/macros: mutt/macros
-    ~/.mutt/mailcap: mutt/mailcap
-    ~/.mutt/muttrc: mutt/muttrc.compiled
 - shell:
   - ["git submodule update --init --recursive", "Installing submodules"]
   - [mkdir -p ~/Downloads, Creating downloads directory]
   - [mkdir -p ~/Projects, Creating projects directory]
-  - [mkdir -p ~/.cache/mutt, Creating mutt cache directory]
   - [omf install simple-ass-prompt]
-  - [rm ~/.config/ranger/scope.sh; ranger --copy-config=scope]
