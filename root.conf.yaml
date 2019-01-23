@@ -7,7 +7,7 @@
 - clean: []
 - shell:
     - 
-      command: "apt install -y curl chrome-gnome-shell exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx tig libsasl2-dev python-pygments highlight atool libcaca-dev python-pip python3-pip chromium-browser htop fish firefox vim-gnome redis postgresql emacs vim memcached nodejs npm virtualbox vagrant socat arc-theme gnome-shell-extensions gnome-tweak-tool network-manager-openvpn network-manager-vpnc docker.io docker ansible"
+      command: "apt install -y curl chrome-gnome-shell exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx tig libsasl2-dev python-pygments highlight atool libcaca-dev python-pip python3-pip chromium-browser htop fish firefox vim-gnome redis postgresql emacs vim memcached nodejs npm virtualbox vagrant socat arc-theme gnome-shell-extensions gnome-tweak-tool network-manager-openvpn network-manager-vpnc docker.io docker ansible terminator"
       stdin: true
       stdout: true
       stderr: true
@@ -29,4 +29,5 @@
       stdout: true
       stderr: true
     - [adduser webmalc docker]
+    - ['chown -R webmalc:webmalc /home/webmalc/.config/*']
 
