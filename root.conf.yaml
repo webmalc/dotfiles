@@ -16,10 +16,15 @@
       stdin: true
       stdout: true
       stderr: true
+
     - [chsh -s /usr/bin/fish webmalc]
     - [chsh -s /usr/bin/fish]
+
+
+    - [update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1]
+    - [update-alternatives --config python]
     - 
-      command: "pip install virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb"
+      command: "pip install virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb mypy"
       stdin: true
       stdout: true
       stderr: true
