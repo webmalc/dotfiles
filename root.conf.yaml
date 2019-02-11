@@ -7,7 +7,7 @@
 - clean: []
 - shell:
     - 
-      command: "apt install -y nautilus-dropbox curl chrome-gnome-shell exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx tig libsasl2-dev python-pygments highlight atool libcaca-dev python-pip python3-pip chromium-browser htop fish firefox vim-gnome redis postgresql emacs vim memcached nodejs npm virtualbox vagrant socat arc-theme gnome-shell-extensions gnome-tweak-tool network-manager-openvpn network-manager-vpnc docker.io docker ansible terminator"
+      command: "apt install -y curl chrome-gnome-shell exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx tig libsasl2-dev python-pygments highlight atool libcaca-dev python-pip python3-pip chromium-browser htop fish firefox vim-gnome redis postgresql emacs vim memcached nodejs npm virtualbox vagrant socat arc-theme gnome-shell-extensions gnome-tweak-tool network-manager-openvpn network-manager-vpnc docker.io docker ansible"
       stdin: true
       stdout: true
       stderr: true
@@ -22,11 +22,17 @@
 
 
     - [update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1]
-    # - [update-alternatives --set python /usr/bin/python3.6]
     - [update-alternatives --config python]
+
+    - 
+      command: "apt install -y nautilus-dropbox terminator"
+      stdin: true
+      stdout: true
+      stderr: true
 
     - [sed -i "s/bin\/python/bin\/python2/" -i /usr/bin/dropbox]
     - [sed -i "s/bin\/python/bin\/python2/" -i /usr/bin/terminator]
+
     - 
       command: "pip install virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb mypy"
       stdin: true
