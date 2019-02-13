@@ -24,4 +24,5 @@
   - ["git submodule update --init --recursive", "Installing submodules"]
   - [mkdir -p ~/Downloads, Creating downloads directory]
   - [mkdir -p ~/Projects, Creating projects directory]
+  - [mkdir -p ~/Encrypt, Creating encrypt directory]
   - [omf install simple-ass-prompt]
