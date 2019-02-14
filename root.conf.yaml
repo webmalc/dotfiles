@@ -30,8 +30,8 @@
       stdout: true
       stderr: true
 
-    - [sed -i "s/bin\/python/bin\/python2/" -i /usr/bin/dropbox]
-    - [sed -i "s/bin\/python/bin\/python2/" -i /usr/bin/terminator]
+    - [sed -i "s/bin\/python\s+$/bin\/python2/" -i /usr/bin/dropbox]
+    - [sed -i "s/bin\/python\s+$/bin\/python2/" -i /usr/bin/terminator]
 
     - 
       command: "pip install python-bidi chardet virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb mypy"
