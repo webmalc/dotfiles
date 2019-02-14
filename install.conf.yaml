@@ -16,6 +16,7 @@
     ~/.vimrc.bundles: vim/vimrc.bundles
     ~/.vimrc.local: vim/vimrc.local
     ~/.spacemacs: spacemacs/spacemacs
+    ~/.config/ranger/rc.conf: ranger/rc.conf
     ~/.emacs.d/private/snippets/js-mode: spacemacs/emacs/private/snippets/js-mode
     ~/.emacs.d/private/snippets/php-mode: spacemacs/emacs/private/snippets/php-mode
     ~/.emacs.d/private/snippets/python-mode: spacemacs/emacs/private/snippets/python-mode
