@@ -356,7 +356,6 @@ you should place your code here."
 
   ;; Ranger ---------------------------------------------------------------------
   (setq ranger-override-dired-mode t)
-  ;; (setq flycheck-eslintrc "~/Projects/vishleva.com/.eslintrc.js")
 
   ;; Pomidor ---------------------------------------------------------------------
   (setq alert-default-style 'libnotify)
@@ -375,8 +374,11 @@ you should place your code here."
   (add-hook 'prog-mode (lambda () (interactive) (column-marker-1 80)))
   (add-hook 'typescript (lambda () (interactive) (column-enforce-mode)))
 
+  ;; Javascript -------------------------------------------------------------------- 
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
   ;; Python -------------------------------------------------------------------- 
-  ;; (add-to-list 'auto-mode-alist '("\\.py\\'" . yapf-mode))
+  (add-to-list 'auto-mode-alist '("\\.py\\'" . yapf-mode))
   (add-hook 'python-mode-hook 'yapf-mode)
   ;; (setq python-shell-interpreter "/docker:root@billing-container:/usr/bin/python3.6")
 

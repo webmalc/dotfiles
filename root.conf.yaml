@@ -7,7 +7,7 @@
 - clean: []
 - shell:
     - 
-      command: "apt install -y ranger steam-devices cryfs odt2txt efixtool caca-utils atool w3m poppler-utils mediainfo nautilus-dropbox curl chrome-gnome-shell exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx tig libsasl2-dev python-pygments highlight atool libcaca-dev python-pip python3-pip chromium-browser htop fish firefox vim-gnome redis postgresql emacs vim memcached nodejs npm virtualbox vagrant socat arc-theme gnome-shell-extensions gnome-tweak-tool network-manager-openvpn network-manager-vpnc docker.io docker ansible terminator"
+      command: "apt install -y ranger steam-devices cryfs odt2txt caca-utils atool w3m poppler-utils mediainfo nautilus-dropbox curl chrome-gnome-shell exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx tig libsasl2-dev python-pygments highlight atool libcaca-dev python-pip python3-pip chromium-browser htop fish firefox vim-gnome redis postgresql emacs vim memcached nodejs npm virtualbox vagrant socat arc-theme gnome-shell-extensions gnome-tweak-tool network-manager-openvpn network-manager-vpnc docker.io docker ansible terminator"
       stdin: true
       stdout: true
       stderr: true
@@ -34,12 +34,12 @@
     - [sed -i "s/bin\/python\s+$/bin\/python2/" -i /usr/bin/terminator]
 
     - 
-      command: "pip install python-bidi chardet virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb mypy"
+      command: "pip install python-bidi chardet virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb mypy ranger-fm"
       stdin: true
       stdout: true
       stderr: true
     - 
-      command: "npm install -g less tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google"
+      command: "npm install -g mocha less tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google"
       stdin: true
       stdout: true
       stderr: true
