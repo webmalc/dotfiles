@@ -390,7 +390,7 @@ you should place your code here."
   ;; (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
   ;; Python -------------------------------------------------------------------- 
-  (add-to-list 'auto-mode-alist '("\\.py\\'" . yapf-mode))
+  ;; (add-to-list 'auto-mode-alist '("\\.py\\'" . yapf-mode))
   (add-hook 'python-mode-hook 'yapf-mode)
   ;; (setq python-shell-interpreter "/docker:root@billing-container:/usr/bin/python3.6")
 

@@ -39,7 +39,7 @@
       stdout: true
       stderr: true
     - 
-      command: "npm install -g mocha less tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google"
+      command: "npm install -g ionic@latest-3 cross-env mocha less tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google"
       stdin: true
       stdout: true
       stderr: true
