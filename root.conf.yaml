@@ -7,7 +7,7 @@
 - clean: []
 - shell:
     - 
-      command: "apt install -y ranger steam-devices cryfs odt2txt caca-utils atool w3m poppler-utils mediainfo nautilus-dropbox curl chrome-gnome-shell exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx tig libsasl2-dev python-pygments highlight atool libcaca-dev python-pip python3-pip chromium-browser htop fish firefox vim-gnome redis postgresql emacs vim memcached nodejs npm virtualbox vagrant socat arc-theme gnome-shell-extensions gnome-tweak-tool network-manager-openvpn network-manager-vpnc docker.io docker ansible terminator"
+      command: "apt install -y ranger steam-devices cryfs odt2txt caca-utils atool w3m poppler-utils mediainfo nautilus-dropbox curl chrome-gnome-shell exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx tig libsasl2-dev python-pygments highlight atool libcaca-dev python-pip python3-pip python3.7 chromium-browser htop fish firefox vim-gnome redis postgresql emacs vim memcached nodejs npm virtualbox vagrant socat arc-theme gnome-shell-extensions gnome-tweak-tool network-manager-openvpn network-manager-vpnc docker.io docker ansible terminator"
       stdin: true
       stdout: true
       stderr: true
