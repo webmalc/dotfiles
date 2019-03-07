@@ -1,5 +1,4 @@
 [global_config]
-  focus = mouse
   suppress_multiple_term_dialog = True
   window_state = maximise
 [keybindings]

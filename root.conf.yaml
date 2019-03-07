@@ -7,7 +7,7 @@
 - clean: []
 - shell:
     - 
-      command: "apt install -y ranger steam-devices cryfs odt2txt caca-utils atool w3m poppler-utils mediainfo nautilus-dropbox curl chrome-gnome-shell exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx tig libsasl2-dev python-pygments highlight atool libcaca-dev python-pip python3-pip python3.7 chromium-browser htop fish firefox vim-gnome redis postgresql emacs vim memcached nodejs npm virtualbox vagrant socat arc-theme gnome-shell-extensions gnome-tweak-tool network-manager-openvpn network-manager-vpnc docker.io docker ansible terminator"
+      command: "apt install -y zipalign openjdk-8-jdk ranger steam-devices cryfs odt2txt caca-utils atool w3m poppler-utils mediainfo nautilus-dropbox curl chrome-gnome-shell exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx tig libsasl2-dev python-pygments highlight atool libcaca-dev python-pip python3-pip python3.7 chromium-browser htop fish firefox vim-gnome redis postgresql emacs vim memcached nodejs npm virtualbox vagrant socat arc-theme gnome-shell-extensions gnome-tweak-tool network-manager-openvpn network-manager-vpnc docker.io docker ansible terminator"
       stdin: true
       stdout: true
       stderr: true
@@ -17,6 +17,14 @@
       stdout: true
       stderr: true
 
+    - 
+      command: "sudo snap install android-studio --classic"
+      stdin: true
+      stdout: true
+      stderr: true
+
+    - [wget https://services.gradle.org/distributions/gradle-5.0-bin.zip -P /tmp]
+    - [unzip -d /opt/gradle /tmp/gradle-*.zip]
     - [chsh -s /usr/bin/fish webmalc]
     - [chsh -s /usr/bin/fish]
 
@@ -39,7 +47,7 @@
       stdout: true
       stderr: true
     - 
-      command: "npm install -g ionic@latest-3 cross-env mocha less tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google"
+      command: "npm install -g ionic cross-env mocha less tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google"
       stdin: true
       stdout: true
       stderr: true
