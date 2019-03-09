@@ -27,7 +27,7 @@
     - [unzip -d /opt/gradle /tmp/gradle-*.zip]
     - [chsh -s /usr/bin/fish webmalc]
     - [chsh -s /usr/bin/fish]
-
+    - [echo 'fs.inotify.max_user_watches=524288' >> /etc/sysctl.conf]
 
     - [update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1]
     - [update-alternatives --config python]
