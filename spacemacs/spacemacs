@@ -39,6 +39,7 @@ values."
      nginx
      (python :variables
         python-enable-yapf-format-on-save t
+        python-test-runner 'pytest
         python-sort-imports-on-save t)
      javascript
      html
@@ -419,6 +420,13 @@ you should place your code here."
   ;; Python -------------------------------------------------------------------- 
   ;; (add-to-list 'auto-mode-alist '("\\.py\\'" . yapf-mode))
   (add-hook 'python-mode-hook 'yapf-mode)
+  (add-hook 'python-mode-hook (lambda ()
+                                ;; (flycheck-mode 1)
+                                ;; (semantic-mode 1)
+                                (setq flycheck-checker 'python-pylint
+                                      ;; flycheck-checker-error-threshold 900
+                                      ;; flycheck-pylintrc "~/.pylintrc")))
+                                 )))
   ;; (setq python-shell-interpreter "/docker:root@billing-container:/usr/bin/python3.6")
 
   ;; Typescript ----------------------------------------------------------------
