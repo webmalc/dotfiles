@@ -42,7 +42,7 @@
     - [sed -i "s/bin\/python\s+$/bin\/python2/" -i /usr/bin/terminator]
 
     - 
-      command: "pip install python-bidi chardet virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb mypy ranger-fm"
+      command: "pip install pudb python-bidi chardet virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb mypy ranger-fm"
       stdin: true
       stdout: true
       stderr: true

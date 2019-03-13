@@ -7,6 +7,7 @@
   go_right = <Alt>l
   go_up = <Alt>k
   layout_launcher = None
+  toggle_zoom = <Primary><Shift>m
 [layouts]
   [[default]]
     [[[child0]]]
