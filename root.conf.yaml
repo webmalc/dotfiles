@@ -6,6 +6,7 @@
 
 - clean: []
 - shell:
+    - apt-add-repository "ppa:fish-shell/release-3" -y
     - 
       command: "apt install -y zipalign openjdk-8-jdk ranger steam-devices cryfs odt2txt caca-utils atool w3m poppler-utils mediainfo nautilus-dropbox curl chrome-gnome-shell exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx tig libsasl2-dev python-pygments highlight atool libcaca-dev python-pip python3-pip python3.7 chromium-browser htop fish firefox vim-gnome redis postgresql emacs vim memcached nodejs npm virtualbox vagrant socat arc-theme gnome-shell-extensions gnome-tweak-tool network-manager-openvpn network-manager-vpnc docker.io docker ansible terminator"
       stdin: true
@@ -23,11 +24,11 @@
       stdout: true
       stderr: true
 
-    - [wget https://services.gradle.org/distributions/gradle-5.0-bin.zip -P /tmp]
+    - wget "https://services.gradle.org/distributions/gradle-5.0-bin.zip" -P /tmp
     - [unzip -d /opt/gradle /tmp/gradle-*.zip]
     - [chsh -s /usr/bin/fish webmalc]
     - [chsh -s /usr/bin/fish]
-    - [echo 'fs.inotify.max_user_watches=524288' >> /etc/sysctl.conf]
+    - [grep -qxF 'fs.inotify.max_user_watches=524288' /etc/sysctl.conf || echo 'fs.inotify.max_user_watches=524288' >> /etc/sysctl.conf]
 
     - [update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1]
     - [update-alternatives --config python]
