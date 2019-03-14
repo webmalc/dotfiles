@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: cls - class
+# key: cls
+# --
+class ${1:classname}(${2:parent}):
+    """
+    ${3:docs}
+    """
+
+    def __init__(self, ${4:args}: ${5:str}) -> None:
+    """
+    Class constructor
+
+    :param $4: ${6:param_desc} 
+    """
+    self.$4 = $4
