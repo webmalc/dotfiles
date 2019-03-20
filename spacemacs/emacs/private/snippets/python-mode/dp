@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: dp - def with params
+# key: dp
+# --
+def ${1:func}(self, ${2:arg}: ${3:str}) -> ${4:None}:
+    """
+    ${5:docs}
+    :param $2: ${6:param_desc}
+    """
