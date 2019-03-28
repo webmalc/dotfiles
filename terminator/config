@@ -12,13 +12,13 @@
   [[default]]
     [[[child0]]]
       fullscreen = False
-      last_active_term = 92bc3ff5-23c7-4830-a3e5-a1c09c059b19
+      last_active_term = 191dfc4d-3f28-429a-a21e-53731c10809e
       last_active_window = True
       maximised = True
       order = 0
       parent = ""
-      position = 0:27
-      size = 1920, 1053
+      position = 0:30
+      size = 1920, 1050
       title = fish  /home/webmalc
       type = Window
     [[[child1]]]
@@ -30,14 +30,14 @@
     [[[child2]]]
       order = 0
       parent = child1
-      position = 526
-      ratio = 0.501908396947
+      position = 525
+      ratio = 0.502392344498
       type = VPaned
     [[[child5]]]
       order = 1
       parent = child1
-      position = 526
-      ratio = 0.501908396947
+      position = 525
+      ratio = 0.502392344498
       type = VPaned
     [[[terminal3]]]
       order = 0
