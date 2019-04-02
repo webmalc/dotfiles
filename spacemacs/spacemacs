@@ -390,6 +390,7 @@ you should place your code here."
   (setq neo-vc-integration '(face))
   (setq neo-theme 'icons)
   (editorconfig-mode 1)
+  (setq neo-hidden-regexp-list '("^\\." "__pycache__.*" "\\.pyc$" "~$" "^#.*#$" "\\.elc$"))
   
   ;; Browser config ------------------------------------------------------------
   (setq browse-url-browser-function 'browse-url-generic
