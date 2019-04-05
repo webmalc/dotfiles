@@ -18,6 +18,8 @@
       stdout: true
       stderr: true
 
+    - [apt remove gnome-shell-extension-ubuntu-dock]
+
     - 
       command: "sudo snap install android-studio --classic"
       stdin: true
