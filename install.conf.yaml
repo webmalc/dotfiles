@@ -9,7 +9,6 @@
     ~/.config/fish/functions: fish/functions
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/terminator/config: terminator/config
-    # ~/.local/share/gnome-shell/extensions: gnome-extensions
     ~/.gitconfig: git/gitconfig
     ~/.bash_profile: bash/bash_profile
     ~/.vimrc.before: vim/vimrc.before
