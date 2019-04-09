@@ -11,7 +11,7 @@
 
     # Install apps
     - 
-      command: "apt install -y spotify-client dropbox steam terminator emacs telegram-desktop chromium-browser vim"
+      command: "apt install -y spotify-client dropbox steam terminator emacs chromium-browser vim"
       stdin: true
       stdout: true
       stderr: true
@@ -23,6 +23,12 @@
       stdout: true
       stderr: true
 
+    # Install snap packages
+    - 
+      command: "snap install telegram-desktop"
+      stdin: true
+      stdout: true
+      stderr: true
 
     # Install python packages
     - 
