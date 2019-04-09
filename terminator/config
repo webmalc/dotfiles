@@ -3,12 +3,19 @@
   suppress_multiple_term_dialog = True
   window_state = maximise
 [keybindings]
+  close_term = <Alt>w
+  close_window = <Alt>q
   go_down = <Alt>j
   go_left = <Alt>h
   go_right = <Alt>l
   go_up = <Alt>k
   layout_launcher = None
-  toggle_zoom = <Primary><Shift>m
+  new_tab = <Alt>t
+  switch_to_tab_1 = <Alt>1
+  switch_to_tab_2 = <Alt>2
+  switch_to_tab_3 = <Alt>3
+  switch_to_tab_4 = <Alt>4
+  toggle_zoom = <Alt>m
 [layouts]
   [[default]]
     [[[child0]]]

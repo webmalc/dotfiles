@@ -12,6 +12,7 @@
     ~/.gitconfig: git/gitconfig
     ~/.bash_profile: bash/bash_profile
     ~/.vimrc.before: vim/vimrc.before
+    ~/Pictures/wallpaper.png: wallpaper/wallpaper.png
     ~/.vimrc.bundles: vim/vimrc.bundles
     ~/.vimrc.local: vim/vimrc.local
     ~/.spacemacs: spacemacs/spacemacs
@@ -26,3 +27,5 @@
   - [mkdir -p ~/Projects, Creating projects directory]
   - [mkdir -p ~/Encrypt, Creating encrypt directory]
   - [omf install simple-ass-prompt]
+  - [dconf dump /org/cinnamon/ > dconf/config.ini]
+
