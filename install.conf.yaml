@@ -12,7 +12,7 @@
     ~/.gitconfig: git/gitconfig
     ~/.bash_profile: bash/bash_profile
     ~/.vimrc.before: vim/vimrc.before
-    ~/Pictures/wallpaper.png: wallpaper/wallpaper.png
+    ~/Pictures/wallpaper: wallpaper
     ~/Documents/surfshark: surfshark
     ~/.vimrc.bundles: vim/vimrc.bundles
     ~/.vimrc.local: vim/vimrc.local
