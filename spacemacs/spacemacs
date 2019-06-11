@@ -394,7 +394,7 @@ you should place your code here."
   (set-frame-parameter nil 'undecorated t)
 
   ;; Neotree ------------------------------------------------------------
-  (setq neo-hidden-regexp-list '("^\\." "__pycache__.*" "\\.pyc$" "~$" "^#.*#$" "\\.elc$"))
+  (setq neo-hidden-regexp-list '("^\\." "__pycache__.*" "\\.egg-info" "\\.pyc$" "~$" "^#.*#$" "\\.elc$"))
   
   ;; Browser config ------------------------------------------------------------
   (setq browse-url-browser-function 'browse-url-generic
