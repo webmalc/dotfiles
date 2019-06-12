@@ -28,6 +28,7 @@
   - [mkdir -p ~/Downloads, Creating downloads directory]
   - [mkdir -p ~/Projects, Creating projects directory]
   - [mkdir -p ~/Encrypt, Creating encrypt directory]
+  - [mkdir -p ~/Ydisk, Creating YandexDisk directory]
   - [omf install simple-ass-prompt]
   - [dconf load /org/cinnamon/ < dconf/config.ini]
 
