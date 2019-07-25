@@ -5,49 +5,51 @@
       force: true
 
 - clean: []
+- link:
+    /etc/pam.d/common-auth: pam.d/common-auth
 - shell:
-    # Add repositories
-    - apt-add-repository "ppa:fish-shell/release-3" -y
+    # # Add repositories
+    # - apt-add-repository "ppa:fish-shell/release-3" -y
 
-    # Install apps
-    - 
-      command: "apt install -y spotify-client dropbox steam terminator emacs chromium-browser vim"
-      stdin: true
-      stdout: true
-      stderr: true
+    # # Install apps
+    # - 
+    #   command: "apt install -y spotify-client dropbox steam terminator emacs chromium-browser vim"
+    #   stdin: true
+    #   stdout: true
+    #   stderr: true
     
-    # Install packages
-    - 
-      command: "apt install -y python-setuptools python3-setuptools zipalign openjdk-8-jdk ranger steam-devices cryfs odt2txt caca-utils atool w3m poppler-utils mediainfo curl exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx python-pygments highlight atool libcaca-dev python-pip python3-pip python3.7 htop fish firefox vim-gnome redis postgresql vim memcached nodejs npm virtualbox vagrant socat docker.io docker ansible"
-      stdin: true
-      stdout: true
-      stderr: true
+    # # Install packages
+    # - 
+    #   command: "apt install -y python-setuptools python3-setuptools zipalign openjdk-8-jdk ranger steam-devices cryfs odt2txt caca-utils atool w3m poppler-utils mediainfo curl exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx python-pygments highlight atool libcaca-dev python-pip python3-pip python3.7 htop fish firefox vim-gnome redis postgresql vim memcached nodejs npm virtualbox vagrant socat docker.io docker ansible"
+    #   stdin: true
+    #   stdout: true
+    #   stderr: true
 
-    # Install snap packages
-    - 
-      command: "snap install telegram-desktop"
-      stdin: true
-      stdout: true
-      stderr: true
+    # # Install snap packages
+    # - 
+    #   command: "snap install telegram-desktop"
+    #   stdin: true
+    #   stdout: true
+    #   stderr: true
 
-    # Install python packages
-    - 
-      command: "pip install setuptools pudb python-bidi chardet virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb ranger-fm"
-      stdin: true
-      stdout: true
-      stderr: true
+    # # Install python packages
+    # - 
+    #   command: "pip install setuptools pudb python-bidi chardet virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb ranger-fm"
+    #   stdin: true
+    #   stdout: true
+    #   stderr: true
 
-    # Install JS packages
-    - 
-      command: "npm install -g ionic jshint @angular/cli cross-env mocha less tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google"
-      stdin: true
-      stdout: true
-      stderr: true
+    # # Install JS packages
+    # - 
+    #   command: "npm install -g ionic jshint @angular/cli cross-env mocha less tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google"
+    #   stdin: true
+    #   stdout: true
+    #   stderr: true
 
-    # Set config
-    - [chsh -s /usr/bin/fish webmalc]
-    - [chsh -s /usr/bin/fish]
-    - [grep -qxF 'fs.inotify.max_user_watches=524288' /etc/sysctl.conf || echo 'fs.inotify.max_user_watches=524288' >> /etc/sysctl.conf]
-    - [adduser webmalc docker]
-    - ['chown -R webmalc:webmalc /home/webmalc/*']
+    # # Set config
+    # - [chsh -s /usr/bin/fish webmalc]
+    # - [chsh -s /usr/bin/fish]
+    # - [grep -qxF 'fs.inotify.max_user_watches=524288' /etc/sysctl.conf || echo 'fs.inotify.max_user_watches=524288' >> /etc/sysctl.conf]
+    # - [adduser webmalc docker]
+    # - ['chown -R webmalc:webmalc /home/webmalc/*']
 
