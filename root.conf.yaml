@@ -32,7 +32,7 @@
 
     # Install python packages
     - 
-      command: "pip install setuptools pudb python-bidi chardet virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb ranger-fm"
+      command: "pip install setuptools pudb python-bidi chardet virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb ranger-fm wakatime"
       stdin: true
       stdout: true
       stderr: true
