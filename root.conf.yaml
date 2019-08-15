@@ -5,6 +5,8 @@
       force: true
 
 - clean: []
+- link:
+    /etc/pam.d/common-auth: pam.d/common-auth
 - shell:
     # Add repositories
     - apt-add-repository "ppa:fish-shell/release-3" -y
