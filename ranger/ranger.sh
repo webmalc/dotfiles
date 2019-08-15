@@ -1,2 +1,2 @@
 #!/bin/sh
-wmctrl -a terminal || gnome-terminal --hide-menubar --maximize --execute sh -c 'ranger'
+wmctrl -a terminal || xfce4-terminal --hide-menubar --maximize --hide-borders --hide-scrollbar -e ranger
