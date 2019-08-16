@@ -18,6 +18,8 @@
     ~/.vimrc.local: vim/vimrc.local
     ~/.spacemacs: spacemacs/spacemacs
     ~/.config/ranger/rc.conf: ranger/rc.conf
+    ~/.config/ranger/scope.sh: ranger/scope.sh
+    ~/.config/ranger/rifle.conf: ranger/rifle.conf
     ~/.config/nemo: nemo
     ~/.config/xfce4/terminal/terminalrc: xfce-terminal/terminalrc
     ~/.emacs.d/private/snippets/js-mode: spacemacs/emacs/private/snippets/js-mode
