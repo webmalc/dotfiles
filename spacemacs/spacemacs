@@ -360,8 +360,8 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
   ;; wakatime-mode
-  (global-wakatime-mode)
-  (setq wakatime-cli-path "/usr/local/bin/wakatime")
+  ;; (global-wakatime-mode)
+  ;; (setq wakatime-cli-path "/usr/local/bin/wakatime")
 
   ;; (require 'helm-bookmark)
 
