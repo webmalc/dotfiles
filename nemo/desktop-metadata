@@ -1,16 +1,16 @@
 [desktop-monitor-0]
 nemo-icon-view-keep-aligned=true
 nemo-icon-view-auto-layout=true
-nemo-icon-view-layout-timestamp=1566374921
+nemo-icon-view-layout-timestamp=1566808330
 
 [home]
-nemo-icon-position-timestamp=1566383424
+nemo-icon-position-timestamp=1566817186
 nemo-icon-position=91,135
 monitor=0
 icon-scale=1
 
 [computer]
-nemo-icon-position-timestamp=1566383424
+nemo-icon-position-timestamp=1566817186
 nemo-icon-position=91,35
 monitor=0
 icon-scale=1
@@ -19,7 +19,7 @@ icon-scale=1
 nemo-icon-position=91,235
 monitor=0
 icon-scale=1
-nemo-icon-position-timestamp=1566383424
+nemo-icon-position-timestamp=1566817186
 
 [Encrypted.volume]
 nemo-icon-position=91,232
