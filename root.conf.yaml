@@ -13,7 +13,7 @@
 
     # Install apps
     - 
-      command: "apt install -y spotify-client dropbox steam terminator emacs chromium-browser vim"
+      command: "apt install -y spotify-client dropbox steam terminator emacs chromium-browser vim rofi"
       stdin: true
       stdout: true
       stderr: true
