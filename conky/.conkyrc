@@ -17,8 +17,8 @@ conky.config = {
     double_buffer = true,
     use_xft = true,
     font = 'Ubuntu Mono:size=13',
-    gap_x = 40,
-    gap_y = 40,
+    gap_x = 35,
+    gap_y = 35,
     minimum_height = 5,
     minimum_width = 5,
     net_avg_samples = 2,
@@ -37,17 +37,18 @@ conky.config = {
     use_spacer = 'none',
     show_graph_scale = false,
     show_graph_range = false,
-    border_outer_margin = 20,
+    border_outer_margin = 15,
 }
 
 conky.text = [[
 $sysname $kernel on $machine
-$hr
+${color2}Host:$color $nodename
 ${color2}Uptime:$color $uptime
-${color2}Frequency (in GHz):$color $freq_g
+$hr
 ${color2}RAM USAGE $color ${alignr} $mem/$memmax - $memperc% 
 $color ${memgraph}
 ${color2}Swap Usage:$color $swap/$swapmax - $swapperc% ${swapbar 4}
+$hr
 #${color2}CPU Usage:$color ${cpu cpu0}% ${cpubar 4}
 ${color2}CPU GENERAL ${alignr} ${cpu cpu0}% 
 $color ${cpugraph cpu0}
@@ -67,6 +68,7 @@ ${color2}CPU 7 ${alignr} ${cpu cpu7}%
 $color ${cpugraph cpu7}
 ${color2}CPU 8 ${alignr} ${cpu cpu8}% 
 $color ${cpugraph cpu8}
+${color2}Frequency:$color $freq_g GHz
 ${color2}Processes:$color $processes  ${color2}Running:$color $running_processes
 $hr
 ${color2}File systems:
@@ -80,6 +82,6 @@ ${color2}Name              PID   CPU%   MEM%
 ${color3} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
 ${color3} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
 ${color3} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
-#${color3} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
+${color3} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
 #${color3} ${top name 5} ${top pid 5} ${top cpu 5} ${top mem 5}
 ]]
