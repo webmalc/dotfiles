@@ -10,10 +10,11 @@
 - shell:
     # Add repositories
     - apt-add-repository "ppa:fish-shell/release-3" -y
+    - apt-add-repository "ppa:papirus/papirus" -y
 
     # Install apps
     - 
-      command: "apt install -y spotify-client dropbox steam terminator emacs chromium-browser vim rofi"
+      command: "apt install -y spotify-client dropbox steam terminator emacs chromium-browser vim rofi papirus-icon-theme"
       stdin: true
       stdout: true
       stderr: true
