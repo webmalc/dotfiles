@@ -6,4 +6,5 @@ Dotfiles for Mint
 * **./install** - regular install
 * **dconf dump /org/cinnamon/ > dconf/config.ini** - save cinnamon configs
 * **nmcli con up id vpn** - connect the VPN connection
+* **conky && conky -c .conkyrc_calendar** - conky
 

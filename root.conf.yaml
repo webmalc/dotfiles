@@ -14,7 +14,7 @@
 
     # Install apps
     - 
-      command: "apt install -y spotify-client dropbox steam terminator emacs chromium-browser vim rofi papirus-icon-theme conky-all"
+      command: "apt install -y spotify-client dropbox steam terminator emacs chromium-browser vim rofi papirus-icon-theme conky-all lua5.3"
       stdin: true
       stdout: true
       stderr: true
