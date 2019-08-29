@@ -18,6 +18,7 @@
     ~/.vimrc.local: vim/vimrc.local
     ~/.conkyrc: conky/.conkyrc
     ~/.conkyrc_calendar: conky/.conkyrc_calendar
+    ~/.conkyrc_work: conky/.conkyrc_work
     ~/.spacemacs: spacemacs/spacemacs
     ~/.config/ranger/rc.conf: ranger/rc.conf
     ~/.config/ranger/scope.sh: ranger/scope.sh

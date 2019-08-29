@@ -44,5 +44,5 @@ conky.config = {
 conky.text = [[
  ${execpi 3600 ~/Projects/dotfiles/conky/calendar.lua}
  ${hr}
- Moscow: ${font Monospace Regular:size=12} ${execpi 3600 curl 'wttr.in/moscow?format=1'}
+ Moscow: ${font Monospace Regular:size=12} ${execpi 3600 curl 'wttr.in/moscow?format=1' | cut -c 4-}
 ]]
