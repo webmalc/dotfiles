@@ -1,7 +1,7 @@
 * {
   /* General */
-  text-font:                            "Ubuntu Regular 12";
-  text-font-mono:                       "Ubuntu Mono 12";
+  text-font:                            "Ubuntu Regular 11";
+  text-font-mono:                       "Ubuntu Mono 11";
   icon-font:                            "Hurmit Nerd Font Mono 60";
   icon-font-small:                      "Hurmit Nerd Font Mono 24";
   inputbar-margin:                      4px 4px;
