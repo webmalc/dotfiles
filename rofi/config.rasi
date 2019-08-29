@@ -5,8 +5,9 @@ configuration {
   disable-history:    false;
   modi:               "drun";
   display-drun:       "apps";
-  columns: 1;
+  columns: 2;
 	modi: "window,run,drun,ssh,combi";
+/*	fixed-num-lines: true;*/
 /*	width: 50;*/
 /*	lines: 15;*/
 /*	columns: 1;*/
@@ -84,19 +85,19 @@ combi-modi: "window,drun";
 /*	kb-remove-word-back: "Control+Alt+h,Control+BackSpace";*/
 /*	kb-remove-word-forward: "Control+Alt+d";*/
 /*	kb-remove-char-forward: "Delete,Control+d";*/
-/*	kb-remove-char-back: "BackSpace,Control+h";*/
+	kb-remove-char-back: "BackSpace";
 	kb-remove-to-eol: "Control+p";
 /*	kb-remove-to-sol: "Control+u";*/
 	kb-accept-entry: "Control+n,Control+m,Return,KP_Enter";
 /*	kb-accept-custom: "Control+Return";*/
 /*	kb-accept-alt: "Shift+Return";*/
-	kb-delete-entry: "Shift+Delete,Super+d";
+	kb-delete-entry: "Shift+Delete,Alt+d";
 /*	kb-mode-next: "Shift+Right,Control+Tab";*/
 /*	kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";*/
-/*	kb-row-left: "Control+Page_Up";*/
-/*	kb-row-right: "Control+Page_Down";*/
-	kb-row-up: "Up,Control+k,ISO_Left_Tab";
-	kb-row-down: "Down,Control+j";
+  kb-row-left: "Alt+h";
+  kb-row-right: "Alt+l";
+	kb-row-up: "Up,Alt+k,ISO_Left_Tab";
+	kb-row-down: "Down,Alt+j";
 /*	kb-row-tab: "Tab";*/
 /*	kb-page-prev: "Page_Up";*/
 /*	kb-page-next: "Page_Down";*/
