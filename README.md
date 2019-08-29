@@ -7,4 +7,7 @@ Dotfiles for Mint
 * **dconf dump /org/cinnamon/ > dconf/config.ini** - save cinnamon configs
 * **nmcli con up id vpn** - connect the VPN connection
 * **conky && conky -c .conkyrc_calendar** - conky
+* **rofi -no-lazy-grab -show combi -theme themes/appsmenu.rasi** - rofi
+
+
 

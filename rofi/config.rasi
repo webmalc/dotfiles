@@ -1,4 +1,11 @@
 configuration {
+  show-icons:         true;
+  cycle:              true;
+  hide-scrollbar:     true;
+  disable-history:    false;
+  modi:               "drun";
+  display-drun:       "apps";
+  columns: 1;
 	modi: "window,run,drun,ssh,combi";
 /*	width: 50;*/
 /*	lines: 15;*/
