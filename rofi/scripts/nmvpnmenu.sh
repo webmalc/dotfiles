@@ -35,7 +35,7 @@ else
     options=${options::-2}
 fi
 
-chosen=$(echo -e "$options" | rofi -theme themes/nmvpnmenu.rasi -theme-str "$status_style" -p "$status" -dmenu -i $special)
+chosen=$(echo -e "$options" | rofi -theme themes/appsmenu.rasi -theme-str "$status_style" -p "$status" -dmenu -i $special)
 if [ -n "$chosen" ]; then
     if [ "$chosen" == "$active" ]; then
         # Disconnect the active vpn
