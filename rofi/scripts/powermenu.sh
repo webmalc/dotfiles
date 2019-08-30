@@ -1,17 +1,17 @@
 #!/bin/bash
 
-rofi_command="rofi -theme themes/powermenu.rasi"
+rofi_command="rofi -theme themes/appsmenu.rasi"
 
 ### Options ###
-power_off=""
-reboot=""
-lock=""
-suspend="鈴"
-log_out=""
+power_off="poweroff"
+reboot="reboot"
+lock="lock"
+suspend="suspend"
+log_out="logout"
 # Variable passed to rofi
 options="$power_off\n$reboot\n$lock\n$suspend\n$log_out"
 
-chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 2)"
+chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0)"
 case $chosen in
     $power_off)
         systemctl poweroff
@@ -20,15 +20,13 @@ case $chosen in
         systemctl reboot
         ;;
     $lock)
-        light-locker-command -l
+        cinnamon-screensaver-command -l
         ;;
     $suspend)
-        mpc -q pause
-        amixer set Master mute
         systemctl suspend
         ;;
     $log_out)
-        i3-msg exit
+        gnome-session-quit --logout --no-prompt
         ;;
 esac
 
