@@ -10,4 +10,4 @@ result = re.sub(day + '(?!\d)',
                 '${color1}' + day + '${color}',
                 result,
                 count=1)
-print(result)
+print(result[:-1])
