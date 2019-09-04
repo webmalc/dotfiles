@@ -39,6 +39,11 @@
       stdin: true
       stdout: true
       stderr: true
+    - 
+      command: "pip3 install thefuck"
+      stdin: true
+      stdout: true
+      stderr: true
 
     # Install JS packages
     - 
