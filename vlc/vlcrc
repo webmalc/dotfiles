@@ -425,7 +425,7 @@
 [freetype] # Freetype2 font renderer
 
 # Font (string)
-#freetype-font=Serif Bold
+freetype-font=Ubuntu
 
 # Monospace Font (string)
 #freetype-monofont=Monospace
@@ -434,13 +434,13 @@
 #freetype-fontsize=0
 
 # Relative font size (integer)
-#freetype-rel-fontsize=0
+freetype-rel-fontsize=20
 
 # Text opacity (integer)
 #freetype-opacity=255
 
 # Text default color (integer)
-#freetype-color=16777215
+freetype-color=4473924
 
 # Force bold (boolean)
 #freetype-bold=0
