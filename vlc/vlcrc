@@ -3112,13 +3112,13 @@ freetype-color=4473924
 [qt] # Qt interface
 
 # Start in minimal view (without menus) (boolean)
-qt-minimal-view=1
+#qt-minimal-view=0
 
 # Systray icon (boolean)
 #qt-system-tray=1
 
 # Show notification popup on track change (integer)
-#qt-notification=1
+qt-notification=2
 
 # Start VLC with only a systray icon (boolean)
 #qt-start-minimized=0
@@ -3133,7 +3133,7 @@ qt-minimal-view=1
 #qt-fs-opacity=0.800000
 
 # Resize interface to the native video size (boolean)
-#qt-video-autoresize=1
+qt-video-autoresize=0
 
 # Show playing item name in window title (boolean)
 #qt-name-in-title=1
@@ -3148,7 +3148,7 @@ qt-minimal-view=1
 #qt-recentplay-filter=
 
 # Continue playback? (integer)
-#qt-continue=1
+qt-continue=2
 
 # Embed the file browser in open dialog (boolean)
 #qt-embedded-open=0
