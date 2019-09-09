@@ -18,7 +18,7 @@ conky.config = {
     double_buffer = true,
     use_xft = true,
     font = 'Ubuntu Mono:size=16',
-    gap_x = 35,
+    gap_x = 335,
     gap_y = 35,
     minimum_height = 5,
     minimum_width = 5,
@@ -42,14 +42,8 @@ conky.config = {
 }
 
 conky.text = [[
-${execpi 3600 ~/Projects/dotfiles/conky/cal.py}
-${hr}
-${execpi 3600 ~/Projects/dotfiles/conky/weather.py}
-${hr}
 
-Tasks: ${execpi 60 task status:pending count}${font Ubuntu Mono:size=12}
-${execpi 60 task | head -n -2}
-${hr}
+${font Ubuntu Mono:size=16}News${font Ubuntu Mono:size=12}
 
-${execpi 3600 ~/Projects/dotfiles/conky/vocab.py}
+${execpi 3600 ~/Projects/dotfiles/conky/news.py}
 ]]
