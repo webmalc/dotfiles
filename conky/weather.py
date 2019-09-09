@@ -10,7 +10,7 @@ soup = BeautifulSoup(html_page, 'html.parser')
 today = soup.select_one('.temp__value')
 tomorrow = date.today() + timedelta(days=1)
 tomorrow_str = tomorrow.strftime('%Y-%m-%d') + ' 00:00+0300'
-date_node = soup.select_one('time.time[datetime="{}"]'.format(tomorrow_str))
+date_node = soup.select_one('time[datetime="{}"]'.format(tomorrow_str))
 tomorrow_node = date_node.parent.select_one(
     '.forecast-briefly__temp_day .temp__value')
 # print('{} -> {}'.format(today.text, tomorrow_node.text))

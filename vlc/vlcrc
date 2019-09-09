@@ -440,7 +440,7 @@ freetype-rel-fontsize=20
 #freetype-opacity=255
 
 # Text default color (integer)
-freetype-color=4473924
+#freetype-color=16777215
 
 # Force bold (boolean)
 #freetype-bold=0
