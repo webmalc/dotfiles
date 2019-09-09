@@ -39,6 +39,8 @@ conky.config = {
     show_graph_scale = false,
     show_graph_range = false,
     border_outer_margin = 15,
+    maximum_width = 300,
+    minimum_width = 300,
 }
 
 conky.text = [[

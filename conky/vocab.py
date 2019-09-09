@@ -28,7 +28,7 @@ def get_word(random_word):
         text = element.text
     else:
         text = soup.select_one('h3.definition').text[10:].strip()
-    text = '${font Ubuntu Mono:size=12}' + textwrap.fill(text, 30)
+    text = '${font Ubuntu Mono:size=12}' + textwrap.fill(text, 35)
     result = u'{}\n\n{}'.format(word, text)
     return result
 
@@ -41,9 +41,15 @@ def get_random_word():
     return random_word
 
 
-try:
-    CONTENT = get_word(get_random_word())
-except:
-    CONTENT = get_word('randomword')
+def run():
+    try:
+        CONTENT = get_word(get_random_word())
+    except:
+        CONTENT = get_word('randomword')
 
-print(CONTENT.encode('utf-8'))
+    return CONTENT.encode('utf-8')
+
+
+print(run())
+print('\n')
+print(run())
