@@ -27,4 +27,4 @@ for weekend in weekends:
                      content,
                      count=1)
 result = header + '\n' + content
-print(result[:-1])
+print(result)
