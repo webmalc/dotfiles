@@ -14,5 +14,5 @@ date_node = soup.select_one('time[datetime="{}"]'.format(tomorrow_str))
 tomorrow_node = date_node.parent.select_one(
     '.forecast-briefly__temp_day .temp__value')
 # print('{} -> {}'.format(today.text, tomorrow_node.text))
-print('Today: ' + today.text)
-print('Tomorrow: ' + tomorrow_node.text)
+print('Today: ' + today.text.encode('utf-8'))
+print('Tomorrow: ' + tomorrow_node.text.encode('utf-8'))
