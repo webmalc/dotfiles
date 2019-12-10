@@ -436,8 +436,8 @@ you should place your code here."
   ;; (add-to-list 'auto-mode-alist '("\\.py\\'" . yapf-mode))
   (add-hook 'python-mode-hook 'yapf-mode)
   (add-hook 'python-mode-hook (lambda ()
-                                ;; (flycheck-mode 1)
-                                ;; (semantic-mode 1)
+                                (flycheck-mode 1)
+                                (semantic-mode 1)
                                 (setq flycheck-checker 'python-pylint
                                       ;; flycheck-checker-error-threshold 900
                                       ;; flycheck-pylintrc "~/.pylintrc")))

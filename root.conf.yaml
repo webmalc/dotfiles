@@ -11,10 +11,11 @@
     # Add repositories
     - apt-add-repository "ppa:fish-shell/release-3" -y
     - apt-add-repository "ppa:papirus/papirus" -y
+    - apt-add-repository "ppa:kelleyk/emacs" -y
 
     # Install apps
     - 
-      command: "apt install -y spotify-client dropbox steam terminator emacs chromium-browser vim rofi papirus-icon-theme conky-all lua5.3 python-bs4"
+      command: "apt install -y spotify-client dropbox steam terminator emacs26 chromium-browser vim rofi papirus-icon-theme conky-all lua5.3 python-bs4"
       stdin: true
       stdout: true
       stderr: true
