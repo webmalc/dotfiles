@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.7.1
+###  vlc 3.0.8
 ###
 
 ###
@@ -330,7 +330,7 @@
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.7.1 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.8 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -569,7 +569,7 @@ freetype-rel-fontsize=20
 #prefetch-buffer-size=16384
 
 # Read size (integer)
-#prefetch-read-size=16384
+#prefetch-read-size=16777216
 
 # Seek threshold (integer)
 #prefetch-seek-threshold=16384
@@ -3366,7 +3366,7 @@ aout=any
 #grayscale=0
 
 # Fullscreen video output (boolean)
-fullscreen=1
+#fullscreen=0
 
 # Embedded video (boolean)
 #embedded-video=1
@@ -3537,7 +3537,7 @@ vout=any
 #audio-language=
 
 # Subtitle language (string)
-#sub-language=
+sub-language=english
 
 # Menu language (string)
 #menu-language=
