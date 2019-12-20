@@ -1,6 +1,7 @@
 # -*- mode: snippet -*-
 # name: pdb - pdb import 
 # key: pdb
+# binding: C-c b
 # --
 import ipdb
 ipdb.set_trace()
