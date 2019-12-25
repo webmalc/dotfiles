@@ -399,6 +399,7 @@ you should place your code here."
   (setq neo-theme 'icons)
   (editorconfig-mode 1)
   (set-frame-parameter nil 'undecorated t)
+  (define-key evil-normal-state-map (kbd "SPC x x") 'kill-this-buffer)
 
   ;; Neotree ------------------------------------------------------------
   (setq neo-hidden-regexp-list '("^\\." "__pycache__.*" "\\.egg-info" "\\.pyc$" "~$" "^#.*#$" "\\.elc$"))
