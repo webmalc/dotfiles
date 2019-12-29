@@ -9,6 +9,7 @@
     ~/.config/fish/functions: fish/functions
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/terminator/config: terminator/config
+    ~/.config/systemd: systemd
     ~/.gitconfig: git/gitconfig
     ~/.bash_profile: bash/bash_profile
     ~/.vimrc.before: vim/vimrc.before
@@ -43,4 +44,4 @@
   - [mkdir -p ~/Ydisk, Creating YandexDisk directory]
   - [omf install simple-ass-prompt]
   - [dconf load /org/cinnamon/ < dconf/config.ini]
-
+  - [systemctl --user enable emacs]
