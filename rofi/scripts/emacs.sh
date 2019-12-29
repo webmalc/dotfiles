@@ -3,13 +3,13 @@
 rofi_command="rofi -theme themes/appsmenu.rasi"
 
 ### Options ###
-start="emacs: start"
-reboot="emacs: reboot"
-stop="emacs: stop"
+start="start"
+reboot="reboot"
+stop="stop"
 # Variable passed to rofi
 options="$start\n$stop\n$reboot"
 
-chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0)"
+chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -p emacs)"
 case $chosen in
     $start)
         systemctl --user start emacs; bash -c " wmctrl -xa emacs.Emacs || emacsclient -nc -s instance1"
