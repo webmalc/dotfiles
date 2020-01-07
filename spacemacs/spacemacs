@@ -408,7 +408,7 @@ you should place your code here."
   (setq neo-hidden-regexp-list '("^\\." "__pycache__.*" "\\.egg-info" "\\.pyc$" "~$" "^#.*#$" "\\.elc$"))
   
   ;; Magit-todo
-  (define-key evil-normal-state-map (kbd "SPC o t") 'magit-todos-list)
+  (define-key evil-normal-state-map (kbd "SPC o m t") 'magit-todos-list)
 
   ;; Dimmer
   (dimmer-mode t)
@@ -514,6 +514,29 @@ you should place your code here."
    (define-key evil-normal-state-map (kbd "SPC o l n") 'langtool-goto-next-error)
    (define-key evil-normal-state-map (kbd "SPC o l p") 'langtool-goto-previous-error)
 
+   ;; Translate shell
+   (defun google-shell-translate-en (&optional b e) 
+     (interactive "r")
+     (shell-command-on-region b e "trans -show-original n -show-original-phonetics n -show-languages n -show-alternatives n -show-prompt-message n -show-translation-phonetics n -d en: :ru")
+     (switch-to-buffer-other-frame "*Shell Command Output*")
+     )
+
+   (defun google-shell-translate-ru (&optional b e) 
+     (interactive "r")
+     (shell-command-on-region b e "trans -show-original n -show-original-phonetics n -show-languages n -show-alternatives n -show-prompt-message n -show-translation-phonetics n -d ru: :en")
+     (switch-to-buffer-other-frame "*Shell Command Output*")
+     )
+
+   (defun google-shell-translate-rtr (&optional b e) 
+     (interactive "r")
+     (shell-command-on-region b e "tr '\n' ' ' | trans --no-ansi -b -d en: :ru | trans -show-original-phonetics n -show-languages n -show-alternatives n -show-prompt-message n -show-translation-phonetics n -d ru: :en")
+     (switch-to-buffer-other-frame "*Shell Command Output*")
+     )
+
+   (define-key evil-normal-state-map (kbd "SPC o t e") 'google-shell-translate-en)
+   (define-key evil-normal-state-map (kbd "SPC o t r") 'google-shell-translate-ru)
+   (define-key evil-normal-state-map (kbd "SPC o t v") 'google-shell-translate-rtr)
+
    ;; Google translate
    (setq google-translate-default-target-language "ru")
    (defun google-translate-json-suggestion (json)
@@ -525,6 +548,7 @@ translation it is possible to get suggestion."
        (if (and info (> (length info) 0))
            (aref info 1)
          nil)))    
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
