@@ -58,7 +58,7 @@
 
     # Remove the unnecessary packages
     - 
-      command: "apt purge -y rhythmbox xplayer thunderbird"
+      command: "apt purge -y rhythmbox* xplayer* thunderbird*"
       stdin: true
       stdout: true
       stderr: true
