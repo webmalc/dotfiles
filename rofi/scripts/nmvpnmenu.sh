@@ -14,7 +14,7 @@ active="$(nmcli -g name,type con show --active | grep vpn | sed -e 's#:vpn$##')"
 mapfile -t list < <(nmcli -g name,type con | grep vpn | sed -e 's#:vpn$##')
 # A vpn is active
 if [ -n "$active" ]; then
-    status="   Connected"
+    status="   connected"
     status_style="#prompt { background-color: @on; }"
     special="-a 0 -selected-row 1"
     # Variable passed to rofi
@@ -24,7 +24,7 @@ if [ -n "$active" ]; then
     done
 # No vpn is active
 else
-    status="   Disconnected"
+    status="   disconnected"
     status_style="#prompt { background-color: @off; }"
     special=""
     # Variable passed to rofi
