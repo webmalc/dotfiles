@@ -56,6 +56,13 @@
       stdout: true
       stderr: true
 
+    # Remove the unnecessary packages
+    - 
+      command: "apt purge -y rhythmbox xplayer thunderbird"
+      stdin: true
+      stdout: true
+      stderr: true
+
     # Set config
     - [chsh -s /usr/bin/fish webmalc]
     - [chsh -s /usr/bin/fish]
