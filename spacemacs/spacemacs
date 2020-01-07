@@ -513,6 +513,9 @@ you should place your code here."
    (define-key evil-normal-state-map (kbd "SPC o l r") 'langtool-correct-buffer)
    (define-key evil-normal-state-map (kbd "SPC o l n") 'langtool-goto-next-error)
    (define-key evil-normal-state-map (kbd "SPC o l p") 'langtool-goto-previous-error)
+
+   ;; Google translate
+   (setq google-translate-default-target-language "ru")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
