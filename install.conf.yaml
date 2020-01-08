@@ -9,6 +9,7 @@
     ~/.config/fish/functions: fish/functions
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/terminator/config: terminator/config
+    ~/.config/redshift.conf: redshift/redshift.conf
     ~/.config/systemd: systemd
     ~/.gitconfig: git/gitconfig
     ~/.bash_profile: bash/bash_profile
