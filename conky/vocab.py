@@ -33,17 +33,17 @@ def get_word(random_word):
     return result
 
 
-def get_random_word():
+def get_random_word(d=''):
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    filename = os.path.join(base_dir, 'words.txt')
+    filename = os.path.join(base_dir, 'words{}.txt'.format(d))
     with open(filename, 'r') as words_file:
         random_word = random_line(words_file).strip()
     return random_word
 
 
-def run():
+def run(d=''):
     try:
-        CONTENT = get_word(get_random_word())
+        CONTENT = get_word(get_random_word(d))
     except:
         CONTENT = get_word('randomword')
 
@@ -52,4 +52,4 @@ def run():
 
 print(run())
 print('\n')
-print(run())
+print(run('_toelf'))

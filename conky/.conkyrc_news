@@ -44,7 +44,5 @@ conky.config = {
 }
 
 conky.text = [[
-${font Ubuntu Mono:size=16}News${font Ubuntu Mono:size=12}
-
 ${execpi 3600 ~/Projects/dotfiles/conky/news.py}
 ]]

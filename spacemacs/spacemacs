@@ -540,13 +540,14 @@ translation it is possible to get suggestion."
    (define-key evil-normal-state-map (kbd "SPC o t r") 'google-shell-translate-ru)
    (define-key evil-normal-state-map (kbd "SPC o t v") 'google-shell-translate-rtr)
 
-   (spacemacs/declare-prefix "ol" "language-tool")
+   (spacemacs/declare-prefix "ol" "language")
    (define-key evil-normal-state-map (kbd "SPC o l c") 'langtool-check)
    (define-key evil-normal-state-map (kbd "SPC o l d") 'langtool-check-done)
    (define-key evil-normal-state-map (kbd "SPC o l s") 'langtool-show-message-at-point)
    (define-key evil-normal-state-map (kbd "SPC o l r") 'langtool-correct-buffer)
    (define-key evil-normal-state-map (kbd "SPC o l n") 'langtool-goto-next-error)
    (define-key evil-normal-state-map (kbd "SPC o l p") 'langtool-goto-previous-error)
+   (define-key evil-normal-state-map (kbd "SPC o l w") 'count-words)
 
    (spacemacs/declare-prefix "op" "project")
    (define-key evil-normal-state-map (kbd "SPC o p t") 'magit-todos-list)

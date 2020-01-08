@@ -45,6 +45,8 @@ conky.config = {
 
 conky.text = [[
 ${execpi 3600 ~/Projects/dotfiles/conky/cal.py}
+
+${time %H:%M:%S}
 ${hr}
 ${execpi 3600 ~/Projects/dotfiles/conky/weather.py}
 ${hr}
