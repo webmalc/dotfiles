@@ -402,14 +402,10 @@ you should place your code here."
   (setq neo-theme 'icons)
   (editorconfig-mode 1)
   (set-frame-parameter nil 'undecorated t)
-  (define-key evil-normal-state-map (kbd "SPC x x") 'kill-this-buffer)
 
   ;; Neotree ------------------------------------------------------------
   (setq neo-hidden-regexp-list '("^\\." "__pycache__.*" "\\.egg-info" "\\.pyc$" "~$" "^#.*#$" "\\.elc$"))
   
-  ;; Magit-todo
-  (define-key evil-normal-state-map (kbd "SPC o m t") 'magit-todos-list)
-
   ;; Dimmer
   (dimmer-mode t)
   ;; (dimmer-configure-which-key)
@@ -480,7 +476,6 @@ you should place your code here."
 
   ;; PHP configuration ---------------------------------------------------------
   (require 'php-auto-yasnippets)
-  (define-key php-mode-map (kbd "C-c C-y") 'yas/create-php-snippet)
   ;; (add-hook 'php-mode-hook 'ede-php-autoload-mode)
 
   (add-hook 'php-mode-hook 'php-enable-psr2-coding-style)
@@ -493,10 +488,6 @@ you should place your code here."
 
    ;; Auto format on save.
    (add-hook 'php-mode-hook 'phpcbf-enable-on-save)
-   (evil-define-key 'normal php-mode-map (kbd "SPC o r c") 'phpcbf)
-
-   ;; counsel
-   (evil-define-key 'normal counsel-mode-map (kbd "SPC o s") 'counsel-ag)
 
    ;; LESS
    (setq less-css-compile-at-save t)
@@ -507,12 +498,6 @@ you should place your code here."
    (setq langtool-mother-tongue "ru")
    (require 'langtool)
 
-   (define-key evil-normal-state-map (kbd "SPC o l c") 'langtool-check)
-   (define-key evil-normal-state-map (kbd "SPC o l d") 'langtool-check-done)
-   (define-key evil-normal-state-map (kbd "SPC o l s") 'langtool-show-message-at-point)
-   (define-key evil-normal-state-map (kbd "SPC o l r") 'langtool-correct-buffer)
-   (define-key evil-normal-state-map (kbd "SPC o l n") 'langtool-goto-next-error)
-   (define-key evil-normal-state-map (kbd "SPC o l p") 'langtool-goto-previous-error)
 
    ;; Translate shell
    (defun google-shell-translate-en (&optional b e) 
@@ -533,9 +518,6 @@ you should place your code here."
      (switch-to-buffer-other-frame "*Shell Command Output*")
      )
 
-   (define-key evil-normal-state-map (kbd "SPC o t e") 'google-shell-translate-en)
-   (define-key evil-normal-state-map (kbd "SPC o t r") 'google-shell-translate-ru)
-   (define-key evil-normal-state-map (kbd "SPC o t v") 'google-shell-translate-rtr)
 
    ;; Google translate
    (setq google-translate-default-target-language "ru")
@@ -548,6 +530,31 @@ translation it is possible to get suggestion."
        (if (and info (> (length info) 0))
            (aref info 1)
          nil)))    
+
+
+   ;; Custom keybindings
+   (spacemacs/declare-prefix "o" "custom")
+
+   (spacemacs/declare-prefix "ot" "google-shell-translate")
+   (define-key evil-normal-state-map (kbd "SPC o t e") 'google-shell-translate-en)
+   (define-key evil-normal-state-map (kbd "SPC o t r") 'google-shell-translate-ru)
+   (define-key evil-normal-state-map (kbd "SPC o t v") 'google-shell-translate-rtr)
+
+   (spacemacs/declare-prefix "ol" "language-tool")
+   (define-key evil-normal-state-map (kbd "SPC o l c") 'langtool-check)
+   (define-key evil-normal-state-map (kbd "SPC o l d") 'langtool-check-done)
+   (define-key evil-normal-state-map (kbd "SPC o l s") 'langtool-show-message-at-point)
+   (define-key evil-normal-state-map (kbd "SPC o l r") 'langtool-correct-buffer)
+   (define-key evil-normal-state-map (kbd "SPC o l n") 'langtool-goto-next-error)
+   (define-key evil-normal-state-map (kbd "SPC o l p") 'langtool-goto-previous-error)
+
+   (spacemacs/declare-prefix "op" "project")
+   (define-key evil-normal-state-map (kbd "SPC o p t") 'magit-todos-list)
+
+   (define-key evil-normal-state-map (kbd "SPC x x") 'kill-this-buffer)
+
+   (evil-define-key 'normal php-mode-map (kbd "SPC o r c") 'phpcbf)
+   (define-key php-mode-map (kbd "C-c C-y") 'yas/create-php-snippet)
 
   )
 
