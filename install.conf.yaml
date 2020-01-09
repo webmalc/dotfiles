@@ -46,3 +46,5 @@
   - [omf install simple-ass-prompt]
   - [dconf load /org/cinnamon/ < dconf/config.ini]
   - [systemctl --user enable emacs]
+  # - [ecryptfs-setup-private; cp .ssh Private/.ssh; ln -s Private/.ssh/ .ssh]
+
