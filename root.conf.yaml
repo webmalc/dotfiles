@@ -5,12 +5,8 @@
       force: true
 
 - clean: []
-- link:
-    /etc/pam.d/common-auth: pam.d/common-auth
 - shell:
     # Add repositories
-    # - wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | apt-key add -  
-    # - echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | tee --append /etc/apt/sources.list.d/vscodium.list  
     - apt-add-repository "ppa:fish-shell/release-3" -y
     - apt-add-repository "ppa:papirus/papirus" -y
     - apt-add-repository "ppa:kelleyk/emacs" -y
@@ -18,14 +14,14 @@
 
     # Install apps
     - 
-      command: "apt install -y spotify-client dropbox steam terminator emacs26 chromium-browser vim rofi papirus-icon-theme conky-all lua5.3 python-bs4"
+      command: "apt install -y dropbox steam terminator emacs26 chromium-browser vim rofi papirus-icon-theme conky-all lua5.3 python-bs4"
       stdin: true
       stdout: true
       stderr: true
     
     # Install packages
     - 
-      command: "apt install -y python-setuptools python3-setuptools zipalign openjdk-8-jdk ranger steam-devices cryfs odt2txt caca-utils atool w3m poppler-utils mediainfo curl exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx python-pygments highlight atool libcaca-dev python-pip python3-pip python3-dev python3.7 python3.7-dev python3.8 python3.8-dev libpq-dev htop fish firefox vim-gnome redis postgresql vim memcached nodejs npm virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup"
+      command: "apt install -y python-setuptools python3-setuptools zipalign openjdk-8-jdk ranger steam-devices cryfs odt2txt caca-utils atool w3m poppler-utils mediainfo curl exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx python-pygments highlight atool libcaca-dev python-pip python3-pip python3-dev python3.7 python3.7-dev python3.8 python3.8-dev libpq-dev htop fish firefox vim-gnome redis postgresql vim memcached nodejs npm virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp"
       stdin: true
       stdout: true
       stderr: true
@@ -71,6 +67,8 @@
       stderr: true
 
     # Set config
+    - [gpasswd -a mpd webmalc]
+    - [gpasswd -a mpd audio]
     - [chsh -s /usr/bin/fish webmalc]
     - [chsh -s /usr/bin/fish]
     - [grep -qxF 'fs.inotify.max_user_watches=524288' /etc/sysctl.conf || echo 'fs.inotify.max_user_watches=524288' >> /etc/sysctl.conf]
@@ -78,4 +76,7 @@
     - [cp /home/webmalc/Projects/dotfiles/stubby/stubby.yml /etc/stubby/stubby.yml]
     - ['chown -R webmalc:webmalc /home/webmalc/*']
 
-
+- link:
+    /etc/pam.d/common-auth: pam.d/common-auth
+    /etc/mpd.conf: mpd_service/mpd.conf
+    /etc/pulse/default.pa: pulse/default.pa

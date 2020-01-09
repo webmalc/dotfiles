@@ -6,6 +6,8 @@
 
 - clean: ['~', '~/.config']
 - link:
+    ~/.ncmpcpp: ncmpcpp
+    ~/.mpd: mpd
     ~/.config/fish/functions: fish/functions
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/terminator/config: terminator/config
