@@ -21,7 +21,7 @@
     
     # Install packages
     - 
-      command: "apt install -y python-setuptools python3-setuptools zipalign openjdk-8-jdk ranger steam-devices cryfs odt2txt caca-utils atool w3m poppler-utils mediainfo curl exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx python-pygments highlight atool libcaca-dev python-pip python3-pip python3-dev python3.7 python3.7-dev python3.8 python3.8-dev libpq-dev htop fish firefox vim-gnome redis postgresql vim memcached nodejs npm virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp"
+      command: "apt install -y python-setuptools python3-setuptools zipalign openjdk-8-jdk ranger steam-devices cryfs odt2txt caca-utils atool w3m poppler-utils mediainfo curl exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx python-pygments highlight atool libcaca-dev python-pip python3-pip python3-dev python3.7 python3.7-dev python3.8 python3.8-dev libpq-dev htop fish firefox vim-gnome redis postgresql vim memcached nodejs npm virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp mpc"
       stdin: true
       stdout: true
       stderr: true

@@ -1,8 +1,5 @@
 #!/bin/bash
 function get_proper_title() {
-    # echo $1 | awk '{print $5" "$6" "$7}' | \
-    #     sed -e 's/N\/A//' | \
-    #     sed -e 's/[[:space:]]*$//' | sed -e 's/^[[:space:]]//'
     echo $1 | awk '{print $5}'
 }
 WID=`xprop -root | grep _NET_ACTIVE_WINDOW | head -1 | awk '{print $5}'`
