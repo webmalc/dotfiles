@@ -1,2 +1,2 @@
 #!/bin/sh
-conky && conky -c ~/.conkyrc_calendar && conky -c ~/.conkyrc_news
+conky -c ~/.config/conky/.conkyrc && conky -c ~/.config/conky/.conkyrc_calendar && conky -c ~/.config/conky/.conkyrc_news && conky -c ~/.config/conky/.conkyrc_news_left
