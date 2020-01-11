@@ -548,6 +548,7 @@ translation it is possible to get suggestion."
    (define-key evil-normal-state-map (kbd "SPC o l n") 'langtool-goto-next-error)
    (define-key evil-normal-state-map (kbd "SPC o l p") 'langtool-goto-previous-error)
    (define-key evil-normal-state-map (kbd "SPC o l w") 'count-words)
+   (define-key evil-normal-state-map (kbd "SPC o l t") 'toggle-truncate-lines)
 
    (spacemacs/declare-prefix "op" "project")
    (define-key evil-normal-state-map (kbd "SPC o p t") 'magit-todos-list)
