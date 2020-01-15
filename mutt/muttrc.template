@@ -100,5 +100,7 @@ bind pager g top
 bind pager G bottom
 bind attach,index g first-entry
 bind attach,index G last-entry
-
 bind index I imap-fetch-mail
+bind index,pager R  group-reply
+macro index       \Cr   "<tag-prefix><clear-flag>N"                                          "mark tagged messages as read"
+macro index       \CR   "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>"         "mark all messages as read"
