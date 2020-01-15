@@ -38,6 +38,7 @@
     ~/.emacs.d/private/snippets/typescript-mode: spacemacs/emacs/private/snippets/typescript-mode
     ~/.config/mutt/mailcap: mutt/mailcap
     ~/.config/mutt/muttrc: mutt/muttrc.compiled
+    ~/.config/mutt/aliases: /home/webmalc/Dropbox/System/mutt/aliases
     ~/.urlview: urlview/urlview
     ~/.config/mailnag/mailnag.cfg: mailnag/mailnag.compiled
 - shell:

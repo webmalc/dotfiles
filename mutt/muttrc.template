@@ -39,21 +39,37 @@ set imap_check_subscribed
 unset imap_passive
 set mail_check = 120
 
-set sidebar_visible = yes
+# sidebar patch config
+set sidebar_visible
+set sidebar_short_path
+set sidebar_folder_indent
+set sidebar_width = 25
+set sidebar_divider_char = ' | '
+set sidebar_indent_string = '  ''
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set mail_check_stats
-bind index,pager \CK sidebar-prev       # Ctrl-Shift-P - Previous Mailbox
+bind index,pager \CK sidebar-prev
 bind index,pager \CJ sidebar-next
 bind index,pager \CL sidebar-open
 
+# Pager View Options
+set pager_index_lines = 10
+set pager_context = 3
+set pager_stop
+set menu_scroll
+set tilde
+unset markers
 
-# cache
+set alias_file= ~/.config/mutt/aliases
+set sort_alias=alias
+set reverse_alias=yes
+source $alias_file
+
 set header_cache    = ~/.cache/mutt/headers
 set message_cachedir    = ~/.cache/mutt/bodies
 set certificate_file    = ~/.cache/mutt/certificates
 auto_view text/html
 set mailcap_path 	= ~/.config/mutt/mailcap
-# -*-muttrc-*-
 
 # Palette for use with the Linux console.  Black background.
 
