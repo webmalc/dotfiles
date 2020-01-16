@@ -53,6 +53,8 @@ ${hr}
 
 Tasks: ${execpi 60 task status:pending count}${font Ubuntu Mono:size=12}
 ${execpi 60 task | head -n -2}
+${hr}${font Ubuntu Mono:size=16}
+Emails: ${execpi 600 ~/Projects/dotfiles/conky/imap.py}${font Ubuntu Mono:size=12}
 ${hr}
 
 ${execpi 3600 ~/Projects/dotfiles/conky/vocab.py}
