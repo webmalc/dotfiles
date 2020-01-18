@@ -14,7 +14,7 @@
 
     # Install packages
     - 
-      command: "apt install -y dropbox steam terminator emacs26 chromium-browser vim rofi papirus-icon-theme conky-all lua5.3 python-bs4 neomutt lynx w3m urlview mailnag"
+      command: "apt install -y dropbox steam terminator emacs26 chromium-browser vim rofi papirus-icon-theme conky-all lua5.3 python-bs4 neomutt lynx w3m urlview mailnag clang-format"
       stdin: true
       stdout: true
       stderr: true
