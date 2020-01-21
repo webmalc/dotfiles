@@ -14,7 +14,7 @@
 
     # Install packages
     - 
-      command: "apt install -y dropbox steam terminator emacs26 chromium-browser vim rofi papirus-icon-theme conky-all lua5.3 python-bs4 neomutt lynx w3m urlview mailnag clang-format"
+      command: "apt install -y dropbox steam terminator emacs26 chromium-browser vim rofi papirus-icon-theme conky-all lua5.3 python-bs4 neomutt lynx w3m urlview mailnag clang-format clang"
       stdin: true
       stdout: true
       stderr: true
@@ -49,12 +49,12 @@
 
     # Install python packages
     - 
-      command: "pip install setuptools pudb python-bidi chardet virtualfish jedi json-rpc service_factory autoflake hy php isort yapf flake8 pylint ipdb ranger-fm wakatime"
+      command: "pip install setuptools python-bidi chardet virtualfish json-rpc service_factory hy php ipdb ranger-fm wakatime"
       stdin: true
       stdout: true
       stderr: true
     - 
-      command: "pip3 install thefuck"
+      command: "pip3 install thefuck platformio"
       stdin: true
       stdout: true
       stderr: true
@@ -82,6 +82,7 @@
     - [adduser webmalc docker]
     - [cp /home/webmalc/Projects/dotfiles/stubby/stubby.yml /etc/stubby/stubby.yml]
     - ['chown -R webmalc:webmalc /home/webmalc/*']
+    - ['curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules | tee /etc/udev/rules.d/99-platformio-udev.rules']
 
 - link:
     /etc/pam.d/common-auth: pam.d/common-auth

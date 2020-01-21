@@ -373,7 +373,6 @@ you should place your code here."
   ;; (require 'helm-bookmark)
 
   ;; clang
-  (global-set-key [tab] 'clang-format-buffer)
   (add-hook 'before-save-hook
             (lambda ()
               (when (member major-mode '(c-mode c++-mode glsl-mode))
