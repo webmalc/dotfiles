@@ -544,6 +544,10 @@ translation it is possible to get suggestion."
            (aref info 1)
          nil)))    
 
+   (defun tox () 
+     (interactive)
+     (async-shell-command "tox")
+   )
 
    ;; Custom keybindings
    (spacemacs/declare-prefix "o" "custom")
@@ -568,7 +572,9 @@ translation it is possible to get suggestion."
 
    (define-key evil-normal-state-map (kbd "SPC x x") 'kill-this-buffer)
 
+   (spacemacs/declare-prefix "or" "run")
    (evil-define-key 'normal php-mode-map (kbd "SPC o r c") 'phpcbf)
+   (evil-define-key 'normal python-mode-map (kbd "SPC o r t") 'tox)
    (define-key php-mode-map (kbd "C-c C-y") 'yas/create-php-snippet)
 
   )
