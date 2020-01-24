@@ -54,7 +54,7 @@
       stdout: true
       stderr: true
     - 
-      command: "pip3 install thefuck platformio"
+      command: "pip3 install thefuck platformio ptpython"
       stdin: true
       stdout: true
       stderr: true

@@ -18,6 +18,7 @@
     ~/.vimrc.before: vim/vimrc.before
     ~/Pictures/wallpaper: wallpaper
     ~/Documents/surfshark: surfshark
+    ~/.ptpython/config.py: ptpython/config.py
     ~/.vimrc.bundles: vim/vimrc.bundles
     ~/.vimrc.local: vim/vimrc.local
     ~/.config/conky: conky/conky_config

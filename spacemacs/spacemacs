@@ -465,7 +465,6 @@ you should place your code here."
                                       ;; flycheck-pylintrc "~/.pylintrc")))
                                  )))
   (flycheck-add-next-checker 'python-pylint 'python-mypy t)
-  (setq python-shell-interpreter "/docker:root@billing-container:/usr/bin/python3.6")
 
   ;; Typescript ----------------------------------------------------------------
   (defun setup-tide-mode ()
