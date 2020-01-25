@@ -27,7 +27,7 @@
     ~/.config/ranger/scope.sh: ranger/scope.sh
     ~/.config/ranger/rifle.conf: ranger/rifle.conf
     ~/.config/ranger/commands.py: ranger/commands.py
-    ~/.config/nemo: nemo
+    #~/.config/nemo: nemo
     ~/.config/vlc/vlcrc: vlc/vlcrc
     ~/.config/rofi: rofi
     ~/.config/gtk-3.0/gtk.css: gtk/gtk.css
