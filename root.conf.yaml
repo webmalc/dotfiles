@@ -54,7 +54,7 @@
       stdout: true
       stderr: true
     - 
-      command: "pip3 install thefuck platformio ptpython ranger-fm "
+      command: "pip3 install thefuck platformio ptpython ranger-fm aiohttp"
       stdin: true
       stdout: true
       stderr: true
