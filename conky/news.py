@@ -1,7 +1,7 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import textwrap
-import urllib2
+from urllib.request import urlopen
 import sys
 
 LEFT = len(sys.argv) > 1
@@ -12,8 +12,8 @@ def print_news(url, title, selector, num, wrap=30, hr=False):
     """
     Print news
     """
-    html_page = urllib2.urlopen(url)
-    soup = BeautifulSoup(html_page, 'html.parser')
+    html = urlopen(url)
+    soup = BeautifulSoup(html, 'html.parser')
     items = soup.select(selector)[:num]
     title_str = '${font Ubuntu Mono:size=16}'
     title_str += title + '${font Ubuntu Mono:size=12}'
@@ -24,7 +24,7 @@ def print_news(url, title, selector, num, wrap=30, hr=False):
     print(' ')
     for item in items:
         print(textwrap.fill(
-            item.text.encode('utf-8').replace('$', '$$').strip(), wrap))
+            item.text.replace('$', '$$').strip(), wrap))
         print(' ')
 
 
@@ -38,7 +38,7 @@ if not LEFT:
     print_news(
         'https://habr.com/ru/top/',
         'Habr',
-        '#broadcast_most-read a.post-info__title',
+        '.content-list_most-read a.post-info__title',
         7,
         60,
         True,
