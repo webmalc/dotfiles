@@ -1,9 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/python3
+import asyncio
 import os
 import random
 import textwrap
-import urllib2
 
+import aiohttp
 from bs4 import BeautifulSoup
 
 
@@ -16,10 +17,12 @@ def random_line(afile):
     return line
 
 
-def get_word(random_word):
-    html_page = urllib2.urlopen('https://www.vocabulary.com/dictionary/' +
-                                random_word)
-    soup = BeautifulSoup(html_page, 'html.parser')
+async def get_word(random_word):
+    url = 'https://www.vocabulary.com/dictionary/' + random_word
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+            html = await response.text()
+    soup = BeautifulSoup(html, 'html.parser')
     word = soup.select_one('h1.dynamictext').text
     word = '${font Ubuntu Mono:size=16}' + word.capitalize()
 
@@ -43,13 +46,13 @@ def get_random_word(d=''):
 
 def run(d=''):
     try:
-        CONTENT = get_word(get_random_word(d))
+        content = get_word(get_random_word(d))
     except:
-        CONTENT = get_word('randomword')
+        content = get_word('randomword')
 
-    return CONTENT.encode('utf-8')
+    return content
 
 
-print(run())
-print('\n')
-print(run('_toelf'))
+loop = asyncio.get_event_loop()
+values, _ = loop.run_until_complete(asyncio.wait([run(), run('_toelf')]))
+print('\n\n'.join([v.result() for v in values]))

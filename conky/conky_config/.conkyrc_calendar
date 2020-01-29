@@ -57,5 +57,5 @@ ${hr}${font Ubuntu Mono:size=16}
 Emails: ${execpi 600 ~/Projects/dotfiles/conky/imap.py}${font Ubuntu Mono:size=12}
 ${hr}
 
-${execpi 3600 ~/Projects/dotfiles/conky/vocab.py}
+${execpi 3600 python3 ~/Projects/dotfiles/conky/vocab.py}
 ]]

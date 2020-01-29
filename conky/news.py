@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 LEFT = len(sys.argv) > 1
 
 
-async def print_news(url, title, selector, num, wrap=30, hr=False):
+async def print_news(url, title, selector, num, wrap=30):
     """
     Print news
     """
@@ -41,12 +41,10 @@ def run():
                 5,
             ),
             print_news(
-                'https://habr.com/ru/top/',
+                'https://habr.com/ru/top',
                 'Habr',
                 '.content-list_most-read a.post-info__title',
                 7,
-                30,
-                True,
             )
         ]
     else:
@@ -62,8 +60,6 @@ def run():
                 'Hacker News',
                 'a.storylink',
                 7,
-                30,
-                True,
             )
         ]
     loop = asyncio.get_event_loop()
