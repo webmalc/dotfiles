@@ -47,6 +47,13 @@
       stdout: true
       stderr: true
 
+    # Install snap packages (classic)
+    - 
+      command: "snap install go --classic"
+      stdin: true
+      stdout: true
+      stderr: true
+
     # Install python packages
     - 
       command: "pip install setuptools python-bidi chardet virtualfish json-rpc service_factory hy php ipdb wakatime"

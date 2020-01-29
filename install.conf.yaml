@@ -54,7 +54,18 @@
   - ['cd ~/.fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf']
   - [fc-cache -fv]
 
-
+  # go modules
+  - [go get -u -v github.com/nsf/gocode]
+  - [go get -u -v github.com/rogpeppe/godef]
+  - [go get -u -v golang.org/x/tools/cmd/gorename]
+  - [go get -u -v golang.org/x/tools/cmd/goimports]
+  - [go get -u -v golang.org/x/lint/golint]
+  - [go get -u -v github.com/kisielk/errcheck]
+  - [go get -u -v github.com/mdempsky/unconvert]
+  - [go get -u -v honnef.co/go/tools/cmd/staticcheck]
+  - [go get -u -v golang.org/x/tools/cmd/guru]
+  - [go get -u -v github.com/go-delve/delve/cmd/dlv]
+  - [go get -u -v github.com/aarzilli/gdlv]
 
   # - [ecryptfs-setup-private; cp .ssh Private/.ssh; ln -s Private/.ssh/ .ssh]
 
