@@ -47,6 +47,7 @@
   - [mkdir -p ~/Downloads, Creating downloads directory]
   - [mkdir -p ~/Projects, Creating projects directory]
   - [mkdir -p ~/Encrypt, Creating encrypt directory]
+  - [mkdir -p ~/Music, Creating music directory]
   - [mkdir -p ~/.fonts, Creating fonts directory]
   - [omf install simple-ass-prompt]
   - [dconf load /org/cinnamon/ < dconf/config.ini]
@@ -69,3 +70,5 @@
 
   # - [ecryptfs-setup-private; cp .ssh Private/.ssh; ln -s Private/.ssh/ .ssh]
 
+  # Startup applications
+  # bash -c "mpv http://webmalc.pw:8000 >> /dev/null 2>&1 &"

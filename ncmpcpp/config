@@ -3,7 +3,7 @@
  mpd_music_dir = "/home/webmalc/Music/"
  lyrics_directory  = ~/.ncmpcpp/lyrics
  ncmpcpp_directory  = ~/.ncmpcpp
- mpd_host = "127.0.0.1"
+ mpd_host = "webmalc.pw"
  mpd_port = "6600"  
  mpd_connection_timeout = "5"  
  mpd_crossfade_time = "5"  
@@ -76,7 +76,7 @@ titles_visibility = "yes"
 
 
 progressbar_look =  "=>-"
-progressbar_boldness = "yes"
+# progressbar_boldness = "yes"
 progressbar_elapsed_color = "white"
 
 now_playing_prefix = "> "

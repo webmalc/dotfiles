@@ -14,7 +14,7 @@
 
     # Install packages
     - 
-      command: "apt install -y dropbox steam terminator emacs26 chromium-browser vim rofi papirus-icon-theme conky-all lua5.3 python-bs4 neomutt lynx w3m urlview mailnag clang-format clang"
+      command: "apt install -y dropbox steam terminator emacs26 chromium-browser vim rofi papirus-icon-theme conky-all lua5.3 python-bs4 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common"
       stdin: true
       stdout: true
       stderr: true
@@ -88,6 +88,7 @@
     - [grep -qxF 'fs.inotify.max_user_watches=524288' /etc/sysctl.conf || echo 'fs.inotify.max_user_watches=524288' >> /etc/sysctl.conf]
     - [adduser webmalc docker]
     - [cp /home/webmalc/Projects/dotfiles/stubby/stubby.yml /etc/stubby/stubby.yml]
+    - [systemctl disable mpd]
     - ['chown -R webmalc:webmalc /home/webmalc/*']
     - ['curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules | tee /etc/udev/rules.d/99-platformio-udev.rules']
     - ['test -e /home/webmalc/.config/ranger/plugins/ranger_devicons || git clone https://github.com/alexanderjeurissen/ranger_devicons /home/webmalc/.config/ranger/plugins/ranger_devicons']
@@ -96,3 +97,4 @@
     /etc/pam.d/common-auth: pam.d/common-auth
     /etc/mpd.conf: mpd_service/mpd.conf
     /etc/pulse/default.pa: pulse/default.pa
+    /etc/environment: env/environment.compiled

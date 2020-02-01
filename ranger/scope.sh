@@ -192,7 +192,14 @@ handle_mime() {
             exit 1;;
 
         # Video and audio
-        video/* | audio/*)
+        video/*)
+            if ![[ $(find "${FILE_PATH}" -type f -size +1G 2>/dev/null) ]]; then
+                mediainfo "${FILE_PATH}" && exit 5
+            fi
+            exiftool "${FILE_PATH}" && exit 5
+            exit 1;;
+
+        audio/*)
             mediainfo "${FILE_PATH}" && exit 5
             exiftool "${FILE_PATH}" && exit 5
             exit 1;;
