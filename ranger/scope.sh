@@ -195,8 +195,8 @@ handle_mime() {
         video/*)
             if ![[ $(find "${FILE_PATH}" -type f -size +1G 2>/dev/null) ]]; then
                 mediainfo "${FILE_PATH}" && exit 5
+                exiftool "${FILE_PATH}" && exit 5
             fi
-            exiftool "${FILE_PATH}" && exit 5
             exit 1;;
 
         audio/*)
