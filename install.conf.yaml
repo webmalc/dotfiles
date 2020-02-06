@@ -71,4 +71,4 @@
   # - [ecryptfs-setup-private; cp .ssh Private/.ssh; ln -s Private/.ssh/ .ssh]
 
   # Startup applications
-  # bash -c "mpv http://webmalc.pw:8000 >> /dev/null 2>&1 &"
+  # bash -c "mpv http://webmalc.pw:8181 >> /dev/null 2>&1 &"
