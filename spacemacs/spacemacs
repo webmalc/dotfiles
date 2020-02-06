@@ -428,6 +428,13 @@ you should place your code here."
 
   ;; Neotree ------------------------------------------------------------
   (setq neo-hidden-regexp-list '("^\\." "__pycache__.*" "\\.egg-info" "\\.pyc$" "~$" "^#.*#$" "\\.elc$"))
+
+  ;; Treemacs
+  (with-eval-after-load 'treemacs
+    (defun treemacs-custom-filter (file _)
+      (or (s-ends-with? "__pycache__" file)
+          (s-ends-with? ".pyc" file)))
+    (push #'treemacs-custom-filter treemacs-ignored-file-predicates))
   
   ;; Dimmer
   (dimmer-mode t)
