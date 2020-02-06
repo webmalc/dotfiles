@@ -38,8 +38,13 @@ values."
      php
      shell-scripts
      nginx
-     go
+     (go :variables
+         go-format-before-save t
+         go-use-golangci-lint t
+         godoc-at-point-function 'godoc-gogetdoc
+         go-backend 'lsp)
      (python :variables
+        python-backend 'anaconda
         python-enable-yapf-format-on-save t
         python-test-runner 'pytest
         python-sort-imports-on-save t)
@@ -55,7 +60,7 @@ values."
      gtags
      vagrant
      ruby
-     extra-langs
+     ;; extra-langs
      (c-c++ :variables
             c-c++-enable-clang-support t)
      semantic
@@ -460,6 +465,7 @@ you should place your code here."
   ;; Python -------------------------------------------------------------------- 
   ;; (add-to-list 'auto-mode-alist '("\\.py\\'" . yapf-mode))
   (require 'auto-virtualenv)
+  (require 'flycheck)
   (add-hook 'python-mode-hook 'auto-virtualenv-set-virtualenv)
   (add-hook 'python-mode-hook 'yapf-mode)
   (add-hook 'python-mode-hook (lambda ()

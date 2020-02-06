@@ -16,7 +16,7 @@
       stdout: true
       stderr: true
     -
-      command: "git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d 2>&1; true"
+      command: "git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d 2>&1; true"
       stdout: true
       stderr: true
     -
