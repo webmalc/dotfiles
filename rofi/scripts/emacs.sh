@@ -25,10 +25,10 @@ case $chosen in
         systemctl --user start emacs; bash -c " wmctrl -xa emacs.Emacs || emacsclient -nc -s instance1"
         ;;
     $stop)
-        systemctl --user stop emacs
+        systemctl --user stop emacs; killall emacs
         ;;
     $reboot)
-        systemctl --user restart emacs
+        killall emacs; systemctl --user restart emacs; bash -c " wmctrl -xa emacs.Emacs || emacsclient -nc -s instance1"
         ;;
 esac
 

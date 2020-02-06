@@ -52,7 +52,9 @@ values."
      html
      sql
      (typescript :variables
-       typescript-fmt-on-save t)
+        typescript-backend 'tide
+        tide-tsserver-executable "/usr/local/bin/tsserver"
+        typescript-fmt-on-save t)
      yaml
      colors
      django
