@@ -79,6 +79,3 @@
   - [go get -u -v github.com/aarzilli/gdlv]
 
   # - [ecryptfs-setup-private; cp .ssh Private/.ssh; ln -s Private/.ssh/ .ssh]
-
-  # Startup applications
-  # bash -c "mpv http://webmalc.pw:8181 >> /dev/null 2>&1 &"

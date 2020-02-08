@@ -6,8 +6,9 @@ rofi_command="rofi -theme themes/appsmenu.rasi"
 start="start"
 reboot="reboot"
 stop="stop"
+update="update"
 # Variable passed to rofi
-options="$start\n$stop\n$reboot"
+options="$start\n$stop\n$reboot\nupdate"
 
 
 active="$(systemctl --user status emacs | grep running)"
@@ -25,10 +26,13 @@ case $chosen in
         systemctl --user start emacs; bash -c " wmctrl -xa emacs.Emacs || emacsclient -nc -s instance1"
         ;;
     $stop)
-        systemctl --user stop emacs; killall emacs
+        killall emacs; systemctl --user stop emacs
         ;;
     $reboot)
         killall emacs; systemctl --user restart emacs; bash -c " wmctrl -xa emacs.Emacs || emacsclient -nc -s instance1"
+        ;;
+    $update)
+        killall emacs; git pull --rebase ~/.emacs.d/; systemctl --user restart emacs; bash -c " wmctrl -xa emacs.Emacs || emacsclient -nc -s instance1"
         ;;
 esac
 
