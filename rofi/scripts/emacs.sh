@@ -8,7 +8,7 @@ reboot="reboot"
 stop="stop"
 update="update"
 # Variable passed to rofi
-options="$start\n$stop\n$reboot\nupdate"
+options="$start\n$stop\n$reboot\n$update"
 
 
 active="$(systemctl --user status emacs | grep running)"
