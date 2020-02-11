@@ -26,12 +26,9 @@
       stdout: true
       stderr: true
 
-    # Install packages
-    # - 
-    #   command: "apt install -y npm nodejs"
-    #   stdin: true
-    #   stdout: true
-    #   stderr: true
+    #Install nodejs
+    - [curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash]
+    - [sudo apt-get install -y nodejs]
 
     # Install translate-shell
     - 
