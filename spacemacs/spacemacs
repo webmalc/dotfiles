@@ -435,8 +435,7 @@ you should place your code here."
   ;; Treemacs
   (with-eval-after-load 'treemacs
     (defun treemacs-custom-filter (file _)
-      (or (s-ends-with? "__pycache__" file)
-          (s-ends-with? ".pyc" file)))
+      (or (s-ends-with? "__pycache__" file) (s-ends-with? ".egg-info" file) (s-ends-with? ".pyc" file)))
     (push #'treemacs-custom-filter treemacs-ignored-file-predicates))
   
   ;; Dimmer
