@@ -18,7 +18,7 @@
     ~/.vimrc.before: vim/vimrc.before
     ~/Pictures/wallpaper: wallpaper
     ~/Documents/surfshark: surfshark
-    ~/.ptpython/config.py: ptpython/config.py
+    ~/.config/ptpython/config.py: ptpython/config.py
     ~/.vimrc.bundles: vim/vimrc.bundles
     ~/.vimrc.local: vim/vimrc.local
     ~/.config/conky: conky/conky_config
@@ -56,8 +56,8 @@
   - [fc-cache -fv]
 
   # go modules
-  - [GO111MODULE=on go get -v golang.org/x/tools/gopls@latest]
-  - [GO111MODULE=on CGO_ENABLED=0 go get -v -trimpath -ldflags '-s -w' github.com/golangci/golangci-lint/cmd/golangci-lint]
+  - [env GO111MODULE=on go get -v golang.org/x/tools/gopls@latest]
+  - [env GO111MODULE=on CGO_ENABLED=0 go get -v -trimpath -ldflags '-s -w' github.com/golangci/golangci-lint/cmd/golangci-lint]
   - [go get -u -v golang.org/x/tools/cmd/godoc]
   - [go get -u -v golang.org/x/tools/cmd/goimports]
   - [go get -u -v golang.org/x/tools/cmd/gorename]
