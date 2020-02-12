@@ -1,4 +1,4 @@
-t; -*- mode: emacs-lisp -*-
+;; -*- mode: emacs-lisp -*-
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
@@ -45,6 +45,8 @@ values."
          go-backend 'lsp)
      (python :variables
         python-backend 'anaconda
+        python-auto-set-local-pyenv-version 'on-visit
+        python-auto-set-local-pyvenv-virtualenv 'on-visit
         python-enable-yapf-format-on-save t
         python-test-runner 'pytest
         python-sort-imports-on-save t)
@@ -109,7 +111,6 @@ values."
                                       wakatime-mode
                                       editorconfig
                                       all-the-icons
-                                      auto-virtualenv
                                       langtool
                                       flycheck-mypy
                                       go-dlv
@@ -475,9 +476,7 @@ you should place your code here."
 
   ;; Python -------------------------------------------------------------------- 
   ;; (add-to-list 'auto-mode-alist '("\\.py\\'" . yapf-mode))
-  (require 'auto-virtualenv)
   (require 'flycheck)
-  (add-hook 'python-mode-hook 'auto-virtualenv-set-virtualenv)
   (add-hook 'python-mode-hook 'yapf-mode)
   (add-hook 'python-mode-hook (lambda ()
                                 (flycheck-mode 1)
