@@ -503,7 +503,7 @@ you should place your code here."
   (setq company-tooltip-align-annotations t)
 
   ;; formats the buffer before saving
-  ;; (add-hook 'before-save-hook 'tide-format-before-save)
+  ;; (add-hook 'before-save-hook 'tide-organize-imports)
   (add-hook 'typescript-mode-hook #'setup-tide-mode)
 
   ;; PHP configuration ---------------------------------------------------------
