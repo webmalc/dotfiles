@@ -65,7 +65,7 @@
 
     # Install JS packages
     - 
-      command: "npm install -g ionic jshint @angular/cli cross-env mocha less tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google"
+      command: "npm install -g @ionic/cli jshint @angular/cli cross-env mocha less tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google"
       stdin: true
       stdout: true
       stderr: true
