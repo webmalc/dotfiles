@@ -430,6 +430,10 @@ you should place your code here."
   (editorconfig-mode 1)
   (set-frame-parameter nil 'undecorated t)
 
+  ;; Flycheck
+  (setq flycheck-check-syntax-automatically '(save mode-enable idle-change))
+  (setq flycheck-idle-change-delay 4)
+
   ;; Neotree ------------------------------------------------------------
   (setq neo-hidden-regexp-list '("^\\." "__pycache__.*" "\\.egg-info" "\\.pyc$" "~$" "^#.*#$" "\\.elc$"))
 
