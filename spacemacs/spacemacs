@@ -44,10 +44,11 @@ values."
          godoc-at-point-function 'godoc-gogetdoc
          go-backend 'lsp)
      (python :variables
-        python-backend 'anaconda
+        python-backend 'lsp
         python-auto-set-local-pyenv-version 'on-visit
         python-auto-set-local-pyvenv-virtualenv 'on-visit
         python-enable-yapf-format-on-save t
+        python-pipenv-activate t
         python-test-runner 'pytest
         python-sort-imports-on-save t)
      javascript
@@ -480,14 +481,24 @@ you should place your code here."
 
   ;; Python -------------------------------------------------------------------- 
   ;; (add-to-list 'auto-mode-alist '("\\.py\\'" . yapf-mode))
-  (require 'flycheck)
   (add-hook 'python-mode-hook 'yapf-mode)
+
+  (require 'flycheck)
   (add-hook 'python-mode-hook (lambda ()
                                 (flycheck-mode 1)
                                 (setq flycheck-checker 'python-pylint
                                       ;; flycheck-checker-error-threshold 900
                                       ;; flycheck-pylintrc "~/.pylintrc")))
                                  )))
+
+  ;; (use-package lsp-ui
+  ;;   :ensure t
+  ;;   :after lsp-mode flycheck
+  ;;   :config (setq lsp-ui-sideline-ignore-duplicate t)
+  ;;   ;; (add-hook 'python-mode-hook)
+  ;;   (add-hook 'python-mode-hook 'lsp-ui-mode)
+  ;;   (flycheck-add-next-checker 'lsp '(warning . python-pylint ) '(warning . python-mypy )))
+
   (flycheck-add-next-checker 'python-pylint 'python-mypy t)
 
   ;; Typescript ----------------------------------------------------------------

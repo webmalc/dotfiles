@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: pdb - pdb import 
-# key: pdb
+# name: br - ipdb import 
+# key: br
 # binding: C-c b
 # --
 import ipdb
