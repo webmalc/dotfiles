@@ -109,7 +109,6 @@ values."
                                       platformio-mode
                                       docker-tramp
                                       pomidor
-                                      wakatime-mode
                                       editorconfig
                                       all-the-icons
                                       langtool
@@ -370,6 +369,8 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setq-default evil-search-module 'evil-search)
+
+
   )
 
 (defun dotspacemacs/user-config ()
@@ -379,10 +380,6 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-
-  ;; wakatime-mode
-  ;; (global-wakatime-mode)
-  ;; (setq wakatime-cli-path "/usr/local/bin/wakatime")
 
   ;; (require 'helm-bookmark)
 
@@ -483,21 +480,20 @@ you should place your code here."
   ;; (add-to-list 'auto-mode-alist '("\\.py\\'" . yapf-mode))
   (add-hook 'python-mode-hook 'yapf-mode)
 
-  (require 'flycheck)
-  (add-hook 'python-mode-hook (lambda ()
-                                (flycheck-mode 1)
-                                (setq flycheck-checker 'python-pylint
-                                      ;; flycheck-checker-error-threshold 900
-                                      ;; flycheck-pylintrc "~/.pylintrc")))
-                                 )))
+  ;; (add-hook 'python-mode-hook (lambda ()
+  ;;                               (flycheck-mode 1)
+  ;;                               (setq flycheck-checker 'python-pylint
+  ;;                                     ;; flycheck-checker-error-threshold 900
+  ;;                                     ;; flycheck-pylintrc "~/.pylintrc")))
+  ;;                                )))
 
-  ;; (use-package lsp-ui
-  ;;   :ensure t
-  ;;   :after lsp-mode flycheck
-  ;;   :config (setq lsp-ui-sideline-ignore-duplicate t)
-  ;;   ;; (add-hook 'python-mode-hook)
-  ;;   (add-hook 'python-mode-hook 'lsp-ui-mode)
-  ;;   (flycheck-add-next-checker 'lsp '(warning . python-pylint ) '(warning . python-mypy )))
+  (require 'flycheck)
+  (use-package lsp-ui
+    :ensure t
+    :after lsp-mode flycheck
+    :config (setq lsp-ui-sideline-ignore-duplicate t)
+    (add-hook 'python-mode-hook 'lsp-ui-mode)
+    (flycheck-add-next-checker 'lsp '(warning . python-pylint ) '(warning . python-mypy )))
 
   (flycheck-add-next-checker 'python-pylint 'python-mypy t)
 
@@ -569,30 +565,27 @@ translation it is possible to get suggestion."
    (spacemacs/declare-prefix "o" "custom")
 
    (spacemacs/declare-prefix "ot" "google-shell-translate")
-   (define-key evil-normal-state-map (kbd "SPC o t e") 'google-shell-translate-en)
-   (define-key evil-normal-state-map (kbd "SPC o t r") 'google-shell-translate-ru)
-   (define-key evil-normal-state-map (kbd "SPC o t v") 'google-shell-translate-rtr)
+   (spacemacs/set-leader-keys "ote" 'google-shell-translate-en)
+   (spacemacs/set-leader-keys "otr" 'google-shell-translate-ru)
+   (spacemacs/set-leader-keys "otv" 'google-shell-translate-rtr)
 
    (spacemacs/declare-prefix "ol" "language")
-   (define-key evil-normal-state-map (kbd "SPC o l c") 'langtool-check)
-   (define-key evil-normal-state-map (kbd "SPC o l d") 'langtool-check-done)
-   (define-key evil-normal-state-map (kbd "SPC o l s") 'langtool-show-message-at-point)
-   (define-key evil-normal-state-map (kbd "SPC o l r") 'langtool-correct-buffer)
-   (define-key evil-normal-state-map (kbd "SPC o l n") 'langtool-goto-next-error)
-   (define-key evil-normal-state-map (kbd "SPC o l p") 'langtool-goto-previous-error)
-   (define-key evil-normal-state-map (kbd "SPC o l w") 'count-words)
-   (define-key evil-normal-state-map (kbd "SPC o l t") 'toggle-truncate-lines)
+   (spacemacs/set-leader-keys "olc" 'langtool-check)
+   (spacemacs/set-leader-keys "old" 'langtool-check-done)
+   (spacemacs/set-leader-keys "ols" 'langtool-show-message-at-point)
+   (spacemacs/set-leader-keys "olr" 'langtool-correct-buffer)
+   (spacemacs/set-leader-keys "oln" 'langtool-goto-next-error)
+   (spacemacs/set-leader-keys "olp" 'langtool-goto-previous-error)
+   (spacemacs/set-leader-keys "olw" 'count-words)
+   (spacemacs/set-leader-keys "olt" 'toggle-truncate-lines)
 
    (spacemacs/declare-prefix "op" "project")
-   (define-key evil-normal-state-map (kbd "SPC o p t") 'magit-todos-list)
+   (spacemacs/set-leader-keys "opt" 'magit-todos-list)
 
-   (define-key evil-normal-state-map (kbd "SPC x x") 'kill-this-buffer)
+   (spacemacs/set-leader-keys "xx" 'spacemacs/kill-this-buffer)
 
    (spacemacs/declare-prefix "or" "run")
-   (evil-define-key 'normal php-mode-map (kbd "SPC o r c") 'phpcbf)
-   (evil-define-key 'normal python-mode-map (kbd "SPC o r t") 'tox)
-   (define-key php-mode-map (kbd "C-c C-y") 'yas/create-php-snippet)
-
+   (spacemacs/set-leader-keys-for-major-mode 'python-mode "ort" 'tox)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
