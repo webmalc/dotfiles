@@ -41,7 +41,7 @@ values."
      nginx
      (go :variables
          go-format-before-save t
-         go-use-golangci-lint t
+         ;; go-use-golangci-lint t
          godoc-at-point-function 'godoc-gogetdoc
          go-backend 'lsp)
      (python :variables
@@ -587,7 +587,8 @@ translation it is possible to get suggestion."
    (spacemacs/set-leader-keys "xx" 'spacemacs/kill-this-buffer)
 
    (spacemacs/declare-prefix "or" "run")
-   (spacemacs/set-leader-keys-for-major-mode 'python-mode "ort" 'tox)
+   ;; (spacemacs/set-leader-keys-for-major-mode 'python-mode "ort" 'tox)
+   (evil-define-key 'normal python-mode-map (kbd "SPC o r t") 'tox)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
