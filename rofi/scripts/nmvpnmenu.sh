@@ -14,15 +14,16 @@ active="$(nmcli -g name,type con show --active | grep vpn | sed -e 's#:vpn$##')"
 mapfile -t list < <(nmcli -g name,type con | grep vpn | sed -e 's#:vpn$##')
 # A vpn is active
 if [ -n "$active" ]; then
-    status="   connected"
+    status="   connected to $active"
     status_style="#prompt { background-color: @on; }"
-    special="-a 0 -selected-row 1"
+    # special="-a 0 -selected-row 1"
+    special=""
     # Variable passed to rofi
-    options="$active"
+    options="   $active"
     for i in "${!list[@]}"; do
         [ "${list[i]}" == "$active" ] && unset "list[i]" || options+="\n${list[i]}"
     done
-# No vpn is active
+    # No vpn is active
 else
     status="   disconnected"
     status_style="#prompt { background-color: @off; }"
@@ -37,7 +38,7 @@ fi
 
 chosen=$(echo -e "$options" | rofi -theme themes/appsmenu.rasi -theme-str "$status_style" -p "$status" -dmenu -i $special)
 if [ -n "$chosen" ]; then
-    if [ "$chosen" == "$active" ]; then
+    if [ "$chosen" == "   $active" ]; then
         # Disconnect the active vpn
         disconnect
     else
@@ -56,7 +57,7 @@ if [ -n "$chosen" ]; then
                 sleep 1
                 # Connect to the chosen one
                 connect
-            # No vpn is active
+                # No vpn is active
             else
                 # Connect to the chosen one
                 connect
