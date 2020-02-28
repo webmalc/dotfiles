@@ -2,19 +2,25 @@ package main
 
 import (
 	"fmt"
-	"github.com/anaskhan96/soup"
 	"io"
 	"os"
 	"path"
 	"path/filepath"
 	"strings"
+
+	"github.com/anaskhan96/soup"
 )
 
 const wordsFile string = "words.txt"
 const wordsToeflfile string = "words_toefl.txt"
 
+type record struct {
+	word       string
+	definition string
+}
+
 // Gets a random word from the dictionary file
-func getRandomWord(filename string, ch chan string) {
+func getRandomWord(filename string, ch chan record) {
 	dir, _ := filepath.Abs(filepath.Dir(os.Args[0]))
 	dictPath := path.Join(dir, "../assets/%s")
 	file, err := os.Open(fmt.Sprintf(dictPath, filename))
@@ -34,17 +40,17 @@ func getRandomWord(filename string, ch chan string) {
 	checkAndPrintError(err)
 
 	if err = file.Close(); err != nil {
-		fmt.Println("Error: %s", err)
+		fmt.Printf("Error: %s", err)
 	}
-	ch <- word
+	ch <- record{word: word}
 }
 
 // Get random words from the dictionary files
-func getRandomWords() [2]string {
-	var words [2]string
+func getRandomWords() [2]record {
+	var words [2]record
 	var filenames = [2]string{wordsFile, wordsToeflfile}
 
-	messages := make(chan string)
+	messages := make(chan record)
 	defer close(messages)
 
 	for _, filename := range filenames {
@@ -57,9 +63,9 @@ func getRandomWords() [2]string {
 }
 
 // Gets the word definition
-func getDefinition(word string, ch chan string) {
+func getDefinition(word record, ch chan record) {
 	var text string
-	url := fmt.Sprintf("https://www.vocabulary.com/dictionary/%s", word)
+	url := fmt.Sprintf("https://www.vocabulary.com/dictionary/%s", word.word)
 	response, err := soup.Get(url)
 	checkAndPrintError(err)
 	doc := soup.HTMLParse(response)
@@ -70,35 +76,35 @@ func getDefinition(word string, ch chan string) {
 	if el.Error == nil {
 		text = cleanString(el.FullText())
 	}
-	ch <- text
+	word.definition = text
+	ch <- word
 }
 
 // Gets definitions from the online dictionary
-func getDefinitions(words [2]string) [2]string {
-	var definitons [2]string
+func getDefinitions(words [2]record) [2]record {
+	var records [2]record
 
-	messages := make(chan string)
+	messages := make(chan record)
 	defer close(messages)
 
 	for _, word := range words {
 		go getDefinition(word, messages)
 	}
 	for i := range words {
-		definitons[i] = <-messages
+		records[i] = <-messages
 	}
-	return definitons
+	return records
 }
 
 // The entry point
 func main() {
-	words := getRandomWords()
-	definitons := getDefinitions(words)
+	records := getDefinitions(getRandomWords())
 
-	for i, word := range words {
-		title := strings.Title(word)
+	for _, record := range records {
+		title := strings.Title(record.word)
 		fmt.Printf("${font Ubuntu Mono:size=16}%s\n", title)
 		fmt.Println("")
-		definition := wrapWords(definitons[i], 35)
+		definition := wrapWords(record.definition, 35)
 		fmt.Printf("${font Ubuntu Mono:size=12}%s\n", definition)
 	}
 }
