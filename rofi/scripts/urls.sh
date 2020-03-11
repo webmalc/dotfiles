@@ -11,7 +11,7 @@ options+='⛅       yandex.com/weather/moscow\n'
 options+='🍿       trakt.tv'
 
 # Variable passed to rofi
-status="URL"
+status="⮫"
 chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -theme-str "$status_style" -p "$status")"
 
 
