@@ -9,18 +9,17 @@
     # Add repositories
     - apt-add-repository "ppa:fish-shell/release-3" -y
     - apt-add-repository "ppa:papirus/papirus" -y
-    - apt-add-repository "ppa:kelleyk/emacs" -y
     - apt update
 
     # Install packages
-    - 
-      command: "apt install -y dropbox steam terminator emacs26 chromium-browser vim rofi papirus-icon-theme conky-all lua5.3 python-bs4 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common transmission-cli fonts-firacode"
+    -
+      command: "apt install -y dropbox steam terminator chromium-browser vim rofi papirus-icon-theme conky-all lua5.3 python-bs4 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common transmission-cli fonts-firacode"
       stdin: true
       stdout: true
       stderr: true
-    
+
     # Install packages
-    - 
+    -
       command: "apt install -y python-setuptools python3-setuptools zipalign openjdk-8-jdk steam-devices cryfs odt2txt caca-utils atool poppler-utils mediainfo curl exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx python-pygments highlight atool libcaca-dev python-pip python3-pip python3-dev python3.7 python3.7-dev python3.8 python3.8-dev libpq-dev htop fish firefox vim-gnome redis postgresql postgresql-10-postgis-scripts vim memcached  virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp mpc graphviz"
       stdin: true
       stdout: true
@@ -31,47 +30,47 @@
     - [sudo apt-get install -y nodejs]
 
     # Install translate-shell
-    - 
+    -
       command: "wget git.io/trans; chmod +x ./trans; mv ./trans /usr/bin/trans"
       stdin: true
       stdout: true
       stderr: true
 
     # Install snap packages
-    - 
+    -
       command: "snap install telegram-desktop"
       stdin: true
       stdout: true
       stderr: true
 
     # Install snap packages (classic)
-    - 
-      command: "snap install go --classic"
+    -
+      command: "snap install go codium --classic"
       stdin: true
       stdout: true
       stderr: true
 
     # Install python packages
-    - 
+    -
       command: "pip install setuptools python-bidi chardet virtualfish json-rpc service_factory hy php ipdb wakatime"
       stdin: true
       stdout: true
       stderr: true
-    - 
+    -
       command: "pip3 install thefuck platformio ptpython ranger-fm aiohttp"
       stdin: true
       stdout: true
       stderr: true
 
     # Install JS packages
-    - 
+    -
       command: "npm install -g @ionic/cli jshint @angular/cli cross-env mocha less tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google"
       stdin: true
       stdout: true
       stderr: true
 
     # Remove the unnecessary packages
-    - 
+    -
       command: "bash -c 'apt purge -y rhythmbox* xplayer* thunderbird*'"
       stdin: true
       stdout: true

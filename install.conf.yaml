@@ -23,7 +23,6 @@
     ~/.vimrc.bundles: vim/vimrc.bundles
     ~/.vimrc.local: vim/vimrc.local
     ~/.config/conky: conky/conky_config
-    ~/.spacemacs: spacemacs/spacemacs
     ~/.config/ranger/rc.conf: ranger/rc.conf
     ~/.config/ranger/scope.sh: ranger/scope.sh
     ~/.config/ranger/rifle.conf: ranger/rifle.conf
@@ -34,10 +33,6 @@
     ~/.config/gtk-3.0/gtk.css: gtk/gtk.css
     ~/.taskrc: task/.taskrc
     ~/.config/xfce4/terminal/terminalrc: xfce-terminal/terminalrc
-    ~/.emacs.d/private/snippets/js-mode: spacemacs/emacs/private/snippets/js-mode
-    ~/.emacs.d/private/snippets/php-mode: spacemacs/emacs/private/snippets/php-mode
-    ~/.emacs.d/private/snippets/python-mode: spacemacs/emacs/private/snippets/python-mode
-    ~/.emacs.d/private/snippets/typescript-mode: spacemacs/emacs/private/snippets/typescript-mode
     ~/.config/mutt/mailcap: mutt/mailcap
     ~/.config/mutt/muttrc: mutt/muttrc.compiled
     ~/.config/mutt/aliases: /home/webmalc/Dropbox/System/mutt/aliases
@@ -52,7 +47,6 @@
   - [mkdir -p ~/.fonts, Creating fonts directory]
   - [omf install simple-ass-prompt]
   - [dconf load /org/cinnamon/ < dconf/config.ini]
-  - [systemctl --user enable emacs]
   - ['cd ~/.fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf']
   - [fc-cache -fv]
 
@@ -80,7 +74,7 @@
   - [go get -u -v github.com/aarzilli/gdlv]
   - [go get -u -v github.com/client9/misspell/cmd/misspell]
   - [go get -u -v github.com/gordonklaus/ineffassign]
-  - [go get -u -v github.com/jokeyrhyme/go-coverage-threshold/cmd/go-coverage-threshold]
+  - [go get -u -v github.com/klmitch/overcover]
   - [go get -u -v github.com/stamblerre/gocode]
   - [go get -u -v github.com/uudashr/gopkgs/v2/cmd/gopkgs]
   - [go get -u -v github.com/ramya-rao-a/go-outline]

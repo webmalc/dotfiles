@@ -16,14 +16,6 @@
       stdout: true
       stderr: true
     -
-      command: "git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d 2>&1; true"
-      stdout: true
-      stderr: true
-    -
       command: 'crontab -l > mycron; echo "0 12 * * * /home/webmalc/Projects/dotfiles/task/notifications.py" >> mycron; crontab mycron; rm mycron'
-      stdout: true
-      stderr: true
-
-      command: 'crontab -l > mycron; echo "0 12 * * FRI /home/webmalc/Projects/dotfiles/spacemacs/update.sh" >> mycron; crontab mycron; rm mycron'
       stdout: true
       stderr: true
