@@ -50,6 +50,9 @@
   - ['cd ~/.fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf']
   - [fc-cache -fv]
 
+  # systemctl
+  - [systemctl --user enable mpv.service]
+
   # go modules
   - [env GO111MODULE=on go get -v golang.org/x/tools/gopls@latest]
   - [env GO111MODULE=on CGO_ENABLED=0 go get -v -trimpath -ldflags '-s -w' github.com/golangci/golangci-lint/cmd/golangci-lint]

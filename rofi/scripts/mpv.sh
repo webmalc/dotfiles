@@ -21,13 +21,13 @@ chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -theme-str "
 
 case $chosen in
     $start)
-        killall mpv; mpv https://music.webmalc.pw
+        systemctl --user stop mpv; systemctl --user start mpv
     ;;
     $stop)
-        killall mpv
+        systemctl --user stop mpv
     ;;
     $reboot)
-        killall mpv; mpv https://music.webmalc.pw
+        systemctl --user stop mpv; systemctl --user start mpv
     ;;
 esac
 

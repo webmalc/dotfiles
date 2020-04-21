@@ -1,0 +1,11 @@
+[Unit]
+Description=MPV
+
+[Service]
+Type=forking
+ExecStart=/home/webmalc/.config/systemd/user/mpv_service.sh
+ExecStop=/usr/bin/kilall mpv > /dev/null 2>&1 &
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
