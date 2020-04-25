@@ -1,5 +1,6 @@
 #eval (python -m virtualfish)
 thefuck --alias | source
+set XDG_CURRENT_DESKTOP GNOME
 set EDITOR vim; export EDITOR
 set PYTHONBREAKPOINT 'ipdb.set_trace'; export PYTHONBREAKPOINT
 set -x -U GOPATH $HOME/go

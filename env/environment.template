@@ -2,3 +2,4 @@ PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/u
 TR_AUTH="{{tr_auth}}"
 MPD_HOST="{{mpd}}"
 MPD_PORT={{mpd_port}}
+XDG_CURRENT_DESKTOP=GNOME
