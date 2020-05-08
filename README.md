@@ -10,6 +10,7 @@ Dotfiles for Mint
 * **bash -c "mpv http://host:port >> /dev/null 2>&1 &"** - mbv
 * **rofi -no-lazy-grab -show combi -theme themes/appsmenu.rasi** - rofi
 * **0 12 * * * /home/webmalc/Projects/dotfiles/task/notifications.py** - crontab
+* **nvidia-settings --assign CurrentMetaMode="HDMI-0: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}"** - second monitor tearing
 
 
 
