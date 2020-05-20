@@ -48,5 +48,5 @@ conky.text = [[
 Notes:
 ${hr}
 
-${execpi 60 cat /home/webmalc/Dropbox/Work/notes.txt| fold }}
+${execpi 60 cat /home/webmalc/Dropbox/Work/notes.txt| fold }
 ]]
