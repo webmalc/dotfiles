@@ -20,7 +20,26 @@
 
     # Install packages
     -
-      command: "apt install -y python-setuptools python3-setuptools zipalign openjdk-8-jdk steam-devices cryfs odt2txt caca-utils atool poppler-utils mediainfo curl exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx python-pygments highlight atool libcaca-dev python-pip python3-pip python3-dev python3.7 python3.7-dev python3.8 python3.8-dev libpq-dev htop fish firefox vim-gnome redis postgresql postgresql-10-postgis-scripts vim memcached  virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp mpc graphviz"
+      command: "apt install -y python-setuptools python3-setuptools zipalign openjdk-8-jdk steam-devices cryfs odt2txt caca-utils atool poppler-utils mediainfo curl exuberant-ctags snapd silversearcher-ag ipython ipython3 keepassx python-pygments highlight atool libcaca-dev python-pip python3-pip python3-dev python3.7 python3.7-dev python3.8 python3.8-dev libpq-dev htop fish firefox vim-gnome redis postgresql postgresql-10-postgis-scripts sqlite3 vim memcached  virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp mpc graphviz cmatrix spotify-client"
+      stdin: true
+      stdout: true
+      stderr: true
+
+    # Install codium
+    -
+      command: "wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | apt-key add - "
+      stdin: true
+      stdout: true
+      stderr: true
+
+    -
+      command: "echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | tee --append /etc/apt/sources.list.d/vscodium.list "
+      stdin: true
+      stdout: true
+      stderr: true
+
+    -
+      command: "apt update && apt install codium"
       stdin: true
       stdout: true
       stderr: true
@@ -45,7 +64,7 @@
 
     # Install snap packages (classic)
     -
-      command: "snap install go codium --classic"
+      command: "snap install go --classic"
       stdin: true
       stdout: true
       stderr: true
