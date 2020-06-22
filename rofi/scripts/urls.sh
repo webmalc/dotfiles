@@ -4,13 +4,17 @@ rofi_command="rofi -theme themes/appsmenu.rasi"
 
 ### Options ###
 options='📖       nativecards.pw\n'
+options+='📖       gocorrect.me/messages\n'
 options+='🌎       translate.yandex.ru\n'
 options+='🌎       translate.google.ca\n'
 options+='📩       mail.zoho.eu\n'
 options+='⛅       yandex.com/weather/moscow\n'
-options+='🔍       unogs.com\n'
-options+='🅽       netflix.com\n'
+options+='⇄       rutracker.org\n'
+options+='⇄       torrentdownloads.me\n'
+options+='⇄       thepiratebay.org\n'
+options+='💻       github.com\n'
 options+='🍿       trakt.tv'
+
 
 # Variable passed to rofi
 status="⮫"

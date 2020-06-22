@@ -3,11 +3,10 @@
 rofi_command="rofi -theme themes/appsmenu.rasi"
 
 ### Options ###
-ncmpcpp="ncmpcpp"
 start="start"
 reboot="reboot"
 stop="stop"
-options="$ncmpcpp\n$start\n$stop\n$reboot"
+options="$start\n$stop\n$reboot"
 
 
 if pgrep -x "mpv" > /dev/null
@@ -23,9 +22,6 @@ chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -theme-str "
 case $chosen in
     $start)
         systemctl --user stop mpv; systemctl --user start mpv
-    ;;
-    $ncmpcpp)
-        /home/webmalc/Projects/dotfiles/wmctrl/switch.sh webmalc-ncmpcpp "xfce4-terminal --hide-menubar --maximize --hide-borders --hide-scrollbar --title webmalc-ncmpcpp -e ncmpcpp"
     ;;
     $stop)
         systemctl --user stop mpv
