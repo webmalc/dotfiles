@@ -1,3 +1,3 @@
 function wttr
-	curl wttr.in
+	curl wttr.in/Moscow
 end

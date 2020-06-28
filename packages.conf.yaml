@@ -11,6 +11,10 @@
       stdout: true
       stderr: true
     -
+      command: "curl -sLf https://spacevim.org/install.sh | bash"
+      stdout: true
+      stderr: true
+    -
       command: 'crontab -l > mycron; echo "0 12 * * * /home/webmalc/Projects/dotfiles/task/notifications.py" >> mycron; crontab mycron; rm mycron'
       stdout: true
       stderr: true
