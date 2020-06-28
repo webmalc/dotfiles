@@ -45,10 +45,14 @@
   - [mkdir -p ~/Encrypt, Creating encrypt directory]
   - [mkdir -p ~/Music, Creating music directory]
   - [mkdir -p ~/.fonts, Creating fonts directory]
+  - [mkdir -p ~/.cache/mutt, Creating mutt directory]
   - [omf install simple-ass-prompt]
-  - [dconf load /org/cinnamon/ < dconf/config.ini]
+  #- [dconf load /org/cinnamon/ < dconf/config.ini]
   - ['cd ~/.fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf']
   - [fc-cache -fv]
+  - [vf install]
+  - [python3 -m venv ~/.mypyls]
+  - ['~/.mypyls/bin/pip install "https://github.com/matangover/mypyls/archive/master.zip#egg=mypyls[default-mypy]"']
 
   # systemctl
   - [systemctl --user enable mpv.service]

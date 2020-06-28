@@ -16,6 +16,8 @@ def _compile_config(config, path, append_path=None):
         with open(path + '.compiled', 'w+') as compiled:
             compiled_content = content.replace(
                 '{{mpd}}', config['mpd']['mpd'])
+            compiled_content = content.replace(
+                '{{mpd_port}}', config['mpd']['mpd_port'])
             compiled_content = compiled_content.replace(
                 '{{tr_auth}}', config['transmission']['tr_auth'])
             compiled.write(compiled_content)

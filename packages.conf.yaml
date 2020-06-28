@@ -7,11 +7,6 @@
 - link: {}
 - shell:
     -
-      command: "curl http://j.mp/spf13-vim3 -L -o - | sh 2>&1; true"
-      stdin: true
-      stdout: true
-      stderr: true
-    -
       command: "curl -L http://get.oh-my.fish | fish 2>&1; true"
       stdout: true
       stderr: true
