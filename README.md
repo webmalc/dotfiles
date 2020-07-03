@@ -12,4 +12,4 @@ Dotfiles for Mint
 * **0 12 * * * /home/webmalc/Projects/dotfiles/task/notifications.py** - crontab
 * **nvidia-settings --assign CurrentMetaMode="HDMI-0: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}"** - second monitor tearing
 * **192.168.0.170:/mnt/server   /home/webmalc/pi   nfs    rw  0  0** - fstab
-* **options nvidia-drm modeset=1** - /etc/modprobe.d/nvidia-drm-nomodeset.conf
+* **options nvidia-drm modeset=1** - /etc/modprobe.d/zz-nvidia-drm-nomodeset.conf
