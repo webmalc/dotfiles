@@ -1,8 +1,8 @@
 -- vim: ts=4 sw=4 noet ai cindent syntax=lua
 
 conky.config = {
-    xinerama_head = 2,
-    alignment = 'top_right',
+    xinerama_head = 1,
+    alignment = 'top_left',
     background = true,
     border_width = 1,
     cpu_avg_samples = 2,
@@ -40,13 +40,10 @@ conky.config = {
     show_graph_scale = false,
     show_graph_range = false,
     border_outer_margin = 15,
-    maximum_width = 400,
-    minimum_width = 400,
+    maximum_width = 800,
+    minimum_width = 800,
 }
 
 conky.text = [[
-Notes:
-${hr}
-
-${execpi 60 cat /home/webmalc/Dropbox/Work/notes.txt| fold }
+${execpi 60 cat /home/webmalc/Dropbox/Work/notes.txt | fold }
 ]]
