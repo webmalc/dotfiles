@@ -4,7 +4,7 @@
       relink: true
       force: true
 
-- clean: ['~', '~/.config']
+- clean: ["~", "~/.config"]
 - link:
     ~/.ncmpcpp: ncmpcpp
     ~/.mpd: mpd
@@ -39,54 +39,60 @@
     ~/.urlview: urlview/urlview
     ~/.config/mailnag/mailnag.cfg: mailnag/mailnag.compiled
 - shell:
-  - ["git submodule update --init --recursive", "Installing submodules"]
-  - [mkdir -p ~/Downloads, Creating downloads directory]
-  - [mkdir -p ~/Projects, Creating projects directory]
-  - [mkdir -p ~/Encrypt, Creating encrypt directory]
-  - [mkdir -p ~/Music, Creating music directory]
-  - [mkdir -p ~/.fonts, Creating fonts directory]
-  - [mkdir -p ~/.cache/mutt, Creating mutt directory]
-  - [omf install simple-ass-prompt]
-  #- [dconf load /org/cinnamon/ < dconf/config.ini]
-  - ['cd ~/.fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf']
-  - [fc-cache -fv]
-  - [vf install]
-  - [python3 -m venv ~/.mypyls]
-  - ['~/.mypyls/bin/pip install "https://github.com/matangover/mypyls/archive/master.zip#egg=mypyls[default-mypy]"']
+    - ["git submodule update --init --recursive", "Installing submodules"]
+    - [mkdir -p ~/Downloads, Creating downloads directory]
+    - [mkdir -p ~/Projects, Creating projects directory]
+    - [mkdir -p ~/Encrypt, Creating encrypt directory]
+    - [mkdir -p ~/Music, Creating music directory]
+    - [mkdir -p ~/.fonts, Creating fonts directory]
+    - [mkdir -p ~/.cache/mutt, Creating mutt directory]
+    - [omf install simple-ass-prompt]
+    - [dconf load /org/cinnamon/ < dconf/config.ini]
+    - [
+        'cd ~/.fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf',
+      ]
+    - [fc-cache -fv]
+    - [vf install]
+    - [python3 -m venv ~/.mypyls]
+    - [
+        '~/.mypyls/bin/pip install "https://github.com/matangover/mypyls/archive/master.zip#egg=mypyls[default-mypy]"',
+      ]
 
-  # systemctl
-  - [systemctl --user enable mpv.service]
+    # systemctl
+    - [systemctl --user enable mpv.service]
 
-  # go modules
-  - [env GO111MODULE=on go get -v golang.org/x/tools/gopls@latest]
-  - [env GO111MODULE=on CGO_ENABLED=0 go get -v -trimpath -ldflags '-s -w' github.com/golangci/golangci-lint/cmd/golangci-lint]
-  - [go get -u -v golang.org/x/tools/cmd/godoc]
-  - [go get -u -v golang.org/x/tools/cmd/goimports]
-  - [go get -u -v golang.org/x/tools/cmd/gorename]
-  - [go get -u -v golang.org/x/tools/cmd/guru]
-  - [go get -u -v github.com/cweill/gotests/...]
-  - [go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct]
-  - [go get -u -v github.com/fatih/gomodifytags]
-  - [go get -u -v github.com/godoctor/godoctor]
-  - [go get -u -v github.com/haya14busa/gopkgs/cmd/gopkgs]
-  - [go get -u -v github.com/josharian/impl]
-  - [go get -u -v github.com/mdempsky/gocode]
-  - [go get -u -v github.com/rogpeppe/godef]
-  - [go get -u -v github.com/zmb3/gogetdoc]
-  - [go get -u -v golang.org/x/lint/golint]
-  - [go get -u -v github.com/kisielk/errcheck]
-  - [go get -u -v github.com/mdempsky/unconvert]
-  - [go get -u -v honnef.co/go/tools/cmd/staticcheck]
-  - [go get -u -v github.com/go-delve/delve/cmd/dlv]
-  - [go get -u -v github.com/aarzilli/gdlv]
-  - [go get -u -v github.com/client9/misspell/cmd/misspell]
-  - [go get -u -v github.com/gordonklaus/ineffassign]
-  - [go get -u -v github.com/klmitch/overcover]
-  - [go get -u -v github.com/stamblerre/gocode]
-  - [go get -u -v github.com/uudashr/gopkgs/v2/cmd/gopkgs]
-  - [go get -u -v github.com/ramya-rao-a/go-outline]
-  - [go get -u -v github.com/acroca/go-symbols]
-  - [go get -u -v github.com/haya14busa/goplay/cmd/goplay]
-  - [go get -u -v github.com/vektra/mockery/.../]
-  - [go get -u -v github.com/kisielk/godepgraph]
+    # go modules
+    - [env GO111MODULE=on go get -v golang.org/x/tools/gopls@latest]
+    - [
+        env GO111MODULE=on CGO_ENABLED=0 go get -v -trimpath -ldflags '-s -w' github.com/golangci/golangci-lint/cmd/golangci-lint,
+      ]
+    - [go get -u -v golang.org/x/tools/cmd/godoc]
+    - [go get -u -v golang.org/x/tools/cmd/goimports]
+    - [go get -u -v golang.org/x/tools/cmd/gorename]
+    - [go get -u -v golang.org/x/tools/cmd/guru]
+    - [go get -u -v github.com/cweill/gotests/...]
+    - [go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct]
+    - [go get -u -v github.com/fatih/gomodifytags]
+    - [go get -u -v github.com/godoctor/godoctor]
+    - [go get -u -v github.com/haya14busa/gopkgs/cmd/gopkgs]
+    - [go get -u -v github.com/josharian/impl]
+    - [go get -u -v github.com/mdempsky/gocode]
+    - [go get -u -v github.com/rogpeppe/godef]
+    - [go get -u -v github.com/zmb3/gogetdoc]
+    - [go get -u -v golang.org/x/lint/golint]
+    - [go get -u -v github.com/kisielk/errcheck]
+    - [go get -u -v github.com/mdempsky/unconvert]
+    - [go get -u -v honnef.co/go/tools/cmd/staticcheck]
+    - [go get -u -v github.com/go-delve/delve/cmd/dlv]
+    - [go get -u -v github.com/aarzilli/gdlv]
+    - [go get -u -v github.com/client9/misspell/cmd/misspell]
+    - [go get -u -v github.com/gordonklaus/ineffassign]
+    - [go get -u -v github.com/klmitch/overcover]
+    - [go get -u -v github.com/stamblerre/gocode]
+    - [go get -u -v github.com/uudashr/gopkgs/v2/cmd/gopkgs]
+    - [go get -u -v github.com/ramya-rao-a/go-outline]
+    - [go get -u -v github.com/acroca/go-symbols]
+    - [go get -u -v github.com/haya14busa/goplay/cmd/goplay]
+    - [go get -u -v github.com/vektra/mockery/.../]
+    - [go get -u -v github.com/kisielk/godepgraph]
   # - [ecryptfs-setup-private; cp .ssh Private/.ssh; ln -s Private/.ssh/ .ssh]
