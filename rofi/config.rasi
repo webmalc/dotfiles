@@ -25,7 +25,7 @@ configuration {
 /*	run-command: "{cmd}";*/
 /*	run-list-command: "";*/
 	run-shell-command: "xfce4-terminal --hide-menubar --maximize --hide-borders --hide-scrollbar -e {cmd}";
-/*	window-command: "xkill -id {window}";*/
+	window-command: "xkill -id {window}";
 /*	window-match-fields: "all";*/
 /*	drun-icon-theme: ;*/
 /*	drun-match-fields: "name,generic,exec,categories";*/

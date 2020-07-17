@@ -3,10 +3,15 @@
 rofi_command="rofi -theme themes/appsmenu.rasi"
 
 ### Options ###
-start="start"
-reboot="reboot"
-stop="stop"
-options="$start\n$stop\n$reboot"
+start_text="   start"
+start_icon="\0icon\x1fmedia-playback-start"
+start="$start_text$start_icon"
+
+stop_text="   stop"
+stop_icon="\0icon\x1fmedia-playback-stop"
+stop="$stop_text$stop_icon"
+
+options="$start\n$stop"
 
 
 if pgrep -x "mpv" > /dev/null
@@ -19,15 +24,13 @@ else
 fi
 chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -theme-str "$status_style" -p "$status")"
 
+echo $chosen
 case $chosen in
-    $start)
+    $start_text)
         systemctl --user stop mpv; systemctl --user start mpv
     ;;
-    $stop)
+    $stop_text)
         systemctl --user stop mpv
-    ;;
-    $reboot)
-        systemctl --user stop mpv; systemctl --user start mpv
     ;;
 esac
 
