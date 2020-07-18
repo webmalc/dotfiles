@@ -8,7 +8,7 @@ conky.config = {
     default_color = 'e0e0e0',
     default_outline_color = 'grey',
     color1 = 'fcf083',
-    color2 = '995a5a',
+    color2 = 'b22727a',
     color3 = 'e0e0e0',
     default_shade_color = 'white',
     draw_borders = false,
@@ -44,12 +44,11 @@ conky.config = {
 }
 
 conky.text = [[
-Week: ${font Ubuntu Mono:size=12}
+Status: ${font Ubuntu Mono:size=12}${execpi 60 bash -c 'if [ "$(watson status -p)" = "No project started." ]; then echo "-"; else echo "\${color1}$(watson status -p) $(watson status -e)\${color}"; fi'}
+${hr}
+${execpi 3600 watson report -w -g }
 
-${execpi 60 watson report -w -g }
+${hr}
 
-${hr}${font Ubuntu Mono:size=16}
-Today: ${font Ubuntu Mono:size=12}
-
-${execpi 60 watson report -d -g }
+${execpi 3600 watson report -d -g }
 ]]
