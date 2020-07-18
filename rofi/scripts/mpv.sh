@@ -1,15 +1,15 @@
 #!/bin/bash
 
-rofi_command="rofi -theme themes/appsmenu.rasi"
+rofi_command="rofi -theme themes/appsmenu.rasi -format p -markup -markup-rows"
 
 ### Options ###
 start_text="   start"
 start_icon="\0icon\x1fmedia-playback-start"
-start="$start_text$start_icon"
+start="<span foreground='#44ad4d'>$start_text</span>$start_icon"
 
 stop_text="   stop"
 stop_icon="\0icon\x1fmedia-playback-stop"
-stop="$stop_text$stop_icon"
+stop="<span font_weight='bold' foreground='#e34039'>$stop_text</span>$stop_icon"
 
 options="$start\n$stop"
 
