@@ -9,6 +9,7 @@
     ~/.ncmpcpp: ncmpcpp
     ~/.mpd: mpd
     ~/.config/fish/functions: fish/functions
+    ~/.config/fish/completions: fish/completions
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/terminator/config: terminator/config
     ~/.config/redshift.conf: redshift/redshift.conf
@@ -36,6 +37,7 @@
     ~/.config/mutt/mailcap: mutt/mailcap
     ~/.config/mutt/muttrc: mutt/muttrc.compiled
     ~/.config/mutt/aliases: /home/webmalc/Dropbox/System/mutt/aliases
+    ~/.config/watson: /home/webmalc/Dropbox/System/watson
     ~/.urlview: urlview/urlview
     ~/.config/mailnag/mailnag.cfg: mailnag/mailnag.compiled
 - shell:

@@ -24,7 +24,6 @@ else
 fi
 chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -theme-str "$status_style" -p "$status")"
 
-echo $chosen
 case $chosen in
     $start_text)
         systemctl --user stop mpv; systemctl --user start mpv

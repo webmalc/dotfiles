@@ -17,13 +17,13 @@ for i in cal.itermonthdays(today.year, today.month):
         if date(today.year, today.month, i).weekday() >= 5:
             weekends.append(str(i))
 
-content = re.sub(
-    day + '(?!\d)', '${color1}' + day + '${color}', content, count=1)
 for weekend in weekends:
     content = re.sub(
         weekend + '(?![\d,\}])',
         '${color2}' + weekend + '${color}',
         content,
         count=1)
+content = re.sub(
+    day + '(?!\d)', '${color1}' + day + '${color}', content, count=1)
 result = header + '\n' + content
 print(result)
