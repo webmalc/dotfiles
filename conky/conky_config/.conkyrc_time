@@ -2,7 +2,7 @@
 
 conky.config = {
     alignment = 'top_left',
-    background = false,
+    background = true,
     border_width = 1,
     cpu_avg_samples = 2,
     default_color = 'e0e0e0',
@@ -49,7 +49,6 @@ Week: ${font Ubuntu Mono:size=12}
 ${execpi 60 watson report -w -g }
 
 ${hr}${font Ubuntu Mono:size=16}
-
 Today: ${font Ubuntu Mono:size=12}
 
 ${execpi 60 watson report -d -g }
