@@ -31,7 +31,7 @@ conky.config = {
     own_window_type = 'desktop',
     own_window_transparent = false,
     own_window_argb_visual = true,
-    own_window_argb_value = 170,
+    own_window_argb_value = 200,
     stippled_borders = 0,
     update_interval = 1.0,
     uppercase = false,
@@ -44,11 +44,12 @@ conky.config = {
 }
 
 conky.text = [[
-Status: ${font Ubuntu Mono:size=12}${execpi 60 bash -c 'if [ "$(watson status -p)" = "No project started." ]; then echo "-"; else echo "\${color1}$(watson status -p) $(watson status -e)\${color}"; fi'}
+Status: ${font Ubuntu Mono:size=12}${execpi 60 bash -c 'if [ "$(watson status -p)" = "No project started." ]; then echo "-"; else echo "\${color1}\${blink "$(watson status -p) $(watson status -e)"}\${color}"; fi'}
 ${hr}
-${execpi 3600 watson report -w -g }
+
+${execpi 60 watson report -w -g }
 
 ${hr}
 
-${execpi 3600 watson report -d -g }
+${execpi 60 watson report -d -g }
 ]]
