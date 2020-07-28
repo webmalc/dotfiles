@@ -12,6 +12,7 @@ options+='⛅       yandex.com/weather/moscow\n'
 options+='⇄       rutracker.org\n'
 options+='⇄       torrentdownloads.me\n'
 options+='⇄       thepiratebay.org\n'
+options+='⇄       solidtorrents.net\n'
 options+='💻       github.com\n'
 options+='🍿       trakt.tv'
 

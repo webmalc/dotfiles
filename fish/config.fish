@@ -5,3 +5,4 @@ set -x -U GOPATH $HOME/go
 set -x -U BROWSER firefox
 set -x -U CHROME_BIN chromium-browser
 set -gx PATH $GOPATH/bin $PATH
+thefuck --alias | source

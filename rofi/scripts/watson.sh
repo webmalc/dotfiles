@@ -10,7 +10,7 @@ while IFS=, read -r from to project tag time; do
     then
         options="$options\n<span font_weight='bold'>$project</span> <span font_style='italic'>+$tag</span>"
     fi;
-done <<< `watson report -s -g`
+done <<< `watson report -s -g -y`
 options="$options\n<span foreground='#44ad4d'>$report</span>"
 options="$options\n<span foreground='#44ad4d'>$log</span>"
 status=`watson status -p`
