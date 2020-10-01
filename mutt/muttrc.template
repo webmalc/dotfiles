@@ -32,9 +32,8 @@ set copy
 
 set spoolfile   = +INBOX
 mailboxes       = +INBOX
-#set postponed = '+Черновики'
+#set postponed = +Drafts'
 set record    = '+Sent'
-#set postponed = +[Gmail]/Drafts
 set imap_check_subscribed
 unset imap_passive
 set mail_check = 120
@@ -104,3 +103,6 @@ bind index I imap-fetch-mail
 bind index,pager R  group-reply
 macro index       \Cr   "<tag-prefix><clear-flag>N"                                          "mark tagged messages as read"
 macro index       \CR   "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>"         "mark all messages as read"
+
+# custom
+set sleep_time = 0

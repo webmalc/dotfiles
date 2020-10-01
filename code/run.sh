@@ -1,3 +1,3 @@
 #!/bin/bash
-codium
+code
 /home/webmalc/.config/rofi/scripts/watson.sh
