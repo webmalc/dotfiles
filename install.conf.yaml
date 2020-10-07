@@ -68,6 +68,7 @@
     - [
         env GO111MODULE=on CGO_ENABLED=0 go get -v -trimpath -ldflags '-s -w' github.com/golangci/golangci-lint/cmd/golangci-lint,
       ]
+    - [go get gopkg.in/niemeyer/godeb.v1/cmd/godeb]
     - [go get -u -f github.com/qor/bindatafs/...]
     - [go get -u -v golang.org/x/tools/cmd/godoc]
     - [go get -u -v golang.org/x/tools/cmd/goimports]

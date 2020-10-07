@@ -8,14 +8,29 @@ from bs4 import BeautifulSoup
 
 LEFT = len(sys.argv) > 1
 
+STATUS_CODES = (200, 429)
+MAX_ATTEMPTS = 10
+
+
+async def get_http(url):
+    """Get the content"""
+    get_http.counter += 1
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url, raise_for_status=True) as response:
+            if response.status not in STATUS_CODES:
+                if get_http.counter > MAX_ATTEMPTS:
+                    return ''
+                await asyncio.sleep(1)
+                return await get_http(url)
+            return await response.text()
+get_http.counter = 0
+
 
 async def print_news(url, title, selector, num, wrap=30):
     """
     Print news
     """
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
-            html = await response.text()
+    html  = await get_http(url)
     soup = BeautifulSoup(html, 'html.parser')
     items = soup.select(selector)[:num]
     title_str = '${font Ubuntu Mono:size=16}'
