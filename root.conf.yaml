@@ -10,6 +10,7 @@
     - ['wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -']
     - ['add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"']
     - apt-add-repository "ppa:papirus/papirus" -y
+    - apt-add-repository "ppa:longsleep/golang-backports" -y
     - apt update
 
     # Install packages
@@ -21,7 +22,7 @@
 
     # Install packages
     -
-      command: "apt -y tmux fzf traceroute install ncdu papirus-icon-theme code xdotool nodejs npm python-setuptools python3-setuptools python3-venv zipalign openjdk-8-jdk steam-devices cryfs odt2txt caca-utils atool poppler-utils mediainfo curl exuberant-ctags silversearcher-ag ipython3 keepassx python-pygments highlight atool libcaca-dev python3-pip python3-dev libpq-dev htop fish redis postgresql postgresql-12-postgis-scripts sqlite3 vim memcached virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp mpc graphviz golang"
+      command: "apt -y dict tmux fzf traceroute install ncdu papirus-icon-theme code xdotool nodejs npm python-setuptools python3-setuptools python3-venv zipalign openjdk-8-jdk steam-devices cryfs odt2txt caca-utils atool poppler-utils mediainfo curl exuberant-ctags silversearcher-ag ipython3 keepassx python-pygments highlight atool libcaca-dev python3-pip python3-dev libpq-dev htop fish redis postgresql postgresql-12-postgis-scripts sqlite3 vim memcached virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp mpc graphviz golang-go"
       stdin: true
       stdout: true
       stderr: true
