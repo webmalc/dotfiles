@@ -8,6 +8,7 @@
 - link:
     ~/.ncmpcpp: ncmpcpp
     ~/.mpd: mpd
+    ~/.tmux.con: tmux/tmux.conf
     ~/.config/fish/functions: fish/functions
     ~/.config/fish/completions: fish/completions
     ~/.config/fish/config.fish: fish/config.fish
@@ -62,6 +63,10 @@
 
     # systemctl
     - [systemctl --user enable mpv.service]
+
+    # tmux
+    - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm]
+    - [tmux source ~/.tmux.conf]
 
     # go modules
     - [env GO111MODULE=on go get -v golang.org/x/tools/gopls@latest]
