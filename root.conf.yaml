@@ -48,7 +48,7 @@
       stdout: true
       stderr: true
     -
-      command: "pip3 install thefuck platformio ptpython ranger-fm aiohttp docker-compose"
+      command: "pip3 install thefuck platformio ptpython ranger-fm aiohttp docker-compose speedtest-cli"
       stdin: true
       stdout: true
       stderr: true
