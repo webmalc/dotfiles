@@ -18,7 +18,7 @@ options+='⇄       rutracker.org -tou\n'
 options+='⇄       torrentdownloads.me -tod\n'
 options+='⇄       thepiratebay.org -top\n'
 options+='⇄       solidtorrents.net -tos\n'
-options+='⇄       rarbggo.org -tor\n'
+options+='⇄       rarbggo.org -tog\n'
 options+='⇄       1337x.to -to3\n'
 
 ### gihub ###
