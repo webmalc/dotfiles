@@ -16,10 +16,10 @@ options="$start\n$stop"
 
 if pgrep -x "mpv" > /dev/null
 then
-    status="🎝"
+    status=""
     status_style="#prompt { background-color: @on; }"
 else
-    status="🎝"
+    status=""
     status_style="#prompt { background-color: @off; }"
 fi
 chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -theme-str "$status_style" -p "$status")"

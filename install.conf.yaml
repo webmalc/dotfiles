@@ -65,8 +65,8 @@
     - [systemctl --user enable mpv.service]
 
     # tmux
-    - ["git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm"]
-    - [tmux source ~/.tmux.conf]
+    - ["test -e ~/.tmux/plugins/tpm || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm"]
+    # - [tmux source ~/.tmux.conf]
 
     # go modules
     - [env GO111MODULE=on go get -v golang.org/x/tools/gopls@latest]

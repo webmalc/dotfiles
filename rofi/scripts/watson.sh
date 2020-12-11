@@ -1,6 +1,6 @@
 #!/bin/bash
 rofi_command="rofi -theme themes/appsmenu.rasi -dmenu -lines 25 -no-custom -format p -markup -markup-rows"
-stop="⏹  stop"
+stop="  stop"
 report="☰  report"
 log="☰  log"
 no_project="No project started."
@@ -17,7 +17,7 @@ status=`watson status -p`
 
 if [ "$status" = "$no_project" ]
 then
-    status="⏹   stopped"
+    status="   stopped"
     status_style="#prompt { background-color: @off; }"
     options=`echo "$options" | cut -c 3-`
 else

@@ -1,0 +1,28 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+
+- clean: []
+- shell:
+    - [
+        "curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -",
+      ]
+    - [
+        'echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list',
+      ]
+    - apt update
+    - apt install elasticsearch
+    - [
+        cp /home/webmalc/Projects/dotfiles/elastic/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml,
+      ]
+    - [
+        mkdir -p /etc/elasticsearch/hunspell/en_US /usr/share/elasticsearch/hunspell/ru_RU,
+      ]
+    - [
+        wget -O /tmp/en_US.zip http://ftp5.gwdg.de/pub/openoffice/contrib/dictionaries/en_US.zip && unzip /tmp/en_US.zip -d /etc/elasticsearch/hunspell/en_US/,
+      ]
+    - [
+        wget -O /tmp/ru_RU.zip http://ftp5.gwdg.de/pub/openoffice/contrib/dictionaries/ru_RU.zip && unzip /tmp/ru_RU.zip -d /etc/elasticsearch/hunspell/ru_RU/,
+      ]
