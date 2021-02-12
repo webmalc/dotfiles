@@ -31,7 +31,7 @@ options+='⛅       weather.com/weather/tenday/l/34f2aafc84cff75ae0b014754856ea5
 options+='🍿       trakt.tv -ttv'
 
 # Variable passed to rofi
-status="🔗"
+status="★"
 chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -theme-str "$status_style" -p "$status")"
 
 

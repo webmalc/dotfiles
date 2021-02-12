@@ -10,7 +10,7 @@ Dotfiles for Mint
 * **bash -c "mpv http://host:port >> /dev/null 2>&1 &"** - mpv
 * **rofi -no-lazy-grab -show combi -theme themes/appsmenu.rasi** - rofi
 * **0 12 * * * /home/webmalc/Projects/dotfiles/task/notifications.py** - crontab
-* **nvidia-settings --assign CurrentMetaMode="HDMI-0: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}"** - second monitor tearing
+* **nvidia-settings --assign CurrentMetaMode="DP-1: nvidia-auto-select +0+0 {ForceCompositionPipeline=On}, HDMI-0: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}"** - monitor tearing
 * **192.168.0.170:/mnt/server   /home/webmalc/pi   nfs    rw  0  0** - fstab
 * **options nvidia-drm modeset=1** - /etc/modprobe.d/zz-nvidia-drm-nomodeset.conf
-* **background-color: rgba(0, 0, 0, 0.7);** - sudo vim /usr/share/themes/Mint-Y-Dark-Aqua/cinnamon/cinnamon.css - panel-top, .panel-bottom, .panel-left, .panel-right
+* **background-color: rgba(0, 0, 0, 0.7);** - sudo vim /usr/share/themes/Mint-Y-Dark-Aqua/cinnamon/cinnamon.css

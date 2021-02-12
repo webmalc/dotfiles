@@ -35,6 +35,8 @@ case $chosen in
         systemctl poweroff
     ;;
     $reboot_text)
+        mpc stop
+        watson stop
         systemctl reboot
     ;;
     $lock_text)
