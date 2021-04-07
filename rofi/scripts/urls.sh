@@ -14,6 +14,7 @@ options+='📅       calendar.zoho.eu -cal\n'
 
 
 # torrents
+options+='⇄       rutor.info -tor\n'
 options+='⇄       rutracker.org -tou\n'
 options+='⇄       torrentdownloads.me -tod\n'
 options+='⇄       thepiratebay.org -top\n'
@@ -39,6 +40,6 @@ if [ -n "$chosen" ]; then
     chosen=${chosen:8}
     chosen=${chosen::-4}
     echo $chosen
-    firefox --new-tab "https://$chosen"
+    firefox --new-tab "http://$chosen"
     wmctrl -xa "Navigator.Firefox"
 fi
