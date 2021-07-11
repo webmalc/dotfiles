@@ -86,8 +86,8 @@
       type = VPaned
       parent = child7
       order = 0
-      position = 268
-      ratio = 0.5009345794392523
+      position = 270
+      ratio = 0.5046728971962616
     [[[terminal9]]]
       type = Terminal
       parent = child8

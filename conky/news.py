@@ -12,7 +12,7 @@ STATUS_CODES = (200, 429)
 MAX_ATTEMPTS = 10
 
 
-async def get_http(url):
+async def get_http(url, is_json=False):
     """Get the content"""
     get_http.counter += 1
     async with aiohttp.ClientSession() as session:
@@ -22,23 +22,58 @@ async def get_http(url):
                     return ''
                 await asyncio.sleep(1)
                 return await get_http(url)
-            return await response.text()
+            if not is_json:
+                return await response.text()
+            else:
+                return await response.json()
+
+
 get_http.counter = 0
+
+
+def get_header(title) -> str:
+    """
+    Print the header
+    """
+    title_str = '${font Ubuntu Mono:size=16}'
+    title_str += title + '${font Ubuntu Mono:size=12}'
+    return f'{title_str}\n\n'
+
+
+def get_items(items, wrap) -> str:
+    """
+    Print the header
+    """
+    result = ''
+    for item in items:
+        content = textwrap.fill(item.replace('$', '$$').strip(), wrap)
+        result += f'{content}\n\n'
+    return result
+
+
+async def print_habr():
+    """
+    Print habr news
+    """
+    json = await get_http(
+        "https://habr.com/kek/v2/articles/most-reading?fl=ru",
+        is_json=True,
+    )
+    result = get_header("Habr")
+    items = [x["titleHtml"] for x in json['articles']['articleRefs'].values()]
+    result += get_items(items[:8], 30)
+    return result
 
 
 async def print_news(url, title, selector, num, wrap=30):
     """
     Print news
     """
-    html  = await get_http(url)
+    html = await get_http(url)
     soup = BeautifulSoup(html, 'html.parser')
     items = soup.select(selector)[:num]
-    title_str = '${font Ubuntu Mono:size=16}'
-    title_str += title + '${font Ubuntu Mono:size=12}'
-    result = f'{title_str}\n\n'
-    for item in items:
-        content = textwrap.fill(item.text.replace('$', '$$').strip(), wrap)
-        result += f'{content}\n\n'
+    result = get_header(title)
+    result += get_items([x.text for x in items], wrap)
     return result
 
 
@@ -55,12 +90,7 @@ def run():
                 '.story-title',
                 5,
             ),
-            print_news(
-                'https://habr.com/ru/top',
-                'Habr',
-                '.content-list_most-read a.post-info__title',
-                7,
-            )
+            print_habr()
         ]
     else:
         commands = [
