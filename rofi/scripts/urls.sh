@@ -5,8 +5,12 @@ rofi_command="rofi -theme themes/appsmenu.rasi"
 ### language ###
 options='📖       nativecards.pw -nvc\n'
 options+='📖       gocorrect.me/messages -gcm\n'
+options+='🌎       deepl.com/translator -trd\n'
 options+='🌎       translate.google.ca -trg\n'
 options+='🌎       translate.yandex.ru -try\n'
+
+# netflix
+options+='🍿       www.netflix.com -net\n'
 
 # zoho
 options+='📩       mail.zoho.eu -zhm\n'

@@ -14,3 +14,4 @@ Dotfiles for Mint
 * **192.168.0.170:/mnt/server   /home/webmalc/pi   nfs    rw  0  0** - fstab
 * **options nvidia-drm modeset=1** - /etc/modprobe.d/zz-nvidia-drm-nomodeset.conf
 * **background-color: rgba(0, 0, 0, 0.7);** - sudo vim /usr/share/themes/Mint-Y-Dark-Aqua/cinnamon/cinnamon.css
+* **deezer arl** - cookies

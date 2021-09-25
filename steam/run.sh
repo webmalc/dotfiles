@@ -8,5 +8,11 @@ elif [[ "$current_time" > "18:00" ]] || [[ "$current_time" < "07:00" ]];
 then
     steam
 else
-    notify-send --urgency=critical "[$current_time] Shame on you! You must work until 18:00."
+    # notify-send --urgency=critical "[$current_time] Shame on you! You must work until 18:00."
+    if zenity --width=400 --question --text "[$current_time] Shame on you! You must work until 18:00. Are you sure?"
+    then
+        steam
+    else
+        exit 1
+    fi
 fi

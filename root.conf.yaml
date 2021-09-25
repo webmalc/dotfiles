@@ -7,62 +7,58 @@
 - clean: []
 - shell:
     # Add repositories
-    - ['wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -']
-    - ['add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"']
+    - [
+        "wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -",
+      ]
+    - [
+        'add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"',
+      ]
     - apt-add-repository "ppa:papirus/papirus" -y
     - apt-add-repository "ppa:longsleep/golang-backports" -y
     - apt update
 
     # Install packages
-    -
-      command: "apt install -y chromium-browser apt-transport-https gnupg2 dropbox steam terminator vim rofi conky-all lua5.3 python-bs4 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common transmission-cli fonts-firacode"
+    - command: "apt install -y chromium-browser apt-transport-https gnupg2 dropbox steam terminator vim rofi conky-all lua5.3 python-bs4 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common transmission-cli fonts-firacode"
       stdin: true
       stdout: true
       stderr: true
 
     # Install packages
-    -
-      command: "apt install -y vlc dict tmux fzf traceroute ncdu papirus-icon-theme code xdotool nodejs npm python-setuptools python3-setuptools python3-venv zipalign openjdk-8-jdk steam-devices cryfs odt2txt caca-utils atool poppler-utils mediainfo curl exuberant-ctags silversearcher-ag ipython3 keepassx python-pygments highlight atool libcaca-dev python3-pip python3-dev libpq-dev htop fish redis postgresql postgresql-12-postgis-scripts sqlite3 vim memcached virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp mpc graphviz golang-go"
+    - command: "apt install -y vlc dict tmux fzf traceroute ncdu papirus-icon-theme code xdotool nodejs npm python-setuptools python3-setuptools python3-venv zipalign openjdk-8-jdk steam-devices cryfs odt2txt caca-utils atool poppler-utils mediainfo curl exuberant-ctags silversearcher-ag ipython3 keepassx python-pygments highlight atool libcaca-dev python3-pip python3-dev libpq-dev htop fish redis postgresql postgresql-12-postgis-scripts sqlite3 vim memcached virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp mpc graphviz golang-go"
       stdin: true
       stdout: true
       stderr: true
 
     # Install translate-shell
-    -
-      command: "wget git.io/trans; chmod +x ./trans; mv ./trans /usr/bin/trans"
+    - command: "wget git.io/trans; chmod +x ./trans; mv ./trans /usr/bin/trans"
       stdin: true
       stdout: true
       stderr: true
 
     # Install snap packages
-    -
-      command: "flatpak install -y org.telegram.desktop"
+    - command: "flatpak install -y org.telegram.desktop"
       stdin: true
       stdout: true
       stderr: true
 
     # Install python packages
-    -
-      command: "pip3 install setuptools td-watson python-bidi chardet virtualfish json-rpc service_factory hy php ipdb wakatime"
+    - command: "pip3 install setuptools deemix td-watson python-bidi chardet virtualfish json-rpc service_factory hy php ipdb wakatime"
       stdin: true
       stdout: true
       stderr: true
-    -
-      command: "pip3 install thefuck platformio ptpython ranger-fm aiohttp docker-compose speedtest-cli"
+    - command: "pip3 install thefuck platformio ptpython ranger-fm aiohttp docker-compose speedtest-cli"
       stdin: true
       stdout: true
       stderr: true
 
     #Install JS packages
-    -
-      command: "npm install -g @ionic/cli jshint @angular/cli cross-env mocha less tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google"
+    - command: "npm install -g @ionic/cli jshint @angular/cli cross-env mocha less tern js-beautify eslint typescript tslint typescript-formatter eslint-config-google jshint"
       stdin: true
       stdout: true
       stderr: true
 
     #Remove the unnecessary packages
-    -
-      command: "sudo apt remove -y rhythmbox celluloid xplayer thunderbird"
+    - command: "sudo apt remove -y rhythmbox celluloid xplayer thunderbird"
       stdin: true
       stdout: true
       stderr: true
@@ -72,16 +68,32 @@
     - [gpasswd -a mpd audio]
     - [chsh -s /usr/bin/fish webmalc]
     - [chsh -s /usr/bin/fish]
-    - [grep -qxF 'fs.inotify.max_user_watches=524288' /etc/sysctl.conf || echo 'fs.inotify.max_user_watches=524288' >> /etc/sysctl.conf]
+    - [
+        grep -qxF 'fs.inotify.max_user_watches=524288' /etc/sysctl.conf || echo 'fs.inotify.max_user_watches=524288' >> /etc/sysctl.conf,
+      ]
     - [adduser webmalc docker]
-    - [cp /home/webmalc/Projects/dotfiles/stubby/stubby.yml /etc/stubby/stubby.yml]
+    - [
+        cp /home/webmalc/Projects/dotfiles/stubby/stubby.yml /etc/stubby/stubby.yml,
+      ]
     - [systemctl disable mpd]
-    - ['curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules | tee /etc/udev/rules.d/99-platformio-udev.rules']
-    - ['test -e /home/webmalc/.config/ranger/plugins/ranger_devicons || git clone https://github.com/alexanderjeurissen/ranger_devicons /home/webmalc/.config/ranger/plugins/ranger_devicons']
-    - [cp /home/webmalc/Projects/dotfiles/pam.d/common-auth /etc/pam.d/common-auth]
+    - [
+        "curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules | tee /etc/udev/rules.d/99-platformio-udev.rules",
+      ]
+    - [
+        "test -e /home/webmalc/.config/ranger/plugins/ranger_devicons || git clone https://github.com/alexanderjeurissen/ranger_devicons /home/webmalc/.config/ranger/plugins/ranger_devicons",
+      ]
+    - [
+        cp /home/webmalc/Projects/dotfiles/pam.d/common-auth /etc/pam.d/common-auth,
+      ]
     - [cp /home/webmalc/Projects/dotfiles/mpd_service/mpd.conf /etc/mpd.conf]
-    - [cp /home/webmalc/Projects/dotfiles/pulse/default.pa /etc/pulse/default.pa]
-    - [cp /home/webmalc/Projects/dotfiles/env/environment.compiled /etc/environment]
+    - [
+        cp /home/webmalc/Projects/dotfiles/pulse/default.pa /etc/pulse/default.pa,
+      ]
+    - [
+        cp /home/webmalc/Projects/dotfiles/env/environment.compiled /etc/environment,
+      ]
     - [mkdir -p /usr/share/backgrounds/]
-    - [cp /home/webmalc/Projects/dotfiles/wallpaper/cyberpunk.jpg /usr/share/backgrounds/cyberpunk.jpg]
-    - ['chown -hR webmalc:webmalc /home/webmalc/.[^.]*']
+    - [
+        cp /home/webmalc/Projects/dotfiles/wallpaper/cyberpunk.jpg /usr/share/backgrounds/cyberpunk.jpg,
+      ]
+    - ["chown -hR webmalc:webmalc /home/webmalc/.[^.]*"]
