@@ -97,3 +97,8 @@
         cp /home/webmalc/Projects/dotfiles/wallpaper/cyberpunk.jpg /usr/share/backgrounds/cyberpunk.jpg,
       ]
     - ["chown -hR webmalc:webmalc /home/webmalc/.[^.]*"]
+
+    # Steam
+    - ["cp /usr/games/steam /root/steam_original"]
+    - ["rm /usr/games/steam"]
+    - ["ln -s /home/webmalc/Projects/dotfiles/steam/steam.sh /user/games/steam"]

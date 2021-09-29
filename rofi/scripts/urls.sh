@@ -33,6 +33,7 @@ options+='💻       github.com/maxi-booking -ghm\n'
 
 ### miscellaneous ###
 options+='⛅       weather.com/weather/tenday/l/34f2aafc84cff75ae0b014754856ea5e7f8ddf618cf9735549dfb5e016c28e10 -wea\n'
+options+='🍕       www.myfitnesspal.com -ftp\n'
 options+='🍿       trakt.tv -ttv'
 
 # Variable passed to rofi
