@@ -2,13 +2,15 @@
 
 # -------------  BEGIN TIME CONTROL -------------------------
 # ----------------------------------------------------
+from_time="18:00"
+end_time="07:00"
 current_time=$(date +%H:%M)
 # steam="/home/webmalc/.config/rofi/scripts/watson.sh;__NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only steam -window-mode exclusive"
-if [[ "$current_time" > "20:00" ]] || [[ "$current_time" < "07:00" ]];
+if [[ "$current_time" > $from_time ]] || [[ "$current_time" < $end_time ]];
 then
     echo "Starting steam..."
 else
-    notify-send --urgency=critical "[$current_time] Shame on you! You must work until 20:00."
+    notify-send --urgency=critical "[$current_time] Shame on you! You must work until $from_time."
     exit 1
 fi
 # ------------- END TIME CONTROL -------------------------
