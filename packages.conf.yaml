@@ -3,18 +3,15 @@
       create: true
       relink: true
 
-- clean: ['~', '~/.config']
+- clean: ["~", "~/.config"]
 - link: {}
 - shell:
-    -
-      command: "curl -L http://get.oh-my.fish | fish 2>&1; true"
+    - command: "curl -L http://get.oh-my.fish | fish 2>&1; true"
       stdout: true
       stderr: true
-    -
-      command: "curl -sLf https://spacevim.org/install.sh | bash"
+    - command: "curl -sLf https://spacevim.org/install.sh | bash"
       stdout: true
       stderr: true
-    -
-      command: 'crontab -l > mycron; echo "0 12 * * * /home/webmalc/Projects/dotfiles/task/notifications.py" >> mycron; crontab mycron; rm mycron'
+    - command: 'crontab -l > mycron; echo "0 12 * * * /home/webmalc/Projects/dotfiles/task/notifications.py" >> mycron; crontab mycron; rm mycron'
       stdout: true
       stderr: true

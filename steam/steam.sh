@@ -2,7 +2,7 @@
 
 # -------------  BEGIN TIME CONTROL -------------------------
 # ----------------------------------------------------
-from_time="18:00"
+from_time="08:00"
 end_time="07:00"
 current_time=$(date +%H:%M)
 # steam="/home/webmalc/.config/rofi/scripts/watson.sh;__NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only steam -window-mode exclusive"

@@ -1,5 +1,5 @@
 #!/bin/bash -e
-amixer -c 1 sset Mic toggle
+amixer -c 2 sset Mic toggle
 CURRENT_SOURCE="A4tech"
 ISMUTE=$(pactl list sources | grep -A 10 $CURRENT_SOURCE | grep "Mute:" | cut -d':' -f 2)
 if [ $ISMUTE == "no" ]

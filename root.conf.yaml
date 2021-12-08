@@ -15,10 +15,17 @@
       ]
     - apt-add-repository "ppa:papirus/papirus" -y
     - apt-add-repository "ppa:longsleep/golang-backports" -y
+    - apt-add-repository "ppa:flexiondotorg/mangohud" -y
     - apt update
 
     # Install packages
-    - command: "apt install -y chromium-browser apt-transport-https gnupg2 dropbox steam terminator vim rofi conky-all lua5.3 python-bs4 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common transmission-cli fonts-firacode"
+
+    - command: "url -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -"
+      stdin: true
+      stdout: true
+      stderr: true
+
+    - command: "apt install -y chromium-browser mangohud apt-transport-https gnupg2 dropbox steam terminator vim rofi conky-all lua5.3 python-bs4 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common transmission-cli fonts-firacode"
       stdin: true
       stdout: true
       stderr: true

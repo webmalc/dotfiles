@@ -15,3 +15,4 @@ Dotfiles for Mint
 * **options nvidia-drm modeset=1** - /etc/modprobe.d/zz-nvidia-drm-nomodeset.conf
 * **background-color: rgba(0, 0, 0, 0.7);** - sudo vim /usr/share/themes/Mint-Y-Dark-Aqua/cinnamon/cinnamon.css
 * **deezer arl** - cookies
+* **mangohud** - MANGOHUD_CONFIG=no_display,cpu_temp,gpu_temp,fps_limit=60 mangohud %command%
