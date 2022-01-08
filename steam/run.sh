@@ -5,7 +5,7 @@ steam="/home/webmalc/.config/rofi/scripts/watson.sh;__NV_PRIME_RENDER_OFFLOAD=1 
 # then
 #     steam_original
 # elif [[ "$current_time" > "18:00" ]] || [[ "$current_time" < "07:00" ]];
-if [[ "$current_time" > "20:00" ]] || [[ "$current_time" < "07:00" ]];
+if [[ "$current_time" > "18:00" ]] || [[ "$current_time" < "07:00" ]];
 then
     steam
 else
