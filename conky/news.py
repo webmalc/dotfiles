@@ -60,7 +60,7 @@ async def print_habr():
         is_json=True,
     )
     result = get_header("Habr")
-    items = [x["titleHtml"] for x in json['articles']['articleRefs'].values()]
+    items = [x["titleHtml"] for x in json['articleRefs'].values()]
     result += get_items(items[:8], 30)
     return result
 

@@ -15,11 +15,11 @@ set delete=yes            # don't ask for delete confirmation
 
 set imap_user={{email_user}}
 set imap_pass={{email_password}}
-set folder=imaps://imap.zoho.eu:993
+set folder=imaps://imappro.zoho.eu:993
 set imap_authenticators=login
 
 set from={{email_user}}
-set smtp_url = "smtps://{{email_user}}@smtp.zoho.eu:465/"
+set smtp_url = "smtps://{{email_user}}@smtppro.zoho.eu:465/"
 set smtp_pass={{email_password}}
 set use_from=yes
 set imap_keepalive=900
