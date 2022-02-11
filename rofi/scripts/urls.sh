@@ -29,6 +29,7 @@ options+='⇄       1337x.to -to3\n'
 ### gihub ###
 options+='💻       github.com -ghw\n'
 options+='💻       github.com/maxi-booking -ghm\n'
+options+='💻       github.com/orgs/maxi-booking/projects -ghp\n'
 
 
 ### miscellaneous ###
