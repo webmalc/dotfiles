@@ -50,6 +50,8 @@ ${time %H:%M:%S}
 ${hr}
 ${execpi 3600 ~/Projects/dotfiles/conky/weather.py}
 ${hr}
+${execpi 3600 ~/Projects/dotfiles/conky/rates.py}
+${hr}
 
 Tasks: ${execpi 60 task status:pending count}${font Ubuntu Mono:size=12}
 ${execpi 60 task | head -n -2}

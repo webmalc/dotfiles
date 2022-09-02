@@ -2,11 +2,14 @@
 import asyncio
 import sys
 import textwrap
+from nis import match
 
 import aiohttp
 from bs4 import BeautifulSoup
 
-LEFT = len(sys.argv) > 1
+mode = "right"
+if len(sys.argv) > 1 and sys.argv[1] in ("left", "right", "second"):
+    mode = sys.argv[1]
 
 STATUS_CODES = (200, 429)
 MAX_ATTEMPTS = 10
@@ -81,8 +84,7 @@ def run():
     """
     Run the main loop
     """
-
-    if not LEFT:
+    if mode == "right":
         commands = [
             print_news(
                 'https://slashdot.org/popular',
@@ -92,7 +94,7 @@ def run():
             ),
             print_habr()
         ]
-    else:
+    elif mode == "left":
         commands = [
             print_news(
                 'https://www.omgubuntu.co.uk',
@@ -107,6 +109,17 @@ def run():
                 7,
             )
         ]
+    elif mode == "second":
+        commands = [
+            print_news(
+                'https://dev.to/top/week',
+                'Dev.to',
+                'h2.crayons-story__title',
+                10,
+                70,
+            ),
+        ]
+
     loop = asyncio.get_event_loop()
     values, _ = loop.run_until_complete(asyncio.wait(commands))
     print('$hr\n\n'.join([v.result() for v in values]))

@@ -5,12 +5,12 @@ rofi_command="rofi -theme themes/appsmenu.rasi"
 ### language ###
 options='📖       nativecards.pw -nvc\n'
 options+='📖       gocorrect.me/messages -gcm\n'
+options+='🌎       translate.yandex.ru -try\n'
 options+='🌎       deepl.com/translator -trd\n'
 options+='🌎       translate.google.ca -trg\n'
-options+='🌎       translate.yandex.ru -try\n'
 
-# netflix
-options+='🍿       www.netflix.com -net\n'
+# kinopoisk
+options+='🍿       www.kinopoisk.ru -kin\n'
 
 # zoho
 options+='📩       mail.zoho.eu -zhm\n'
@@ -33,9 +33,9 @@ options+='💻       github.com/orgs/maxi-booking/projects -ghp\n'
 
 
 ### miscellaneous ###
-options+='⛅       weather.com/weather/tenday/l/34f2aafc84cff75ae0b014754856ea5e7f8ddf618cf9735549dfb5e016c28e10 -wea\n'
+options+='⛅       yandex.ru/pogoda/mytischi -wea\n'
 options+='🍕       www.myfitnesspal.com -ftp\n'
-options+='🍿       trakt.tv -ttv'
+options+='🍿       myshows.me/profile/ -ttv'
 
 # Variable passed to rofi
 status="★"

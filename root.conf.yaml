@@ -37,7 +37,7 @@
       stderr: true
 
     # Install packages
-    - command: "apt install -y vlc dict tmux fzf traceroute ncdu papirus-icon-theme code xdotool nodejs npm python-setuptools python3-setuptools python3-venv zipalign openjdk-8-jdk steam-devices cryfs odt2txt caca-utils atool poppler-utils mediainfo curl exuberant-ctags silversearcher-ag ipython3 keepassx python-pygments highlight atool libcaca-dev python3-pip python3-dev libpq-dev htop fish redis postgresql postgresql-12-postgis-scripts sqlite3 vim memcached virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp mpc graphviz golang-go"
+    - command: "apt install -y vlc dict tmux shc fzf traceroute ncdu papirus-icon-theme code xdotool nodejs npm python-setuptools python3-setuptools python3-venv zipalign openjdk-8-jdk steam-devices cryfs odt2txt caca-utils atool poppler-utils mediainfo curl exuberant-ctags silversearcher-ag ipython3 keepassx python-pygments highlight atool libcaca-dev python3-pip python3-dev libpq-dev htop fish redis postgresql postgresql-12-postgis-scripts sqlite3 vim memcached virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp mpc graphviz golang-go"
       stdin: true
       stdout: true
       stderr: true
@@ -114,4 +114,6 @@
     # Steam
     - ["cp /usr/games/steam /root/steam_original"]
     - ["rm /usr/games/steam"]
-    - ["ln -s /home/webmalc/Projects/dotfiles/steam/steam.sh /user/games/steam"]
+    - [
+        "ln -s /home/webmalc/Projects/dotfiles/steam/steam.run /user/games/steam",
+      ]

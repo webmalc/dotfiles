@@ -23,7 +23,7 @@ async def get_word(random_word):
         async with session.get(url) as response:
             html = await response.text()
     soup = BeautifulSoup(html, 'html.parser')
-    word = soup.select_one('div.word-area h1').text
+    word = soup.select_one('h1#hdr-word-area').text
     word = '${font Ubuntu Mono:size=16}' + word.capitalize()
 
     element = soup.select_one('p.short')

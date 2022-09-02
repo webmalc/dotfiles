@@ -46,4 +46,8 @@ conky.config = {
 
 conky.text = [[
 ${execpi 60 cat /home/webmalc/Dropbox/Work/notes.txt | fold }
+
+${hr}
+
+${execpi 3600 /home/webmalc/Projects/dotfiles/conky/news.py second}
 ]]

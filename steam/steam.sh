@@ -1,0 +1,118 @@
+#!/bin/bash -e
+
+# -------------  BEGIN TIME CONTROL -------------------------
+# ----------------------------------------------------
+from_time="10:00"
+end_time="08:00"
+current_time=$(date +%H:%M)
+# steam="/home/webmalc/.config/rofi/scripts/watson.sh;__NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only steam -window-mode exclusive"
+if [[ "$current_time" > $from_time ]] || [[ "$current_time" < $end_time ]]; then
+    echo "Starting steam..."
+#elif [[ $(date +%u) -gt 5 ]]; then
+    #echo "Starting steam..."
+else
+    notify-send --urgency=critical "[$current_time] Shame on you! You must work until $from_time."
+    exit 1
+fi
+# ------------- END TIME CONTROL -------------------------
+# ----------------------------------------------------
+
+
+# Copyright (C) 2013-2017 Michael Gilbert <mgilbert@debian.org>
+# License: MIT
+
+# According to Valve, ~/.steam is intended to be a control directory containing
+# symbolic links pointing to the currently-running or most-recently-run Steam
+# installation. This is part of Steam's API, and is relied on by external
+# components.
+#
+# The shell variable name STEAMCONFIG matches what's used in Valve's
+# /usr/bin/steam (available at $STEAMDIR/bin_steam.sh in a Steam
+# installation).
+STEAMCONFIG="$HOME/.steam"
+
+: "${XDG_DATA_HOME:="$HOME/.local/share"}"
+
+# Fix dangling symlinks
+if [ -L "$STEAMCONFIG/steam" ] && ! [ -e "$STEAMCONFIG/steam" ]; then
+    rm -f "$STEAMCONFIG/steam"
+fi
+if [ -L "$STEAMCONFIG/root" ] && ! [ -e "$STEAMCONFIG/root" ]; then
+    rm -f "$STEAMCONFIG/root"
+fi
+
+# STEAMDIR points to the actual installation root: the equivalent of
+# C:\Program Files\Steam in the Windows Steam client. To avoid filename
+# collisions this should be distinct from ~/.steam.
+#
+# The shell variable name STEAMDIR matches what's used in Valve's
+# /usr/bin/steam.
+if [ -L "$STEAMCONFIG/steam" ]; then
+    STEAMDIR="$(readlink -e -q "$STEAMCONFIG/steam")"
+    elif [ -L "$STEAMCONFIG/root" ]; then
+    STEAMDIR="$(readlink -e -q "$STEAMCONFIG/root")"
+    elif [ -d "$STEAMCONFIG/steam" ] && ! [ -L "$STEAMCONFIG/steam" ]; then
+    # The historical Debian behaviour has been to use ~/.steam as the
+    # installation directory in addition to using it as the control
+    # directory.This causes some file collisions, so we've moved away
+    # from that, but we can't easily disentangle this in existing
+    # installations.
+    STEAMDIR="$HOME/.steam"
+else
+    # This is a new installation, so use a distinct directory to avoid
+    # file collisions. Valve would use $XDG_DATA_HOME/Steam here.
+    # Debian uses a subdirectory of ~/.steam, to avoid having a mixture
+    # of XDG basedirs and traditional dotfiles in the same application.
+    STEAMDIR="$HOME/.steam/debian-installation"
+fi
+
+ubuntu32="$STEAMDIR/ubuntu12_32"
+steam="$ubuntu32/steam"
+runtime="$ubuntu32/steam-runtime"
+
+real=/usr/lib/games/steam/steam
+
+# use C locale (bug #764311)
+test -n "$LANG" || export LANG=C
+
+# check wether this system supports sse2
+nosse2="\
+WARNING:
+The hardware on this system lacks support for the sse2 instruction set.
+The browser within the steam client will not work. For more information,
+see: https://support.steampowered.com/kb_article.php?ref=4090-RTKZ-4347"
+if ! grep -q sse2 /proc/cpuinfo; then
+    echo "$nosse2"
+fi
+
+# do an initial update when expected pieces are missing
+test ! -d "$STEAMCONFIG" && rm -rf "$STEAMCONFIG" && mkdir -p "$STEAMCONFIG" || true
+test ! -d "$STEAMDIR" && rm -rf "$STEAMDIR" && mkdir -p "$STEAMDIR" || true
+test ! -x "$STEAMDIR/steam.sh" && rm -rf "$STEAMDIR/package" "$steam" || true
+test ! -d "$ubuntu32" && rm -rf "$ubuntu32" && mkdir -p "$ubuntu32" || true
+test ! -x "$steam" && rm -rf "$steam" && cp "$real" "$steam" && "$steam" || true
+test ! -e "$runtime.tar.xz" && cat "$runtime.tar.xz.part"* > "$runtime.tar.xz" || true
+test ! -d "$runtime" && cd "$ubuntu32" && tar xf steam-runtime.tar.xz && \
+md5sum steam-runtime.tar.xz > steam-runtime/checksum || \
+rm -f steam-runtime.tar.xz*
+
+# remove steam-runtime libraries that are incompatible with newer mesa drivers
+# (https://bugs.freedesktop.org/78242)
+# and libraries for which the STEAM_RUNTIME_PREFER_HOST_LIBRARIES mechanism
+# doesn't work because both versions appear as .so.0.0.0
+find "$runtime" \( -name libxcb.so\* \
+-o -name libxcb-dri3.so.0* \
+-o -name libgcc_s.so\* \
+-o -name libstdc++.so\* \
+-o -name libgpg-error.so\* \
+\) -delete
+
+# Steam bundles a version of SDL that uses the libdbus API wrong, causing
+# assertion failures which are now fatal by default
+# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=882607
+# https://github.com/ValveSoftware/steam-for-linux/issues/5201
+export DBUS_FATAL_WARNINGS=0
+
+# launch the Valve run script
+test -x "$STEAMDIR/steam.sh" && "$STEAMDIR/steam.sh" -nominidumps -nobreakpad "$@" \
+2>"$STEAMDIR/error.log"
