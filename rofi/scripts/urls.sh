@@ -12,9 +12,9 @@ options+='🌎       translate.google.ca -trg\n'
 # kinopoisk
 options+='🍿       www.kinopoisk.ru -kin\n'
 
-# zoho
-options+='📩       mail.zoho.eu -zhm\n'
-options+='📅       calendar.zoho.eu -cal\n'
+# mail
+options+='📩       mail.yandex.ru -yhm\n'
+options+='📅       calendar.yandex.ru -cal\n'
 
 
 # torrents
@@ -29,7 +29,7 @@ options+='⇄       1337x.to -to3\n'
 ### gihub ###
 options+='💻       github.com -ghw\n'
 options+='💻       github.com/maxi-booking -ghm\n'
-options+='💻       github.com/orgs/maxi-booking/projects -ghp\n'
+options+='💻       github.com/orgs/maxi-booking/projects/7 -ghp\n'
 
 
 ### miscellaneous ###

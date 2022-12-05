@@ -105,7 +105,7 @@ def run():
             print_news(
                 'https://news.ycombinator.com',
                 'Hacker News',
-                'a.titlelink',
+                'span.titleline',
                 7,
             )
         ]

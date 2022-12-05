@@ -5,7 +5,7 @@ import os
 
 
 def print_unseen(username, password):
-    imap = imaplib.IMAP4_SSL('imappro.zoho.eu', 993)
+    imap = imaplib.IMAP4_SSL('imap.yandex.ru', 993)
     imap.login(username, password)
 
     def count(folder):
