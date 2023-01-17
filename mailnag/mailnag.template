@@ -26,7 +26,7 @@ port = 993
 ssl = 1
 imap = 1
 idle = 0
-folder = INBOX, Drafts, Templates, Sent, Spam, Trash, Notification, NewsLetter, Important
+folder = INBOX, Drafts, Sent, Spam, Trash
 
 [userscriptplugin]
 script_file = 
