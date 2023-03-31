@@ -58,7 +58,6 @@ combi-modi: "window,drun";
 /*	window-format: "{w}    {i}{c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	theme: "glue_pro_blue";
 /*	color-normal: ;*/
 /*	color-urgent: ;*/
 /*	color-active: ;*/
@@ -145,3 +144,8 @@ combi-modi: "window,drun";
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
+//@theme "/home/webmalc/.local/share/rofi/themes/spotlight-dark.rasi"
+//@theme "/home/webmalc/.local/share/rofi/themes/launchpad.rasi"
+//@theme "/home/webmalc/.local/share/rofi/themes/windows11-list-dark.rasi"
+//@theme "/home/webmalc/.local/share/rofi/themes/squared-nord.rasi"
+@theme "/home/webmalc/.local/share/rofi/themes/spotlight-dark.rasi"

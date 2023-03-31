@@ -13,6 +13,6 @@ Dotfiles for Mint
 * **nvidia-settings --assign CurrentMetaMode="DP-1: nvidia-auto-select +0+0 {ForceCompositionPipeline=On}, HDMI-0: nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}"** - monitor tearing
 * **192.168.0.170:/mnt/server   /home/webmalc/pi   nfs    rw  0  0** - fstab
 * **options nvidia-drm modeset=1** - /etc/modprobe.d/zz-nvidia-drm-nomodeset.conf
-* **background-color: rgba(0, 0, 0, 0.7);** - sudo vim /usr/share/themes/Mint-Y-Dark-Aqua/cinnamon/cinnamon.css
+* **.panel-top background-color: rgba(0, 0, 0, 0.7); remove box-shadow** - sudo vim /usr/share/themes/Mint-Y-Dark-Aqua/cinnamon/cinnamon.css
 * **deezer arl** - cookies
 * **mangohud** - MANGOHUD_CONFIG=no_display,cpu_temp,gpu_temp,fps_limit=60 mangohud %command%

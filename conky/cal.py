@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import re
 from calendar import SUNDAY, TextCalendar, month
 from datetime import date

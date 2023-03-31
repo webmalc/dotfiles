@@ -42,9 +42,17 @@ entry {
   background-color: @background-light;
   border-color: @background-light;
 }
+#element-text {
+  background-color: inherit;
+}
+#element-icon {
+  background-color: inherit;
+}
 #element.selected {
   background-color: @background-focus;
   text-color: @accent;
   border-color: @accent;
 }
+
+
 
