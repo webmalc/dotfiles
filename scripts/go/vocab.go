@@ -102,7 +102,7 @@ func main() {
 
 	for _, record := range records {
 		title := strings.Title(record.word)
-		fmt.Printf("${font Ubuntu Mono:size=16}%s\n", title)
+		fmt.Printf("${font Ubuntu Mono:size=16:weight=bold}${color2}%s${color}\n", title)
 		fmt.Println("")
 		definition := wrapWords(record.definition, 35)
 		fmt.Printf("${font Ubuntu Mono:size=12}%s\n", definition)

@@ -37,7 +37,7 @@
       stderr: true
 
     # Install packages
-    - command: "apt install -y vlc dict tmux shc fzf traceroute ncdu papirus-icon-theme code xdotool python-setuptools python3-setuptools python3-venv zipalign openjdk-8-jdk steam-devices cryfs odt2txt caca-utils atool poppler-utils mediainfo curl exuberant-ctags silversearcher-ag ipython3 keepassx highlight atool libcaca-dev python3-pip python3-dev libpq-dev htop fish redis postgresql sqlite3 vim memcached virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp mpc graphviz golang-go"
+    - command: "apt install -y vlc dict tmux shc fzf traceroute ncdu papirus-icon-theme code xdotool python-setuptools python3-setuptools python3-venv zipalign openjdk-8-jdk steam-devices cryfs odt2txt caca-utils atool poppler-utils mediainfo curl exuberant-ctags silversearcher-ag ipython3 keepassx highlight atool libcaca-dev python3-pip python3-dev libpq-dev htop fish redis postgresql postgis sqlite3 vim memcached virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp mpc graphviz golang-go"
       stdin: true
       stdout: true
       stderr: true

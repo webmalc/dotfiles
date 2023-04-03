@@ -2,7 +2,6 @@
 import asyncio
 import sys
 import textwrap
-from nis import match
 
 import aiohttp
 from bs4 import BeautifulSoup
@@ -38,8 +37,8 @@ def get_header(title) -> str:
     """
     Print the header
     """
-    title_str = '${font Ubuntu Mono:size=16}'
-    title_str += title + '${font Ubuntu Mono:size=12}'
+    title_str = '${font Ubuntu Mono:size=16:weight=bold}${color2}'
+    title_str += title + '${color}${font Ubuntu Mono:size=12}'
     return f'{title_str}\n\n'
 
 

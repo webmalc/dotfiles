@@ -5,10 +5,10 @@ conky.config = {
     background = true,
     border_width = 1,
     cpu_avg_samples = 2,
-    default_color = 'e0e0e0',
+    default_color = 'slategrey',
     default_outline_color = 'grey',
     color1 = 'fcf083',
-    color2 = 'b22727a',
+    color2 = 'a9a9a9',
     color3 = 'e0e0e0',
     default_shade_color = 'white',
     draw_borders = false,
@@ -18,7 +18,7 @@ conky.config = {
     double_buffer = true,
     use_xft = true,
     font = 'Ubuntu Mono:size=16',
-    gap_x = 435,
+    gap_x = 455,
     gap_y = 35,
     minimum_height = 5,
     minimum_width = 5,
@@ -44,7 +44,7 @@ conky.config = {
 }
 
 conky.text = [[
-Status: ${font Ubuntu Mono:size=12}${execpi 60 bash -c 'if [ "$(watson status -p)" = "No project started." ]; then echo "-"; else echo "\${color1}\${blink "$(watson status -p) $(watson status -e)"}\${color}"; fi'}
+${font Ubuntu Mono:size=16:weight=bold}${color2}Status${color}: ${font Ubuntu Mono:size=12}${execpi 60 bash -c 'if [ "$(watson status -p)" = "No project started." ]; then echo "-"; else echo "\${color1}\${blink "$(watson status -p) $(watson status -e)"}\${color}"; fi'}
 ${hr}
 
 ${execpi 60 watson report -w -g }

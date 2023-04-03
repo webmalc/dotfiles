@@ -9,7 +9,5 @@ data = json.load(response)
 previous = data["Valute"]["USD"]["Previous"]
 value = data["Valute"]["USD"]["Value"]
 print(
-    "USD: ${font Ubuntu Mono:size=12}"
-    + "{} / {}".format(value, previous)
-    + "${font Ubuntu Mono:size=16}"
-)
+    "${font Ubuntu Mono:size=16:weight=bold}${color2}USD${color}: ${font Ubuntu Mono:size=12}"
+    + "{} / {}".format(value, previous) + "${font Ubuntu Mono:size=16}")

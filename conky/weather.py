@@ -1,8 +1,8 @@
 #!/usr/bin/python2
 
-import urllib2
 from datetime import date, timedelta
 
+import urllib2
 from bs4 import BeautifulSoup
 
 html_page = urllib2.urlopen('https://yandex.ru/pogoda/moscow')
@@ -14,5 +14,9 @@ date_node = soup.select_one('time[datetime="{}"]'.format(tomorrow_str))
 tomorrow_node = date_node.parent.select_one(
     '.forecast-briefly__temp_day .temp__value')
 # print('{} -> {}'.format(today.text, tomorrow_node.text))
-print('Today: ' + today.text.encode('utf-8'))
-print('Tomorrow: ' + tomorrow_node.text.encode('utf-8'))
+print(
+    '${font Ubuntu Mono:size=16:weight=bold}${color2}Today:${color} ${font Ubuntu Mono:size=16}'
+    + today.text.encode('utf-8'))
+print(
+    '${font Ubuntu Mono:size=16:weight=bold}${color2}Tomorrow${color}: ${font Ubuntu Mono:size=16}'
+    + tomorrow_node.text.encode('utf-8'))
