@@ -10,7 +10,7 @@ conky.config = {
     color1 = 'fcf083',
     color2 = 'a9a9a9',
     color3 = 'e0e0e0',
-    default_shade_color = 'white',  
+    default_shade_color = 'white',
     draw_borders = false,
     draw_graph_borders = true,
     draw_outline = false,
@@ -18,9 +18,9 @@ conky.config = {
     double_buffer = true,
     use_xft = true,
     font = 'Ubuntu Mono:size=16',
-    gap_x = 715,
+    gap_x = 765,
     gap_y = 35,
-    minimum_height = 5,
+    minimum_height = 980,
     minimum_width = 5,
     net_avg_samples = 2,
     no_buffers = true,
@@ -39,8 +39,8 @@ conky.config = {
     show_graph_scale = false,
     show_graph_range = false,
     border_outer_margin = 15,
-    maximum_width = 250,
-    minimum_width = 250,
+    maximum_width = 300,
+    minimum_width = 300,
 }
 
 conky.text = [[

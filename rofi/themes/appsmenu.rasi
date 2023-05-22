@@ -8,6 +8,12 @@
   text-color: @foreground-list;
   font: @text-font;
 }
+listview {
+  columns       : 2;
+  spacing       : 5px;
+  fixed-height  : true;
+  fixed-columns : false;
+}
 #window {
   padding: @list-8-window-padding;
 }
@@ -44,9 +50,12 @@ entry {
 }
 #element-text {
   background-color: inherit;
+  vertical-align: 0.5;
 }
 #element-icon {
   background-color: inherit;
+  margin: 0px 12px 0px 0px;
+  size: 3ch;
 }
 #element.selected {
   background-color: @background-focus;

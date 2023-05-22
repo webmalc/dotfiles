@@ -1,3 +1,5 @@
 [user]
 	email = m@webmalc.pw
 	name = webmalc
+[core]
+	excludesfile = /home/webmalc/.gitignore_global

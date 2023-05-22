@@ -67,7 +67,7 @@ async def print_habr():
     return result
 
 
-async def print_news(url, title, selector, num, wrap=30):
+async def print_news(url, title, selector, num, wrap=38):
     """
     Print news
     """
@@ -115,7 +115,6 @@ def run():
                 'Dev.to',
                 'h2.crayons-story__title',
                 10,
-                70,
             ),
         ]
 

@@ -21,7 +21,7 @@ conky.config = {
     font = 'Ubuntu Mono:size=12',
     gap_x = 35,
     gap_y = 35,
-    minimum_height = 5,
+    minimum_height = 1010,
     minimum_width = 5,
     net_avg_samples = 2,
     no_buffers = true,
@@ -40,8 +40,8 @@ conky.config = {
     show_graph_scale = false,
     show_graph_range = false,
     border_outer_margin = 15,
-    maximum_width = 600,
-    minimum_width = 600,
+    maximum_width = 300,
+    minimum_width = 300,
 }
 
 conky.text = [[

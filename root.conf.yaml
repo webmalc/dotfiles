@@ -31,7 +31,7 @@
       stdout: true
       stderr: true
 
-    - command: "apt install -y nodejs chromium-browser mint-themes-legacy mangohud apt-transport-https gnupg2 dropbox steam terminator vim rofi conky-all lua5.3 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common transmission-cli fonts-firacode"
+    - command: "apt install -y nodejs chromium-browser tig mint-themes-legacy mangohud apt-transport-https gnupg2 dropbox steam terminator vim neovim rofi conky-all lua5.3 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common transmission-cli fonts-firacode"
       stdin: true
       stdout: true
       stderr: true
