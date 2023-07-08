@@ -1,6 +1,7 @@
 #!/bin/bash
 current_time=$(date +%H:%M)
-steam="/home/webmalc/.config/rofi/scripts/watson.sh;__NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only steam -window-mode exclusive"
+# steam="/home/webmalc/.config/rofi/scripts/watson.sh;__NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only steam -window-mode exclusive"
+steam="steam"
 # if [[ $(date +%u) -gt 5 ]];
 # then
 #     steam_original
@@ -9,7 +10,7 @@ if [[ "$current_time" > "18:00" ]] || [[ "$current_time" < "07:00" ]];
 then
     steam
 else
-    notify-send --urgency=critical "[$current_time] Shame on you! You must work until 20:00."
+    notify-send --urgency=critical "[$current_time] Shame on you! You must work until 18:00."
     # if zenity --width=400 --question --text "[$current_time] Shame on you! You must work until 18:00. Are you sure?"
     # then
     #     steam

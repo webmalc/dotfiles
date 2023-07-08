@@ -4,8 +4,6 @@ import (
 	"fmt"
 	"io"
 	"os"
-	"path"
-	"path/filepath"
 	"strings"
 
 	"github.com/anaskhan96/soup"
@@ -21,9 +19,10 @@ type record struct {
 
 // Gets a random word from the dictionary file
 func getRandomWord(filename string, ch chan record) {
-	dir, _ := filepath.Abs(filepath.Dir(os.Args[0]))
-	dictPath := path.Join(dir, "../assets/%s")
-	file, err := os.Open(fmt.Sprintf(dictPath, filename))
+	// dir, _ := filepath.Abs(filepath.Dir(os.Args[0]))
+	// dictPath := path.Join(dir, "../assets/%s")
+	// file, err := os.Open(fmt.Sprintf(dictPath, filename))
+	file, err := os.Open(fmt.Sprintf("/home/webmalc/Projects/dotfiles/scripts/assets/%s", filename))
 
 	checkAndPrintError(err)
 
@@ -63,9 +62,10 @@ func getRandomWords() [2]record {
 }
 
 // Gets the word definition
-func getDefinition(word record, ch chan record) {
+func getDefinitionOld(word record, ch chan record) {
 	var text string
 	url := fmt.Sprintf("https://www.vocabulary.com/dictionary/%s", word.word)
+	soup.Header("User-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.27 Safari/537.36")
 	response, err := soup.Get(url)
 	checkAndPrintError(err)
 	doc := soup.HTMLParse(response)
@@ -75,6 +75,29 @@ func getDefinition(word record, ch chan record) {
 	}
 	if el.Error == nil {
 		text = cleanString(el.FullText())
+	}
+	word.definition = text
+	ch <- word
+}
+
+// Gets the word definition
+func getDefinition(word record, ch chan record) {
+	var text string
+	url := fmt.Sprintf("https://www.dictionary.com/browse/%s", word.word)
+	response, err := soup.Get(url)
+	checkAndPrintError(err)
+	doc := soup.HTMLParse(response)
+	el := doc.Find("div", "data-type", "word-definitions")
+	if el.Error == nil {
+		elements := el.FindAll("div", "data-type", "word-definition-content")
+		if len(elements) > 2 {
+			elements = elements[0:2]
+		}
+		for _, el := range elements {
+			if el.Error == nil {
+				text += cleanString(el.FullText())
+			}
+		}
 	}
 	word.definition = text
 	ch <- word
