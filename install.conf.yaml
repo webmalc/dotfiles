@@ -68,6 +68,10 @@
     - [
         "test -e ~/.tmux/plugins/tpm || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm",
       ]
+    # poetry
+    - [
+        "curl -sSL https://install.python-poetry.org | python3 -",
+      ]
     # - [tmux source ~/.tmux.conf]
 
     # go modules

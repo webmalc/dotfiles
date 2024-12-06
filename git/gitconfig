@@ -2,4 +2,11 @@
 	email = m@webmalc.pw
 	name = webmalc
 [core]
-	excludesfile = /home/webmalc/.gitignore_global
+	excludesFile = ~/.gitignore_global
+[safe]
+	directory = /media/webmalc/data/backup/git/github.com/
+	directory = /media/webmalc/data/backup/git/github.com/
+	directory = /media/webmalc/data/backup/git/github.com/
+	directory = /media/webmalc/data/backup/git/github.com/*
+	directory = /media/webmalc/data/backup/git/github.com/*
+	directory = *

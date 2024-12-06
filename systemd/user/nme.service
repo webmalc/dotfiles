@@ -1,0 +1,10 @@
+[Unit]
+Description=No-more-excuses
+
+[Service]
+Type=simple
+ExecStart=/home/webmalc/Projects/no-more-excuses/no-more-excuses.app
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

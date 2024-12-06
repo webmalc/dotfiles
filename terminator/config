@@ -221,4 +221,100 @@
       order = 1
       profile = default
       uuid = 4a0df59f-a8ac-4497-99db-7f8dd0ed4bbe
+  [[no-more-excuses]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 0:0
+      maximised = True
+      fullscreen = False
+      size = 1920, 1080
+      title = fish  /home/webmalc
+      last_active_term = 191dfc4d-3f28-429a-a21e-53731c10809e
+      last_active_window = True
+    [[[child1]]]
+      type = HPaned
+      parent = child0
+      order = 0
+      position = 958
+      ratio = 0.5002610966057441
+    [[[child2]]]
+      type = VPaned
+      parent = child1
+      order = 0
+      position = 540
+      ratio = 0.5023255813953489
+    [[[terminal3]]]
+      type = Terminal
+      parent = child2
+      order = 0
+      profile = default
+      uuid = 191dfc4d-3f28-429a-a21e-53731c10809e
+      command = cd /home/webmalc/Projects/no-more-excuses/; fish
+    [[[child4]]]
+      type = VPaned
+      parent = child2
+      order = 1
+      position = 269
+      ratio = 0.503731343283582
+    [[[terminal5]]]
+      type = Terminal
+      parent = child4
+      order = 0
+      profile = default
+      uuid = 43c46942-2117-4c68-b59a-3afb800ae83d
+      command = cd /home/webmalc/Projects/no-more-excuses/; fish
+    [[[terminal6]]]
+      type = Terminal
+      parent = child4
+      order = 1
+      profile = default
+      uuid = f27f0e22-e78c-41e2-8217-3568b46fdb9e
+      command = cd /home/webmalc/Projects/no-more-excuses/; fish
+    [[[child7]]]
+      type = VPaned
+      parent = child1
+      order = 1
+      position = 540
+      ratio = 0.5023255813953489
+    [[[child8]]]
+      type = VPaned
+      parent = child7
+      order = 0
+      position = 270
+      ratio = 0.5046728971962616
+    [[[terminal9]]]
+      type = Terminal
+      parent = child8
+      order = 0
+      profile = default
+      uuid = 84cc69d6-c3fb-4daa-a698-fbf88884c64f
+      command = cd /home/webmalc/Projects/no-more-excuses/; fish
+    [[[terminal10]]]
+      type = Terminal
+      parent = child8
+      order = 1
+      profile = default
+      uuid = b309694e-b4e8-402d-940d-3d7428fac694
+      command = cd /home/webmalc/Projects/no-more-excuses/; fish
+    [[[child11]]]
+      type = VPaned
+      parent = child7
+      order = 1
+      position = 269
+      ratio = 0.5037453183520599
+    [[[terminal12]]]
+      type = Terminal
+      parent = child11
+      order = 0
+      profile = default
+      uuid = 6495d3f0-a694-48f0-b2fd-f896b2ba0b7a
+      command = ""
+    [[[terminal13]]]
+      type = Terminal
+      parent = child11
+      order = 1
+      profile = default
+      uuid = 4a0df59f-a8ac-4497-99db-7f8dd0ed4bbe
 [plugins]

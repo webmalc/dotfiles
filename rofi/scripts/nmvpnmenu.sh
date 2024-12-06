@@ -9,7 +9,7 @@ connect() {
 }
 
 # Get the active vpn connection if there's one
-active="$(nmcli -g name,type con show --active | grep vpn | sed -e 's#:vpn$##')"
+active="$(nmcli -g name,type con show --active | grep "vpn\|wireguard" | sed -e 's#:vpn\|:wireguard$##')"
 paused=""
 timeout=600
 pause_option="<span foreground='#e34039'>⏼︎    pause</span>"
@@ -24,7 +24,7 @@ fi
 
 
 # Get the list of vpns
-mapfile -t list < <(nmcli -g name,type con | grep vpn | sed -e 's#:vpn$##')
+mapfile -t list < <(nmcli -g name,type con | grep 'vpn\|wireguard' | sed -e 's#:vpn\|:wireguard$##')
 # A vpn is active
 if [ -n "$active" ]; then
     status="   connected to $active"
