@@ -87,9 +87,9 @@ func getDefinition(word record, ch chan record) {
 	response, err := soup.Get(url)
 	checkAndPrintError(err)
 	doc := soup.HTMLParse(response)
-	el := doc.Find("div", "data-type", "word-definitions")
+	el := doc.Find("ol", "data-type", "definition-content-list")
 	if el.Error == nil {
-		elements := el.FindAll("div", "data-type", "word-definition-content")
+		elements := el.FindAll("li")
 		if len(elements) > 2 {
 			elements = elements[0:2]
 		}
@@ -125,9 +125,9 @@ func main() {
 
 	for _, record := range records {
 		title := strings.Title(record.word)
-		fmt.Printf("${font Ubuntu Mono:size=16:weight=bold}${color2}%s${color}\n", title)
+		fmt.Printf("${font Ubuntu Mono:size=14:weight=bold}${color2}%s${color}\n", title)
 		fmt.Println("")
 		definition := wrapWords(record.definition, 35)
-		fmt.Printf("${font Ubuntu Mono:size=12}%s\n", definition)
+		fmt.Printf("${font Ubuntu Mono:size=11}%s\n", definition)
 	}
 }

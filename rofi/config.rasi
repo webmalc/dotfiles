@@ -92,10 +92,10 @@ combi-modi: "window,drun";
 /*	kb-accept-alt: "Shift+Return";*/
 	kb-delete-entry: "Shift+Delete,Alt+d";
 /*	kb-mode-next: "Shift+Right,Control+Tab";*/
-/*	kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";*/
+/*	kb-mode-previous: "Shift+Left";*/
   kb-row-left: "Alt+h,Super+h";
   kb-row-right: "Alt+l,Super+l";
-	kb-row-up: "Up,Alt+k,Super+k,ISO_Left_Tab";
+	kb-row-up: "Up,Alt+k,Super+k";
 	kb-row-down: "Down,Alt+j,Super+j";
 /*	kb-row-tab: "Tab";*/
 /*	kb-page-prev: "Page_Up";*/

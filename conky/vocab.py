@@ -18,20 +18,19 @@ def random_line(afile):
 
 
 async def get_word(random_word):
-    url = 'https://www.vocabulary.com/dictionary/' + random_word
+    url = 'https://www.merriam-webster.com/dictionary/' + random_word
     async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
+        async with session.get(url, headers={
+                'User-Agent': 'curl/7.54.1',
+        }) as response:
             html = await response.text()
     soup = BeautifulSoup(html, 'html.parser')
-    word = soup.select_one('h1#hdr-word-area').text
+    word = soup.select_one('h1.hword').text
     word = '${font Ubuntu Mono:size=16}' + word.capitalize()
 
-    element = soup.select_one('p.short')
+    element = soup.select_one('div.sense-content')
     if element:
         text = element.text
-    else:
-        text = soup.select_one('h3.definition').text[10:].strip()
-    text = '${font Ubuntu Mono:size=12}' + textwrap.fill(text, 35)
     result = u'{}\n\n{}'.format(word, text)
     return result
 
@@ -53,6 +52,10 @@ def run(d=''):
     return content
 
 
-loop = asyncio.get_event_loop()
-values, _ = loop.run_until_complete(asyncio.wait([run(), run('_toelf')]))
-print('\n\n'.join([v.result() for v in values]))
+async def main():
+    values = await asyncio.gather(run(), run('_toefl'))
+    print('\n\n'.join(values))
+
+
+if __name__ == '__main__':
+    asyncio.run(main())

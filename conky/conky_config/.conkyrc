@@ -17,7 +17,7 @@ conky.config = {
     draw_shades = false,
     double_buffer = true,
     use_xft = true,
-    font = 'Ubuntu Mono:size=13',
+    font = 'Ubuntu Mono:size=11',
     gap_x = 35,
     gap_y = 35,
     minimum_height = 980,

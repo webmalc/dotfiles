@@ -14,6 +14,8 @@ options+='💬       www.bing.com/search?toWww=1&redig=F08C5B7460244EC58845E960D
 options+='💬       bard.google.com/chat -bar\n'
 options+='💬       chatgpt.com -gpt\n'
 options+='💬       giga.chat/gigachat -gig\n'
+options+='💬       chat.deepseek.com -see\n'
+options+='💬       duck.ai -dai\n'
 
 # mail
 options+='📩       mail.yandex.ru -yhm\n'
@@ -37,14 +39,16 @@ options+='🍿       www.okko.tv -oko\n'
 ### gihub ###
 options+='💻       github.com -ghw\n'
 options+='💻       github.com/maxi-booking -ghm\n'
-options+='💻       github.com/orgs/maxi-booking/projects/7 -ghp\n'
+options+='💻       github.com/orgs/maxi-booking/projects/ -gmp\n'
+options+='💻       github.com/webmalc?tab=projects -gwp\n'
 
 
 ### miscellaneous ###
 options+='⛅       yandex.ru/pogoda/mytischi -wea\n'
 options+='🍕       www.myfitnesspal.com -ftp\n'
 options+='🍿       myshows.me/profile/ -ttv\n'
-options+='🍿       www.ismyshowcancelled.com/ -isc'
+options+='🍿       www.ismyshowcancelled.com/ -isc\n'
+options+='🖵       blackscreen.app -blk'
 
 # Variable passed to rofi
 status="★"
@@ -56,6 +60,8 @@ if [ -n "$chosen" ]; then
     chosen=${chosen::-5}
     if [ "$chosen" == "www.kinopoisk.ru" ]; then
         firefox "ext+container:name=Personal&url=$chosen"
+    elif [ "$chosen" == "blackscreen.app" ]; then
+        firefox -kiosk -private-window "https://$chosen"
     else
         firefox --new-tab "https://$chosen"
     fi

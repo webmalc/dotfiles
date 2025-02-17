@@ -1,5 +1,4 @@
 [global_config]
-  handle_size = 1
   window_state = maximise
   borderless = True
   suppress_multiple_term_dialog = True
@@ -17,11 +16,10 @@
   switch_to_tab_2 = <Alt>2
   switch_to_tab_3 = <Alt>3
   switch_to_tab_4 = <Alt>4
-  layout_launcher = None
+  layout_launcher = <Alt>bracketright
 [profiles]
   [[default]]
     background_color = "#151515"
-    cursor_color = "#aaaaaa"
     foreground_color = "#d3d7cf"
     show_titlebar = False
     scrollbar_position = hidden
@@ -79,7 +77,7 @@
       order = 1
       profile = default
       uuid = f27f0e22-e78c-41e2-8217-3568b46fdb9e
-      command = cd /home/webmalc/Projects/d8base-backend/ && vf activate ss && make docker_es; fish
+      command = cd /home/webmalc/Projects/d8base-backend/ && vf activate ss; fish
     [[[child7]]]
       type = VPaned
       parent = child1

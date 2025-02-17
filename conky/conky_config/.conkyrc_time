@@ -1,6 +1,7 @@
 -- vim: ts=4 sw=4 noet ai cindent syntax=lua
 
 conky.config = {
+    xinerama_head = 1,
     alignment = 'top_left',
     background = true,
     border_width = 1,
@@ -18,9 +19,9 @@ conky.config = {
     double_buffer = true,
     use_xft = true,
     font = 'Ubuntu Mono:size=16',
-    gap_x = 455,
+    gap_x = 400,
     gap_y = 35,
-    minimum_height = 980,
+    minimum_height = 1010,
     minimum_width = 5,
     net_avg_samples = 2,
     no_buffers = true,
@@ -44,7 +45,7 @@ conky.config = {
 }
 
 conky.text = [[
-${font Ubuntu Mono:size=16:weight=bold}${color2}Status${color}: ${font Ubuntu Mono:size=12}${execpi 60 bash -c 'if [ "$(watson status -p)" = "No project started." ]; then echo "-"; else echo "\${color1}\${blink "$(watson status -p) $(watson status -e)"}\${color}"; fi'}
+${font Ubuntu Mono:size=16:weight=bold}${color2}Status${color}: ${font Ubuntu Mono:size=11}${execpi 60 bash -c 'if [ "$(watson status -p)" = "No project started." ]; then echo "-"; else echo "\${color1}\${blink "$(watson status -p) $(watson status -e)"}\${color}"; fi'}
 ${hr}
 
 ${execpi 60 watson report -w -g }

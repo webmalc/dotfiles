@@ -1,13 +1,11 @@
-#!/usr/bin/python2
-
+#!/usr/bin/python3
 import json
+from urllib.request import urlopen
 
-import urllib2
-
-response = urllib2.urlopen("https://www.cbr-xml-daily.ru/daily_json.js")
+response = urlopen("https://www.cbr-xml-daily.ru/daily_json.js")
 data = json.load(response)
 previous = data["Valute"]["USD"]["Previous"]
 value = data["Valute"]["USD"]["Value"]
 print(
-    "${font Ubuntu Mono:size=16:weight=bold}${color2}USD${color}: ${font Ubuntu Mono:size=12}"
+    "${font Ubuntu Mono:size=14:weight=bold}${color2}USD${color}: ${font Ubuntu Mono:size=12}"
     + "{} / {}".format(value, previous) + "${font Ubuntu Mono:size=16}")

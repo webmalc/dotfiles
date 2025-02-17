@@ -18,9 +18,7 @@ Dotfiles for Mint
 * **mangohud** - MANGOHUD_CONFIG=no_display,cpu_temp,gpu_temp,fps_limit=60 mangohud %command%
 * **crontab -e**
 
-55 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send --urgency=critical "Stand up and move!!!"
-55 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay /usr/share/mint-artwork/sounds/notification.oga
-56 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay /usr/share/mint-artwork/sounds/notification.oga
-57 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay /usr/share/mint-artwork/sounds/notification.oga
-58 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay /usr/share/mint-artwork/sounds/notification.oga
-59 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay /usr/share/mint-artwork/sounds/notification.oga
+57 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send --urgency=critical "Stand up and move!!!"              
+57 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay --volume=35536 /home/webmalc/Projects/dotfiles/sounds/active
+58 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay --volume=45536 /home/webmalc/Projects/dotfiles/sounds/active
+59 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay --volume=65536 /home/webmalc/Projects/dotfiles/sounds/active

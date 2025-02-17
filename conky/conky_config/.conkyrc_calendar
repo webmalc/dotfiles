@@ -17,7 +17,7 @@ conky.config = {
     draw_shades = false,
     double_buffer = true,
     use_xft = true,
-    font = 'Ubuntu Mono:size=16',
+    font = 'Ubuntu Mono:size=12',
     gap_x = 35,
     gap_y = 35,
     minimum_height = 980,
@@ -50,13 +50,10 @@ ${time %H:%M:%S}
 ${hr}
 ${execpi 3600 ~/Projects/dotfiles/conky/weather.py}
 ${hr}
+
 ${execpi 3600 ~/Projects/dotfiles/conky/rates.py}
 ${hr}
-
-${font Ubuntu Mono:size=16:weight=bold}${color2}Tasks${color}: ${font Ubuntu Mono:size=16}${execpi 60 task status:pending count}${font Ubuntu Mono:size=12}
-${execpi 60 task | head -n -2}
-${hr}${font Ubuntu Mono:size=16}
-${font Ubuntu Mono:size=16:weight=bold}${color2}Emails${color}: ${font Ubuntu Mono:size=16}${execpi 600 ~/Projects/dotfiles/conky/imap.py}${font Ubuntu Mono:size=12}
+${font Ubuntu Mono:size=14:weight=bold}${color2}Emails${color}: ${font Ubuntu Mono:size=14}${execpi 600 ~/Projects/dotfiles/conky/imap.py}${font Ubuntu Mono:size=11}
 ${hr}
 
 ${execpi 3600 ~/Projects/dotfiles/scripts/go/vocab.app}
