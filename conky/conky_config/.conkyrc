@@ -21,7 +21,7 @@ conky.config = {
     gap_x = 35,
     gap_y = 35,
     minimum_height = 980,
-    minimum_width = 5,
+    minimum_width = 390,
     net_avg_samples = 2,
     no_buffers = true,
     out_to_console = false,
@@ -50,6 +50,8 @@ $hr
 ${color2}RAM USAGE $color ${alignr} $mem/$memmax - $memperc% 
 $color ${memgraph}
 ${color2}Swap Usage:$color $swap/$swapmax - $swapperc% ${swapbar 4}
+$hr
+GPU: ${execi 1 nvidia-settings -query [gpu:0]/GPUCoreTemp -t}°C     CPU: ${execi 1 sensors k10temp-pci-00c3 | awk '/Tctl/ {print $2}'}
 $hr
 #${color2}CPU Usage:$color ${cpu cpu0}% ${cpubar 4}
 ${color2}CPU GENERAL ${alignr} ${cpu cpu0}% 

@@ -8,6 +8,7 @@ options+='📖       gocorrect.me/messages -gcm\n'
 options+='🌎       translate.yandex.ru -try\n'
 options+='🌎       deepl.com/translator -trd\n'
 options+='🌎       translate.google.ca -trg\n'
+options+='🌎       www.vocabulary.com/dictionary/ -voc\n'
 
 ### ai ###
 options+='💬       www.bing.com/search?toWww=1&redig=F08C5B7460244EC58845E960D801C8BC&q=Bing+AI&showconv=1 -bin\n'
