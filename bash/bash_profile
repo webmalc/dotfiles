@@ -5,3 +5,4 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+export PATH="$HOME/go/bin:$PATH"

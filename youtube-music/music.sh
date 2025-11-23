@@ -1,0 +1,2 @@
+#!/bin/sh
+XAPP_FORCE_GTKWINDOW_ICON="youtube" firefox --class WebApp-Youtubemusic3906 --name WebApp-Youtubemusic3906 --profile /home/webmalc/.local/share/ice/firefox/Youtubemusic3906 --no-remote "https://music.youtube.com"

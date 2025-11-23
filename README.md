@@ -18,7 +18,11 @@ Dotfiles for Mint
 * **mangohud** - MANGOHUD_CONFIG=no_display,cpu_temp,gpu_temp,fps_limit=60 mangohud %command%
 * **crontab -e**
 
-57 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send --urgency=critical "Stand up and move!!!"              
-57 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay --volume=35536 /home/webmalc/Projects/dotfiles/sounds/active
-58 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay --volume=45536 /home/webmalc/Projects/dotfiles/sounds/active
-59 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay --volume=65536 /home/webmalc/Projects/dotfiles/sounds/active
+#57 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send --urgency=critical "Stand up and move!!!"
+#57 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay --volume=45536 /home/webmalc/Projects/dotfiles/sounds/active.mp3
+#58 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay --volume=55536 /home/webmalc/Projects/dotfiles/sounds/active.mp3
+#59 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay --volume=65536 /home/webmalc/Projects/dotfiles/sounds/active.mp3
+#* * * * * /home/webmalc/Projects/dotfiles/scripts/stopapp.sh
+
+0,30 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send --urgency=critical "Stand up and move!!!"
+0,30 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay --volume=75536 /home/webmalc/Projects/dotfiles/sounds/active.mp3

@@ -1,0 +1,9 @@
+{
+  "todo": {
+    "prefix": "tn",
+    "body": [
+      "#TODO: "
+    ],
+    "description": "TODO"
+  }
+}

@@ -4,11 +4,10 @@ rofi_command="rofi -theme themes/appsmenu.rasi"
 
 ### language ###
 options='📖       nativecards.pw -nvc\n'
-options+='📖       gocorrect.me/messages -gcm\n'
 options+='🌎       translate.yandex.ru -try\n'
 options+='🌎       deepl.com/translator -trd\n'
 options+='🌎       translate.google.ca -trg\n'
-options+='🌎       www.vocabulary.com/dictionary/ -voc\n'
+options+='🌎       www.vocabulary.com/dictionary/randomword -voc\n'
 
 ### ai ###
 options+='💬       www.bing.com/search?toWww=1&redig=F08C5B7460244EC58845E960D801C8BC&q=Bing+AI&showconv=1 -bin\n'
@@ -17,10 +16,13 @@ options+='💬       chatgpt.com -gpt\n'
 options+='💬       giga.chat/gigachat -gig\n'
 options+='💬       chat.deepseek.com -see\n'
 options+='💬       duck.ai -dai\n'
+options+='💬       grok.com -grk\n'
 
 # mail
-options+='📩       mail.yandex.ru -yhm\n'
-options+='📅       calendar.yandex.ru -cal\n'
+#options+='📩       mail.yandex.ru -yhm\n'
+#options+='📅       calendar.yandex.ru -cal\n'
+options+='📩       mail.zoho.eu -zom\n'
+options+='📅       calendar.zoho.eu -cal\n'
 
 
 # torrents
@@ -32,10 +34,7 @@ options+='⇄       solidtorrents.net -tos\n'
 options+='⇄       1337x.to -to3\n'
 
 # streaming
-options+='🍿       fmoviesz.to/user/bookmark?sort=recently_watched -stv\n'
-options+='🍿       flixtor.to/home -stv\n'
 options+='🍿       www.kinopoisk.ru -kin\n'
-options+='🍿       www.okko.tv -oko\n'
 
 ### gihub ###
 options+='💻       github.com -ghw\n'

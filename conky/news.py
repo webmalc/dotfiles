@@ -7,7 +7,13 @@ import aiohttp
 from bs4 import BeautifulSoup
 
 mode = "right"
-if len(sys.argv) > 1 and sys.argv[1] in ("left", "right", "second"):
+if len(sys.argv) > 1 and sys.argv[1] in (
+        "left",
+        "right",
+        "second",
+        "third",
+        "fourth",
+):
     mode = sys.argv[1]
 
 STATUS_CODES = (200, 429)
@@ -116,20 +122,46 @@ async def main():
                 'https://dev.to/top/week',
                 'Dev.to',
                 'h2.crayons-story__title',
-                5,
+                7,
             ),
-            print_news(
-                'https://www.reddit.com/r/programming/top/?t=week',
-                'Reddit Programming',
-                'article faceplate-screen-reader-content',
-                3,
-            ),
+            # print_news(
+            #     'https://www.reddit.com/r/programming/top/?t=week',
+            #     'Reddit Programming',
+            #     'article faceplate-screen-reader-content',
+            #     3,
+            # ),
             print_news(
                 'https://habr.com/ru/hubs/artificial_intelligence/articles/top/daily/',
                 'Habr AI',
                 'h2.tm-title_h2',
-                5,
+                7,
             )
+        ]
+
+    elif mode == "third":
+        commands = [
+            print_news(
+                'https://www.rbc.ru/',
+                'RBC',
+                'span.main__feed__title-wrap',
+                10,
+            ),
+            print_news(
+                'https://www.rbc.ru/politics',
+                'RBC politics',
+                'span.item__title',
+                10,
+            ),
+        ]
+
+    elif mode == "fourth":
+        commands = [
+            print_news(
+                'https://www.rbc.ru/politics',
+                'RBC politics',
+                'span.item__title',
+                20,
+            ),
         ]
     results = await asyncio.gather(*commands)
     print('$hr\n\n'.join(results))

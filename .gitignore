@@ -67,6 +67,7 @@ target/
 
 #IDE
 .idea
+.vscode
 
 #static
 /static

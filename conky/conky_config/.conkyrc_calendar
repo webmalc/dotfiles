@@ -48,7 +48,10 @@ ${execpi 3600 ~/Projects/dotfiles/conky/cal.py}
 
 ${time %H:%M:%S}
 ${hr}
-${execpi 3600 ~/Projects/dotfiles/conky/weather.py}
+${execpi curl "wttr.in/Москва_0Q.png" | convert - -transparent black /tmp/conky_weather.png}
+${image /tmp/conky_weather.png -p 0,195 -n}
+
+
 ${hr}
 
 ${execpi 3600 ~/Projects/dotfiles/conky/rates.py}

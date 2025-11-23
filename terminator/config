@@ -57,7 +57,7 @@
       order = 0
       profile = default
       uuid = 191dfc4d-3f28-429a-a21e-53731c10809e
-      command = cd /home/webmalc/Projects/d8base-backend/ && vf activate ss; fish
+      command = cd /home/webmalc/Projects/; fish
     [[[child4]]]
       type = VPaned
       parent = child2
@@ -70,14 +70,14 @@
       order = 0
       profile = default
       uuid = 43c46942-2117-4c68-b59a-3afb800ae83d
-      command = cd /home/webmalc/Projects/d8base-backend/ && vf activate ss; fish
+      command = cd /home/webmalc/Projects/; fish
     [[[terminal6]]]
       type = Terminal
       parent = child4
       order = 1
       profile = default
       uuid = f27f0e22-e78c-41e2-8217-3568b46fdb9e
-      command = cd /home/webmalc/Projects/d8base-backend/ && vf activate ss; fish
+      command = cd /home/webmalc/Projects/; fish
     [[[child7]]]
       type = VPaned
       parent = child1
@@ -96,14 +96,14 @@
       order = 0
       profile = default
       uuid = 84cc69d6-c3fb-4daa-a698-fbf88884c64f
-      command = cd /home/webmalc/Projects/d8base-backend/ && vf activate ss; fish
+      command = cd /home/webmalc/Projects/; fish
     [[[terminal10]]]
       type = Terminal
       parent = child8
       order = 1
       profile = default
       uuid = b309694e-b4e8-402d-940d-3d7428fac694
-      command = cd /home/webmalc/Projects/d8base-backend/ && vf activate ss; fish
+      command = cd /home/webmalc/Projects/; fish
     [[[child11]]]
       type = VPaned
       parent = child7
