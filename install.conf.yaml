@@ -72,4 +72,6 @@
     # - [tmux source ~/.tmux.conf]
      - [go install github.com/jesseduffield/lazygit@latest]
      - [go install github.com/jesseduffield/lazydocker@latest]
+     - [pipx install radio-active]
+     - [pipx install deezer-downloader]
   # - [ecryptfs-setup-private; cp .ssh Private/.ssh; ln -s Private/.ssh/ .ssh]
