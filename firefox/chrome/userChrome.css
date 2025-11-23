@@ -1,0 +1,24 @@
+/* Disable rounded corners globally in Firefox UI */
+* {
+  border-radius: 0 !important;
+}
+
+/* Extra fixes for stubborn elements (tabs, URL bar, toolbars, etc.) */
+#navigator-toolbox,
+#TabsToolbar,
+.tabbrowser-tab,
+.tab-background,
+.urlbarView,
+.megabar,
+.panel,
+menupopup,
+tooltip,
+toolbarbutton,
+.toolbarbutton-icon {
+  border-radius: 0 !important;
+  --toolbarbutton-border-radius: 0 !important;
+  --tab-border-radius: 0 !important;
+  --urlbar-border-radius: 0 !important;
+}
+
+

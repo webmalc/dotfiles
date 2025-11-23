@@ -1,0 +1,3 @@
+57 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send --urgency=critical "Stand up and move!!!"
+58 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay --volume=55536 /home/webmalc/Projects/dotfiles/sounds/active.mp3
+59 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay --volume=75536 /home/webmalc/Projects/dotfiles/sounds/active.mp3

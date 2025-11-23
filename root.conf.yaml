@@ -7,12 +7,12 @@
 - clean: []
 - shell:
     # Add repositories
-    - [
-        "wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -",
-      ]
-    - [
-        'add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"',
-      ]
+    # - [
+    #     "wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -",
+    #   ]
+    # - [
+    #     'add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"',
+    #   ]
     # - [
     #     "wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg",
     #   ]
@@ -31,7 +31,7 @@
       stdout: true
       stderr: true
 
-    - command: "apt install -y goverlay nodejs chromium-browser tig mint-themes-legacy mangohud apt-transport-https gnupg2 dropbox steam terminator vim neovim rofi conky-all lua5.3 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common transmission-cli fonts-firacode"
+    - command: "apt install -y goverlay nodejs chromium-browser tig mint-themes-legacy mangohud apt-transport-https gnupg2 dropbox steam terminator vim neovim rofi conky-all lua5.3 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common transmission-cli fonts-firacode ripgrep fd-find"
       stdin: true
       stdout: true
       stderr: true
