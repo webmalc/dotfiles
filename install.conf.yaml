@@ -6,6 +6,8 @@
 
 - clean: ["~", "~/.config"]
 - link:
+    ~/.moc/config: moc/config
+    ~/.moc/keys: moc/keymap
     ~/.ncmpcpp: ncmpcpp
     ~/.mpd: mpd
     ~/.tmux.con: tmux/tmux.conf

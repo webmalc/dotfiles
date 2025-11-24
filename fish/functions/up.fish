@@ -8,7 +8,7 @@ function up
 
     echo -e "\e[32m################# Updating system #################\e[0m"
     echo ""
-    sudo apt upgrade
+    sudo apt upgrade -y
     echo ""
     echo -e "\e[32m################# Updating flatpak #################\e[0m"
     echo ""

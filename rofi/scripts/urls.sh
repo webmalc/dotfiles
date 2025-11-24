@@ -24,7 +24,6 @@ options+='💬       grok.com -grk\n'
 options+='📩       mail.zoho.eu -zom\n'
 options+='📅       calendar.zoho.eu -cal\n'
 
-
 # torrents
 options+='⇄       rutor.info -tor\n'
 options+='⇄       rutracker.org -tou\n'
@@ -35,13 +34,14 @@ options+='⇄       1337x.to -to3\n'
 
 # streaming
 options+='🍿       www.kinopoisk.ru -kin\n'
+options+='🎵       www.internet-radio.com -rad\n'
+options+='🎵       music.webmalc.pw/pl/ -mus\n'
 
 ### gihub ###
 options+='💻       github.com -ghw\n'
 options+='💻       github.com/maxi-booking -ghm\n'
 options+='💻       github.com/orgs/maxi-booking/projects/ -gmp\n'
 options+='💻       github.com/webmalc?tab=projects -gwp\n'
-
 
 ### miscellaneous ###
 options+='⛅       yandex.ru/pogoda/mytischi -wea\n'
@@ -54,16 +54,15 @@ options+='🖵       blackscreen.app -blk'
 status="★"
 chosen="$(echo -e "$options" | $rofi_command -dmenu -selected-row 0 -theme-str "$status_style" -p "$status")"
 
-
 if [ -n "$chosen" ]; then
-    chosen=${chosen:8}
-    chosen=${chosen::-5}
-    if [ "$chosen" == "www.kinopoisk.ru" ]; then
-        firefox "ext+container:name=Personal&url=$chosen"
-    elif [ "$chosen" == "blackscreen.app" ]; then
-        firefox -kiosk -private-window "https://$chosen"
-    else
-        firefox --new-tab "https://$chosen"
-    fi
-    wmctrl -xa "Navigator.Firefox"
+  chosen=${chosen:8}
+  chosen=${chosen::-5}
+  if [ "$chosen" == "www.kinopoisk.ru" ]; then
+    firefox "ext+container:name=Personal&url=$chosen"
+  elif [ "$chosen" == "blackscreen.app" ]; then
+    firefox -kiosk -private-window "https://$chosen"
+  else
+    firefox --new-tab "https://$chosen"
+  fi
+  wmctrl -xa "Navigator.Firefox"
 fi
