@@ -76,6 +76,7 @@
      - [go install github.com/jesseduffield/lazydocker@latest]
      - [pipx install radio-active]
      - [pipx install deezer-downloader]
+     - [pipx install spotdl]
      - [pipx install httpie]
      - [pipx install speedtest-cli]
      - [pipx install tldr]
