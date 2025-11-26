@@ -5,5 +5,12 @@
       "#TODO: "
     ],
     "description": "TODO"
+  },
+  "test it": {
+    "prefix": "ti",
+    "body": [
+      "#TODO: test it"
+    ],
+    "description": "Test it"
   }
 }

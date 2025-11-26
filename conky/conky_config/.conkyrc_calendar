@@ -49,7 +49,7 @@ ${execpi 3600 ~/Projects/dotfiles/conky/cal.py}
 ${time %H:%M:%S}
 ${hr}
 ${execpi 3600 ~/Projects/dotfiles/conky/weather.sh}
-${image /tmp/conky_weather.png -p 0,195 -n}
+${image /tmp/conky_weather.png -p -10,195 -n}
 
 
 ${hr}
