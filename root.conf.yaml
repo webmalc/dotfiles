@@ -31,7 +31,7 @@
       stdout: true
       stderr: true
 
-    - command: "apt install -y goverlay nodejs chromium-browser tig mint-themes-legacy mangohud apt-transport-https gnupg2 dropbox steam terminator vim neovim rofi conky-all lua5.3 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common transmission-cli fonts-firacode ripgrep fd-find pipx moc moc-ffmpeg-plugin pgcli"
+    - command: "apt install -y goverlay nodejs chromium-browser tig mint-themes-legacy mangohud apt-transport-https gnupg2 dropbox steam terminator vim neovim rofi conky-all lua5.3 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common transmission-cli fonts-firacode ripgrep fd-find pipx moc moc-ffmpeg-plugin pgcli espeak-ng"
       stdin: true
       stdout: true
       stderr: true

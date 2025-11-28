@@ -1,6 +1,6 @@
 function up
     echo -e "\e[32m################# System packages #################\e[0m"
-    sudo apt list --upgradable
+    apt list --upgradable
     echo -e "\e[32m################# Flatpak packages #################\e[0m"
     flatpak remote-ls --updates
 
@@ -16,4 +16,6 @@ function up
     echo ""
     echo -e "\e[32m################# Updating spice #################\e[0m"
     echo ""
+    echo -e "\e[32m################# Cleaning #################\e[0m"
+    aptcl
 end

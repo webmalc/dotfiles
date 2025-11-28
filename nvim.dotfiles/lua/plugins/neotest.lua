@@ -11,6 +11,7 @@ return {
     adapters = {
       require("neotest-python")({
         runner = "pytest",
+        args = { "-v" },
         -- pytest_discover_instances = true,
       }),
     },

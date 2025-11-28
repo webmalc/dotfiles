@@ -10,3 +10,5 @@
 	directory = /media/webmalc/data/backup/git/github.com/*
 	directory = /media/webmalc/data/backup/git/github.com/*
 	directory = *
+[push]
+	autoSetupRemote = true

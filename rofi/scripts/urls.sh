@@ -10,13 +10,8 @@ options+='🌎       translate.google.ca -trg\n'
 options+='🌎       www.vocabulary.com/dictionary/randomword -voc\n'
 
 ### ai ###
-options+='💬       www.bing.com/search?toWww=1&redig=F08C5B7460244EC58845E960D801C8BC&q=Bing+AI&showconv=1 -bin\n'
-options+='💬       bard.google.com/chat -bar\n'
-options+='💬       chatgpt.com -gpt\n'
-options+='💬       giga.chat/gigachat -gig\n'
 options+='💬       chat.deepseek.com -see\n'
 options+='💬       duck.ai -dai\n'
-options+='💬       grok.com -grk\n'
 
 # mail
 #options+='📩       mail.yandex.ru -yhm\n'
