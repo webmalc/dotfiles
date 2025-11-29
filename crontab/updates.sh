@@ -4,7 +4,7 @@ APT_UPDATES=0
 APT_UPDATES=$(apt list --upgradable 2>/dev/null | grep -c "^[^/]*/")
 
 FLAT_UPDATES=0
-FLAT_UPDATES=$((FLAT_USER + FLAT_SYS))
+FLAT_UPDATES=$(flatpak remote-ls --updates | wc -l)
 
 TOTAL=$((APT_UPDATES + FLAT_UPDATES))
 

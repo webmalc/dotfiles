@@ -1,0 +1,53 @@
+return {
+  {
+    "milanglacier/minuet-ai.nvim",
+    config = function()
+      vim.system({ "ollama", "run", "qwen2.5-coder:1.5b", "<", "/dev/null" })
+      require("minuet").setup({
+        provider = "openai_fim_compatible",
+        n_completions = 1,
+        context_window = 2048,
+        request_timeout = 1,
+        debounce = 400, --default 600
+        -- throttle = 1500,
+
+        provider_options = {
+          openai_fim_compatible = {
+            api_key = "TERM", -- Placeholder; uses $TERM env var
+            name = "Ollama",
+            end_point = "http://localhost:11434/v1/completions",
+            model = "qwen2.5-coder:1.5b",
+            optional = {
+              max_tokens = 56,
+              top_p = 0.9,
+            },
+          },
+        },
+      })
+    end,
+  },
+  {
+    "saghen/blink.cmp",
+    optional = true,
+    opts = {
+      keymap = {
+        ["<A-y>"] = {
+          function(cmp)
+            cmp.show({ providers = { "minuet" } })
+          end,
+        },
+      },
+      sources = {
+        -- if you want to use auto-complete
+        default = { "minuet" },
+        providers = {
+          minuet = {
+            name = "minuet",
+            module = "minuet.blink",
+            score_offset = 100,
+          },
+        },
+      },
+    },
+  },
+}

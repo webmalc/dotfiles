@@ -1,6 +1,6 @@
 57 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) notify-send --urgency=critical "Stand up and move!!!"
 #58 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay --volume=55536 /home/webmalc/Projects/dotfiles/sounds/active.mp3
 #59 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) paplay --volume=75536 /home/webmalc/Projects/dotfiles/sounds/active.mp3
-58 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) espeak-ng -p 30 -a 100 "Human, stand up and take a break"
-59 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) espeak-ng -p 30 -a 150 "Human, stand up and take a break"
+58 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) espeak-ng -p 30 -a 300 "Human, stand up and take a break"
+59 * * * * XDG_RUNTIME_DIR=/run/user/$(id -u) espeak-ng -p 30 -a 500 "Human, stand up and take a break"
 0 */3 * * * XDG_RUNTIME_DIR=/run/user/$(id -u) /home/webmalc/Projects/dotfiles/crontab/updates.sh
