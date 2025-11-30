@@ -12,6 +12,7 @@ options+='🌎       www.vocabulary.com/dictionary/randomword -voc\n'
 ### ai ###
 options+='💬       chat.deepseek.com -see\n'
 options+='💬       duck.ai -dai\n'
+options+='💬       search.brave.com/ask -ask\n'
 
 # mail
 #options+='📩       mail.yandex.ru -yhm\n'
