@@ -12,5 +12,35 @@
       "#TODO: test it"
     ],
     "description": "Test it"
+  },
+  "method": {
+    "prefix": "meth",
+    "body": [
+      "def ${1:function_name}(self${2}) -> ${3:return_type}:",
+      "    \"\"\"${4:docstring}.\"\"\"",
+      "    ${0}",
+      ""
+    ],
+    "description": "Method"
+  },
+  "function": {
+    "prefix": "func",
+    "body": [
+      "def ${1:function_name}(${2}) -> ${3:return_type}:",
+      "    \"\"\"${4:docstring}.\"\"\"",
+      "    ${0}",
+      ""
+    ],
+    "description": "Function"
+  },
+  "class": {
+    "prefix": "tys",
+    "body": [
+      "class ${1:class_name}(${2}):",
+      "    \"\"\"${3:docstring}.\"\"\"",
+      "",
+      "    ${0}"
+    ],
+    "description": "Class"
   }
 }
