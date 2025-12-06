@@ -10,3 +10,6 @@ set -gx PATH $HOME/.local/bin $PATH
 set -g simple_ass_prompt_greeting
 set --erase fish_greeting
 thefuck --alias | source
+
+# opencode
+fish_add_path /home/webmalc/.opencode/bin

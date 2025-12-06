@@ -6,3 +6,7 @@ mixin
 queryset
 geoapi
 desc
+sitemaps
+sitemap
+xml
+gz
