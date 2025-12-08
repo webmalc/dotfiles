@@ -13,6 +13,13 @@
     ],
     "description": "Test it"
   },
+  "llm": {
+    "prefix": "llm",
+    "body": [
+      "#TODO: <LLM INSTRUCT> "
+    ],
+    "description": "LLM instruction"
+  },
   "method": {
     "prefix": "meth",
     "body": [

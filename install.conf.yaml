@@ -80,4 +80,5 @@
      - [pipx install httpie]
      - [pipx install speedtest-cli]
      - [pipx install tldr]
+     - [npm install -g repomix]
   # - [ecryptfs-setup-private; cp .ssh Private/.ssh; ln -s Private/.ssh/ .ssh]

@@ -4,7 +4,7 @@ rofi_command="rofi -theme themes/appsmenu.rasi"
 
 ### language ###
 options=':)    -    smile, happy, face\n'
-options=':‑)    -    smiley, happy, face\n'
+options+=':‑)    -    smiley, happy, face\n'
 options+=':)    -    smiley, happy, face\n'
 options+=':-]    -    smiley, happy, face\n'
 options+=':]    -    smiley, happy, face\n'

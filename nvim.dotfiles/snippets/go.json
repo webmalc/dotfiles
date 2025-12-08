@@ -12,5 +12,12 @@
       "// TODO: test it"
     ],
     "description": "Test it"
+  },
+  "llm": {
+    "prefix": "llm",
+    "body": [
+      "// TODO: <LLM INSTRUCT> "
+    ],
+    "description": "LLM instruction"
   }
 }
