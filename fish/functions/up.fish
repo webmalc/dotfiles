@@ -4,7 +4,7 @@ function up
     echo -e "\e[32m################# Flatpak packages #################\e[0m"
     flatpak remote-ls --updates
 
-    bash -c 'read -p $\'\\e[33m\################# Press any key to continue #################\\e[0m\''
+    bash -c 'read -p $\'\\e[33m################# Press any key to continue #################\\e[0m\''
 
     echo -e "\e[32m################# Updating system #################\e[0m"
     echo ""

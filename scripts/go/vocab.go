@@ -9,8 +9,10 @@ import (
 	"github.com/anaskhan96/soup"
 )
 
-const wordsFile string = "words.txt"
-const wordsToeflfile string = "words_toefl.txt"
+const (
+	wordsFile      string = "words.txt"
+	wordsToeflfile string = "words_toefl.txt"
+)
 
 type record struct {
 	word       string
@@ -47,7 +49,7 @@ func getRandomWord(filename string, ch chan record) {
 // Get random words from the dictionary files
 func getRandomWords() [2]record {
 	var words [2]record
-	var filenames = [2]string{wordsFile, wordsToeflfile}
+	filenames := [2]string{wordsFile, wordsToeflfile}
 
 	messages := make(chan record)
 	defer close(messages)
@@ -87,7 +89,7 @@ func getDefinition(word record, ch chan record) {
 	response, err := soup.Get(url)
 	checkAndPrintError(err)
 	doc := soup.HTMLParse(response)
-	el := doc.Find("ol", "data-type", "definition-content-list")
+	el := doc.Find("ol", "class", "list-definition")
 	if el.Error == nil {
 		elements := el.FindAll("li")
 		if len(elements) > 2 {

@@ -11,6 +11,28 @@ return {
             },
           },
         },
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                autoSearchPaths = true,
+                diagnosticMode = "off",
+                typeCheckingMode = "off",
+                useLibraryCodeForTypes = true,
+                diagnosticSeverityOverrides = {
+                  reportUnusedVariable = "none",
+                  reportUnusedImport = "none",
+                  reportMissingImports = "none",
+                  reportPrivateImportUsage = "none",
+                },
+              },
+            },
+            pyright = {
+              disableTaggedHints = true,
+              disableOrganizeImports = true,
+            },
+          },
+        },
       },
     },
   },

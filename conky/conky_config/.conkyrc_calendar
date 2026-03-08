@@ -48,16 +48,16 @@ ${execpi 3600 ~/Projects/dotfiles/conky/cal.py}
 
 ${time %H:%M:%S}
 ${hr}
-${execpi 3600 ~/Projects/dotfiles/conky/weather.sh}
-${image /tmp/conky_weather.png -p -8,195 -n}
 
+${execpi 3600 ~/Projects/dotfiles/conky/weather_gis.py}
 
-${hr}
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ${execpi 3600 ~/Projects/dotfiles/conky/rates.py}
-${hr}
-${font Ubuntu Mono:size=14:weight=bold}${color2}Emails${color}: ${font Ubuntu Mono:size=14}${execpi 600 ~/Projects/dotfiles/conky/imap.py}${font Ubuntu Mono:size=11}
-${hr}
 
-${execpi 3600 ~/Projects/dotfiles/scripts/go/vocab.app}
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+${font Ubuntu Mono:size=14:weight=bold}${color2}Emails${color}: ${font Ubuntu Mono:size=14}${execpi 600 ~/Projects/dotfiles/conky/imap.py}${font Ubuntu Mono:size=11}
+
+${hr}
 ]]

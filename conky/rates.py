@@ -8,4 +8,5 @@ previous = data["Valute"]["USD"]["Previous"]
 value = data["Valute"]["USD"]["Value"]
 print(
     "${font Ubuntu Mono:size=14:weight=bold}${color2}USD${color}: ${font Ubuntu Mono:size=12}"
-    + "{} / {}".format(value, previous) + "${font Ubuntu Mono:size=16}")
+    + "{} / {}".format(value, previous)
+)

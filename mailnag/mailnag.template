@@ -4,7 +4,7 @@ filter_text = newsletter, viagra
 [core]
 imap_idle_timeout = 10
 enabled_plugins = dbusplugin, libnotifyplugin
-poll_interval = 10
+poll_interval = 60
 credentialstore = auto
 connectivity_test = auto
 autostart = 1

@@ -10,6 +10,6 @@ TOTAL=$((APT_UPDATES + FLAT_UPDATES))
 
 if [ "$TOTAL" -gt 0 ]; then
   notify-send "New updates: $TOTAL"
-  espeak-ng -p 30 "Human, you have new system updates"
+  espeak-ng -p 30 "You have new system updates"
 fi
 exit 0

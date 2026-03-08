@@ -44,6 +44,10 @@
     ~/.config/mailnag/mailnag.cfg: mailnag/mailnag.compiled
     ~/.spacemacs: spacemacs/spacemacs
     ~/.emacs.d/private/: spacemacs/emacs/private/
+    ~/.config/opencode/AGENTS.md: llm/AGENTS.md
+    ~/.qwen/QWEN.md: llm/AGENTS.md
+    ~/.gemini/GEMINI.md: llm/AGENTS.md
+  
 - shell:
     - ["cat  /home/webmalc/Projects/dotfiles/crontab/crontab.txt | crontab -", "Installing crontab"]
     - ["git submodule update --init --recursive", "Installing submodules"]
@@ -53,6 +57,7 @@
     - [mkdir -p ~/Music, Creating music directory]
     - [mkdir -p ~/.fonts, Creating fonts directory]
     - [mkdir -p ~/.cache/mutt, Creating mutt directory]
+    - [mkdir -p ~/.cache/mutt/bodies, Creating mutt directory bodies]
     - [omf install simple-ass-prompt]
     - [dconf load /org/cinnamon/ < dconf/config.ini]
     - [

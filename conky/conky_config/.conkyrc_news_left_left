@@ -44,5 +44,5 @@ conky.config = {
 }
 
 conky.text = [[
-${execpi 3600 /home/webmalc/Projects/dotfiles/conky/news.py second}
+${execpi 3600 /home/webmalc/Projects/dotfiles/conky/news.py second | tee /tmp/news_1.txt}
 ]]

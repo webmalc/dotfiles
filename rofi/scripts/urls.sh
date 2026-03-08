@@ -10,9 +10,10 @@ options+='🌎       translate.google.ca -trg\n'
 options+='🌎       www.vocabulary.com/dictionary/randomword -voc\n'
 
 ### ai ###
-options+='💬       chat.deepseek.com -see\n'
-options+='💬       duck.ai -dai\n'
-options+='💬       search.brave.com/ask -ask\n'
+options+='💬       chat.deepseek.com -dll\n'
+options+='💬       www.kimi.com -kll\n'
+options+='💬       chat.z.ai -zll\n'
+options+='💬       chat.qwen.ai -qll\n'
 
 # mail
 #options+='📩       mail.yandex.ru -yhm\n'
@@ -32,6 +33,7 @@ options+='⇄       1337x.to -to3\n'
 options+='🍿       www.kinopoisk.ru -kin\n'
 options+='🎵       www.internet-radio.com -rad\n'
 options+='🎵       music.webmalc.pw/pl/ -mus\n'
+options+='🎵       get-music -get\n'
 
 ### gihub ###
 options+='💻       github.com -ghw\n'
@@ -57,6 +59,10 @@ if [ -n "$chosen" ]; then
     firefox "ext+container:name=Personal&url=$chosen"
   elif [ "$chosen" == "blackscreen.app" ]; then
     firefox -kiosk -private-window "https://$chosen"
+  elif [ "$chosen" == "get-music" ]; then
+    cd /home/webmalc/Projects/get-music/
+    ./app &
+    firefox --new-tab "http://localhost:8010/"
   else
     firefox --new-tab "https://$chosen"
   fi
