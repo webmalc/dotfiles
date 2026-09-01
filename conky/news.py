@@ -142,7 +142,7 @@ async def main():
             print_news(
                 "https://www.rbc.ru/",
                 "RBC",
-                "span.main__feed__title-wrap",
+                ".news-line-title",
                 10,
             ),
             print_news(

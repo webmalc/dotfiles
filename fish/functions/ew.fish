@@ -1,3 +1,3 @@
 function ew
-    vim ~/Dropbox/Work/work.txt
+    nvim ~/Disk/Work/work.txt
 end

@@ -57,7 +57,4 @@ ${execpi 3600 ~/Projects/dotfiles/conky/rates.py}
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-${font Ubuntu Mono:size=14:weight=bold}${color2}Emails${color}: ${font Ubuntu Mono:size=14}${execpi 600 ~/Projects/dotfiles/conky/imap.py}${font Ubuntu Mono:size=11}
-
-${hr}
 ]]

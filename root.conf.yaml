@@ -31,13 +31,13 @@
       stdout: true
       stderr: true
 
-    - command: "apt install -y goverlay nodejs chromium-browser tig mint-themes-legacy mangohud apt-transport-https gnupg2 dropbox steam terminator vim neovim rofi conky-all lua5.3 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common transmission-cli fonts-firacode ripgrep fd-find pipx moc moc-ffmpeg-plugin pgcli espeak-ng"
+    - command: "apt install -y goverlay nodejs chromium-browser dropbox tig mint-themes-legacy mangohud apt-transport-https gnupg2 steam steam-devices terminator vim neovim rofi conky-all lua5.3 neomutt lynx w3m urlview mailnag clang-format clang mpv nfs-common transmission-cli fonts-firacode ripgrep fd-find pipx moc moc-ffmpeg-plugin pgcli espeak-ng"
       stdin: true
       stdout: true
       stderr: true
 
     # Install packages
-    - command: "apt install -y vlc dict tmux shc fzf traceroute ncdu papirus-icon-theme code xdotool python-setuptools python3-setuptools python3-venv zipalign openjdk-8-jdk steam-devices cryfs odt2txt caca-utils atool poppler-utils mediainfo curl exuberant-ctags silversearcher-ag ipython3 keepassx highlight atool libcaca-dev python3-pip python3-dev libpq-dev htop fish redis postgresql postgis sqlite3 vim memcached virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp mpc graphviz golang-go"
+    - command: "apt install -y vlc dict tmux shc fzf traceroute ncdu papirus-icon-theme code xdotool python-setuptools python3-setuptools python3-venv zipalign openjdk-8-jdk cryfs odt2txt caca-utils atool poppler-utils mediainfo curl exuberant-ctags silversearcher-ag ipython3 keepassx highlight atool libcaca-dev python3-pip python3-dev libpq-dev htop fish redis postgresql postgis sqlite3 vim memcached virtualbox vagrant socat docker.io docker ansible xfce4-terminal taskwarrior stubby ecryptfs-utils cryptsetup mpd ncmpcpp mpc graphviz golang-go"
       stdin: true
       stdout: true
       stderr: true

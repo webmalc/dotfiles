@@ -38,8 +38,8 @@
     ~/.config/xfce4/terminal/terminalrc: xfce-terminal/terminalrc
     ~/.config/mutt/mailcap: mutt/mailcap
     ~/.config/mutt/muttrc: mutt/muttrc.compiled
-    ~/.config/mutt/aliases: /home/webmalc/Dropbox/System/mutt/aliases
-    ~/.config/watson: /home/webmalc/Dropbox/System/watson
+    ~/.config/mutt/aliases: /home/webmalc/Disk/System/mutt/aliases
+    ~/.config/watson: /home/webmalc/Disk/System/watson
     ~/.urlview: urlview/urlview
     ~/.config/mailnag/mailnag.cfg: mailnag/mailnag.compiled
     ~/.spacemacs: spacemacs/spacemacs

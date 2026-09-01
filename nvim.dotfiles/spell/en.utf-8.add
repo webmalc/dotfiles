@@ -20,3 +20,10 @@ gosec
 noctx
 Denormalization
 denormalization
+Django
+urlpatterns
+djangoproject
+urls
+django
+URLconf
+subdir

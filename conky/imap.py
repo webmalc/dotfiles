@@ -5,27 +5,31 @@ import os
 
 
 def print_unseen(username, password):
-    imap = imaplib.IMAP4_SSL('imappro.zoho.eu', 993)
+    imap = imaplib.IMAP4_SSL("imap.yandex.ru", 993)
     imap.login(username, password)
 
     def count(folder):
         imap.select(folder)
-        return_code, mail_ids = imap.search(None, 'Unseen')
-        ids = mail_ids[0].decode('utf-8')
-        num = (len(ids.split(' ')) if ids else 0)
+        return_code, mail_ids = imap.search(None, "Unseen")
+        ids = mail_ids[0].decode("utf-8")
+        num = len(ids.split(" ")) if ids else 0
         return num
 
-    print(count('INBOX') + count('Spam'))
+    unseen_count = count("INBOX")
+    print(unseen_count)
+
     imap.close()
+
+    if unseen_count > 0:
+        os.system(f'notify-send "New Email" "You have {unseen_count} unread email(s)"')
 
 
 def get_config():
     config = configparser.ConfigParser()
-    path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                        '../config.ini')
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "../config.ini")
     config.read(path)
     return config
 
 
-config = get_config()['email']
-print_unseen(config['user'], config['password'])
+config = get_config()["email"]
+print_unseen(config["user"], config["password"])

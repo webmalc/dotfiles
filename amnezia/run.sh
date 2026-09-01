@@ -1,6 +1,3 @@
 #!/bin/bash
-# pkexec pkill Amnezia
-# chromium
-chromium &
-sleep 1
+# pkill chromium
 /home/webmalc/Projects/dotfiles/wmctrl/switch.sh AmneziaVPN.AmneziaVPN AmneziaVPN

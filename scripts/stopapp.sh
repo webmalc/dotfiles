@@ -4,5 +4,5 @@
 current_hour=$(date +%H)
 
 if [ "$current_hour" -ge 16 ] || [ "$current_hour" -lt 7 ]; then
-    pkill -f Telegram
+  pkill -f Telegram
 fi

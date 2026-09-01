@@ -4,21 +4,19 @@ rofi_command="rofi -theme themes/appsmenu.rasi"
 
 ### language ###
 options='📖       nativecards.pw -nvc\n'
-options+='🌎       translate.yandex.ru -try\n'
-options+='🌎       deepl.com/translator -trd\n'
-options+='🌎       translate.google.ca -trg\n'
+options+='🌎       translate.google.com -trg\n'
 options+='🌎       www.vocabulary.com/dictionary/randomword -voc\n'
 
 ### ai ###
-options+='💬       chat.deepseek.com -dll\n'
-options+='💬       www.kimi.com -kll\n'
-options+='💬       chat.z.ai -zll\n'
-options+='💬       chat.qwen.ai -qll\n'
+options+='💬       chat.deepseek.com -dch\n'
+options+='💬       www.kimi.com -kch\n'
+options+='💬       chat.z.ai -zch\n'
+options+='💬       chat.qwen.ai -qch\n'
 
 # mail
-#options+='📩       mail.yandex.ru -yhm\n'
-#options+='📅       calendar.yandex.ru -cal\n'
 options+='📩       mail.zoho.eu -zom\n'
+# options+='📩       mail.yandex.ru -yam\n'
+# options+='📅       calendar.yandex.ru -cal\n'
 options+='📅       calendar.zoho.eu -cal\n'
 
 # torrents
@@ -30,10 +28,9 @@ options+='⇄       solidtorrents.net -tos\n'
 options+='⇄       1337x.to -to3\n'
 
 # streaming
-options+='🍿       www.kinopoisk.ru -kin\n'
 options+='🎵       www.internet-radio.com -rad\n'
-options+='🎵       music.webmalc.pw/pl/ -mus\n'
-options+='🎵       get-music -get\n'
+options+='🎵       zvuk.com -mus\n'
+options+='🎵       music.yandex.ru -muy\n'
 
 ### gihub ###
 options+='💻       github.com -ghw\n'
@@ -42,8 +39,8 @@ options+='💻       github.com/orgs/maxi-booking/projects/ -gmp\n'
 options+='💻       github.com/webmalc?tab=projects -gwp\n'
 
 ### miscellaneous ###
-options+='⛅       yandex.ru/pogoda/mytischi -wea\n'
-options+='🍕       www.myfitnesspal.com -ftp\n'
+# options+='⛅       www.windy.com/55.909/37.734?55.556,37.734,8,p:cities -wea\n'
+options+='⛅       yandex.ru/pogoda/ru?lat=55.909967&lon=37.736745 -wea\n'
 options+='🍿       myshows.me/profile/ -ttv\n'
 options+='🍿       www.ismyshowcancelled.com/ -isc\n'
 options+='🖵       blackscreen.app -blk'
@@ -59,10 +56,6 @@ if [ -n "$chosen" ]; then
     firefox "ext+container:name=Personal&url=$chosen"
   elif [ "$chosen" == "blackscreen.app" ]; then
     firefox -kiosk -private-window "https://$chosen"
-  elif [ "$chosen" == "get-music" ]; then
-    cd /home/webmalc/Projects/get-music/
-    ./app &
-    firefox --new-tab "http://localhost:8010/"
   else
     firefox --new-tab "https://$chosen"
   fi
