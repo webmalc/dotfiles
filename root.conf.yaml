@@ -106,7 +106,4 @@
         cp /home/webmalc/Projects/dotfiles/env/environment.compiled /etc/environment,
       ]
     - [mkdir -p /usr/share/backgrounds/]
-    - [
-        cp /home/webmalc/Projects/dotfiles/wallpaper/cyberpunk.jpg /usr/share/backgrounds/cyberpunk.jpg,
-      ]
     - ["chown -hR webmalc:webmalc /home/webmalc/.[^.]*"]

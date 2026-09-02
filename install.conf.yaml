@@ -20,7 +20,6 @@
     ~/.gitconfig: git/gitconfig
     ~/.bash_profile: bash/bash_profile
     ~/.vimrc.before: vim/vimrc.before
-    ~/Pictures/wallpaper: wallpaper
     ~/.config/ptpython/config.py: ptpython/config.py
     ~/.ptpython/config.py: ptpython/config.py
     ~/.vimrc.bundles: vim/vimrc.bundles
