@@ -1,3 +1,3 @@
 #!/bin/bash
-firefox --new-tab "https://www.kimi.com/"
+firefox --new-tab "https://chat.qwen.ai/"
 wmctrl -xa "Navigator.Firefox"
