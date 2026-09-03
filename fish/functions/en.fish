@@ -1,3 +1,3 @@
 function en
-    nvim ~/Disk/Work/notes.txt
+    nvim ~/Disk/Work/notes.md
 end
