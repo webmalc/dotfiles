@@ -2,6 +2,7 @@
 import asyncio
 import os
 import random
+import re
 import textwrap
 
 import aiohttp
@@ -18,7 +19,7 @@ def random_line(afile):
 
 
 async def get_word(random_word):
-    url = "https://www.merriam-webster.com/dictionary/" + random_word
+    url = "https://www.dictionary.com/browse/dog" + random_word
     async with aiohttp.ClientSession() as session:
         async with session.get(
             url,
@@ -28,13 +29,31 @@ async def get_word(random_word):
         ) as response:
             html = await response.text()
     soup = BeautifulSoup(html, "html.parser")
-    word = soup.select_one("h1.hword").text
-    word = "${font Ubuntu Mono:size=16}" + word.capitalize()
+    word = soup.select_one("h1#hdr-headword-dcom-1").text
+    word = (
+        "${font Ubuntu Mono:size=14:weight=bold}${color2}"
+        + word.capitalize()
+        + "${color}${font Ubuntu Mono:size=11}"
+    )
 
-    element = soup.select_one("div.sense-content")
-    if element:
-        text = element.text
-    result = "{}\n\n{}".format(word, text)
+    p_tags = soup.find_all("p", class_="txt-variant-label-short")
+    definitions = []
+    for p in p_tags:
+        text = p.get_text(separator=" ", strip=True)
+        if text:
+            definitions.append(text)
+
+    result_txt = "\n\n".join(definitions[:3])
+    result = "{}\n\n{}".format(
+        word,
+        textwrap.fill(
+            result_txt,
+            35,
+            drop_whitespace=False,
+            replace_whitespace=False,
+        ),
+    )
+
     return result
 
 
