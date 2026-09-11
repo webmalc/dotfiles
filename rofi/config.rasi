@@ -1,10 +1,15 @@
 configuration {
+window {
+      close-on-delete: false;
+  }
   show-icons:         true;
   cycle:              true;
   hide-scrollbar:     true;
   disable-history:    false;
   modi:               "drun";
-  display-drun:       "apps";
+  display-drun:       "";
+  display-window:       "🗗   ";
+	window-format: "{i}{c}   {t}";
   columns: 2;
 	modi: "window,run,drun,ssh,combi";
 /*	fixed-num-lines: true;*/
@@ -89,7 +94,7 @@ combi-modi: "window,drun";
 /*	kb-remove-to-sol: "Control+u";*/
 	kb-accept-entry: "Control+n,Control+m,Return,KP_Enter";
 /*	kb-accept-custom: "Control+Return";*/
-/*	kb-accept-alt: "Shift+Return";*/
+  /*	kb-accept-alt: "Shift+Return";*/
 	kb-delete-entry: "Shift+Delete,Alt+d";
 /*	kb-mode-next: "Shift+Right,Control+Tab";*/
 /*	kb-mode-previous: "Shift+Left";*/

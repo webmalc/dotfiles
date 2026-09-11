@@ -32,11 +32,12 @@ options+='🎵       www.internet-radio.com -rad\n'
 options+='🎵       zvuk.com -mus\n'
 options+='🎵       music.yandex.ru -muy\n'
 
-### gihub ###
+### projects ###
 options+='💻       github.com -ghw\n'
 options+='💻       github.com/maxi-booking -ghm\n'
 options+='💻       github.com/orgs/maxi-booking/projects/ -gmp\n'
 options+='💻       github.com/webmalc?tab=projects -gwp\n'
+options+='💻       webmalc.atlassian.net/jira/for-you -jir\n'
 
 ### miscellaneous ###
 # options+='⛅       www.windy.com/55.909/37.734?55.556,37.734,8,p:cities -wea\n'
